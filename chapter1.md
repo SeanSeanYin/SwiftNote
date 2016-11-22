@@ -1,3 +1,6 @@
-# First Chapter
+# JSON 
 
-GitBook allows you to organize your book into chapters, each chapter is stored in a separate file like this one.
+SwiftyJSON的[gitHub](https://github.com/SwiftyJSON/SwiftyJSON)
+
+[SwiftyJSON 中文教學](http://www.hangge.com/blog/cache/detail_968.html)
+
