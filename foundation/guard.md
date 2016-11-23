@@ -1,7 +1,7 @@
 #Guard
 guard 條件式 else {
 
-```當條件式為false要執行的程式```
+``` //當條件式為false要執行的程式 ```
 
 ```return ```
 
