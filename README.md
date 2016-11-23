@@ -1,3 +1,3 @@
-# My Awesome Book
+# 我的Swift學習筆記本
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+用來記錄在Swift上開發遇到的點點滴滴
