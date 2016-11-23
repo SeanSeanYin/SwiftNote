@@ -5,5 +5,5 @@
 * [URL](url.md)
 * [Keyboard](keyboard.md)
 * [CocoaPods](cocoapods.md)
-* String
+* [String](string.md)
 
