@@ -7,5 +7,5 @@
 * [CocoaPods](cocoapods.md)
 * [String](string.md)
 * [Date](date.md)
-* Outside Function
+* [Outside Function](outside_function.md)
 
