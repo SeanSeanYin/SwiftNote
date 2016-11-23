@@ -8,4 +8,5 @@
 * [String](string.md)
 * [Date](date.md)
 * [Outside Function](outside_function.md)
+  * [sha1](outside function/sha1.md)
 
