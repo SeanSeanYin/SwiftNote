@@ -12,10 +12,6 @@ CoreData：
 ```  
 //  AppDelegate.swift
 //  CoreDataDemo
-//
-//  Created by V-cube on 2016/11/23.
-//  Copyright © 2016年 V-cube. All rights reserved.
-//
 
 import UIKit
 import CoreData
