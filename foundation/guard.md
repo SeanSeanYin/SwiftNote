@@ -7,4 +7,4 @@ guard 條件式 else {
 
 }
 
-由於```guard```只判斷```true or false```，要注意條件式不能為```optional(true) or optional(false)```
+由於```guard```只判斷```true or false```，要注意條件式不能回傳為```optional(true) or optional(false)```
