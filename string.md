@@ -4,7 +4,7 @@
 * String是值類型，NSString是參考類型
 * String可直接用 + 來串接字串， NSString要用append()
 * String支援for...in瀏覽方法（String.characters），NSString不支援
-* 
+* String計算字串長度用String.characters.count或String.lengthOfBytes(using: .utf8)；NSString用.length
 
 
 
