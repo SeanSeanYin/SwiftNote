@@ -7,6 +7,7 @@
 * String計算字串長度用String.characters.count或String.lengthOfBytes(using: .utf8)；NSString用.length
 * String用 == 比較兩字串是否相等，NSString用 NSString.isEqual(to: String)來比較字串，但是參數的字串要是String格式，也可以用isEqual(object: Any?)來比較兩物件是否相等
 * String轉數字用Int(String)，NSString用NSString.intValue
+* 
 
 
 
