@@ -11,5 +11,5 @@
    * [sha1](outside function/sha1.md)
 * [Foundation](foundation.md)
    * [Guard](foundation/guard.md)
-* Storage Data
+* [Storage Data](storage_data.md)
 
