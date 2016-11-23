@@ -8,8 +8,7 @@
 * String用 == 比較兩字串是否相等，NSString用 NSString.isEqual(to: String)來比較字串，但是參數的字串要是String格式，也可以用isEqual(object: Any?)來比較兩物件是否相等
 * String轉數字用Int(String)，NSString用NSString.intValue
 * String判斷是否為空用String.isEmpty，NSString用NSString.length == 0
-* 
-* 
+* String可以用String.insert(newElement: Character, at: String.Index)來在特定字元前插入字元（不行插入字串）
 
 
 
