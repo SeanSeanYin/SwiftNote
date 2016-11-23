@@ -48,5 +48,5 @@ extension String {
 ```
 
 然後在程式內如下調用：
-signature = signature.sha1()
+```signature = signature.sha1()```
 
