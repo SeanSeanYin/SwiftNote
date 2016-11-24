@@ -2,7 +2,7 @@
 # SHA1
 ####參考[stack overflow](http://stackoverflow.com/questions/39684092/swift-3-making-sha1-sha256-and-md5-functions)這篇
 
-先在專案底下新增 ProjectNname-Bridging-Header.h
+先在專案新增一個```objective-c```的file，xcode會自動生成```ProjectNname-Bridging-Header.h```，然後可以將剛剛新增的objective.m檔案移除
 
 並且在此.h檔案內新增 `#import <CommonCrypto/CommonHMAC.h>`
 
