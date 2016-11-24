@@ -4,7 +4,7 @@ SwiftyJSON的[gitHub](https://github.com/SwiftyJSON/SwiftyJSON)
 
 [SwiftyJSON 中文教學](http://www.hangge.com/blog/cache/detail_968.html)
 
-* 使用CocoaPods的方法
+* 使用CocoaPods安裝SwiftyJSON的方法
   * 先透過終端機到Project的根目錄建立Podfile
   * 然後貼上以下代碼，並將MyApp改成專案名稱
 ```
