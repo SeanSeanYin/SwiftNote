@@ -102,4 +102,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 最後在 ```applicationWillTerminate``` 函式
   內，新增 ```self.saveContext()```。
 
-* 在CoreDataDemo.xcdatamodeld替Entity用Editor-> Create NSManagedObject Subclass時會產生錯誤時，
+  * 在CoreDataDemo.xcdatamodeld替Entity用Editor-> Create NSManagedObject Subclass時，自動產生的檔案EntityProperties.swift在build會錯誤時，
