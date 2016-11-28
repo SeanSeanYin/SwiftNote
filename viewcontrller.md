@@ -10,4 +10,13 @@
             height: 1)) 
      lineView.backgroundColor = UIColor.blackColor();
      label.addSubview(lineView) ```
-* 
+* 新增Spinner
+  * 先宣告 @IBOutlet var spinner:UIActivityIndicatorView!
+  * 在要顯示的地方新增
+  ```
+    self.spinner.hidesWhenStopped = true
+    self.spinner.center = self.view.center
+    view.addSubview(spinner)
+    spinner.startAnimating()```
+  * 在要停止的地方新增
+* 測試
