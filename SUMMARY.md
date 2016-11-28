@@ -11,6 +11,6 @@
    * [sha1](outside function/sha1.md)
 * [Foundation](foundation.md)
    * [Guard](foundation/guard.md)
-   * ViewContrller
+   * [ViewContrller](viewcontrller.md)
 * [Storage Data](storage_data.md)
 
