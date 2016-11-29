@@ -32,5 +32,13 @@
     }
     ```
 * popover要能正確切齊顯示在anchor下方
-  * 
+  * 使用下面方法
+  ``` 
+  let vc = segue.destination
+  if let controller = vc.popoverPresentationController {
+        controller.delegate = self
+        controller.sourceView = self.view
+        controller.sourceRect = (self.navigationItem.rightBarButtonItem?.accessibilityFrame)!
+  }
+    ```
 * 
