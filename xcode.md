@@ -13,3 +13,9 @@
     * 然後搜尋height，把破萬的異常值都改成千位數以內
     * 存檔後離開Main.stroyboard
     * 再重新啟動這個專案
+
+* 要在IB內解除stackview的方法
+  * 先選擇想解散的stackview
+  * 按下option鍵，點選```Embed In Stack```按鈕
+  * 選擇```unembed```即可
+
