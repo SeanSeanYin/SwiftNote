@@ -7,6 +7,9 @@
     * 看此台裝置是否有加入到AppID下
     * 等待Processing symbol完畢
     
-  * 產生這個警告訊息然後按Button又都沒反應的解決方式
-  * 用別的編輯器打開Main.storyboard
-  * 
+  * 產生這個警告訊息然後按Button又都沒反應的解決方式![](uHQ3p.png)
+    * 先強制關閉xcode
+    * 用別的編輯器打開Main.storyboard
+    * 然後搜尋height，把破萬的異常值都改成千位數以內
+    * 存檔後離開Main.stroyboard
+    * 再重新啟動這個專案
