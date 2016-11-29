@@ -31,4 +31,6 @@
         return .none
     }
     ```
+* popover要能正確切齊顯示在anchor下方
+  * 
 * 
