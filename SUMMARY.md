@@ -12,6 +12,7 @@
 * [Foundation](foundation.md)
    * [Guard](foundation/guard.md)
    * [ViewContrller](viewcontrller.md)
+   * Basic functions
 * [Storage Data](storage_data.md)
 * [Xcode](xcode.md)
 
