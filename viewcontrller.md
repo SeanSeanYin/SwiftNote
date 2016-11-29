@@ -23,4 +23,5 @@
     OperationQueue.main.addOperation {
        self.spinner.stopAnimating()
     }```
-* 測試
+* popover 要
+* 
