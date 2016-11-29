@@ -23,5 +23,6 @@
     OperationQueue.main.addOperation {
        self.spinner.stopAnimating()
     }```
-* popover 要
+* popover 要能顯示在多種Size的螢幕上
+  * 
 * 
