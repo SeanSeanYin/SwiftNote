@@ -24,7 +24,8 @@
        self.spinner.stopAnimating()
     }```
 * popover 要能顯示在多種Size的螢幕上
-  * 新增該function
+  * 先讓viewcontroller follow protocol：```UIPopoverPresentationControllerDelegate```
+  * 再新增該function
   ``` 
     func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
         return .none
