@@ -8,41 +8,15 @@
 
 然後置入以下的Extension
 ```
-extension Int {
-
-    func hexString() -> String {
-    
-        return String(format: "%02x", self)
-    }
-}
-
-extension Data {
-
-    func hexString() -> String {
-        let string = self.map{Int($0).hexString()}.joined()
-        return string
-    }
-    
-    func sha1() -> Data {
-        
-        var result = Data(count: Int(CC_SHA1_DIGEST_LENGTH))
-        _ = result.withUnsafeMutableBytes {resultPtr in
-            self.withUnsafeBytes{(bytes: UnsafePointer<UInt8>) in
-            CC_SHA1(bytes, CC_LONG(count), resultPtr)
-            }
-        }
-        return result
-    }
-}
-
 extension String {
-
-    func hexString() -> String {
-        return self.data(using: .utf8)!.hexString()
-    }
-    
     func sha1() -> String {
-        return self.data(using: .utf8)!.sha1().hexString()
+        let data = self.data(using: String.Encoding.utf8)!
+        var digest = [UInt8](repeating: 0, count:Int(CC_SHA1_DIGEST_LENGTH))
+        data.withUnsafeBytes {
+            _ = CC_SHA1($0, CC_LONG(data.count), &digest)
+        }
+        let hexBytes = digest.map { String(format: "%02hhx", $0) }
+        return hexBytes.joined()
     }
 }
 ```
