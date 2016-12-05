@@ -7,6 +7,7 @@ NSUerDefaults：適合儲存單一使用者的基本設定，但是不適合儲�
   * ```UserDefaults.standard.set(value: Any?, forKey: String)```
 * 讀取值
   * ```UserDefaults.standard.string(forKey: String)```
+使用set不會馬上儲存，需要調用
 
 
 CoreData：
