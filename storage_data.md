@@ -109,3 +109,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   內，新增 ```self.saveContext()```。
 
   * 在CoreDataDemo.xcdatamodeld替Entity用Editor-> Create NSManagedObject Subclass時，自動產生的檔案EntityProperties.swift在build會錯誤時，需要更改Data Model Inspector的Module欄位為空白，Codegen為Manual/None
+
+* Relationship delete rules
+  * Deny: Destination至少有一筆資料的情況下，就不刪除Source
+  * Nullify:  刪除Relationship但是不刪除objects (Destination or Source)
+  * Cascade: 刪除Source的時候一併刪除Detination
+  * No Action: 刪除Source的時候，什麼都不對Destinationy做
