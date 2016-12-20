@@ -17,3 +17,13 @@ end
 ```
   * 再回到終端機輸入pod install，看到終端機顯示```Pod installation complete```即表示完成
 
+
+* Way for loop in JSON
+  * ```
+   for (_, subJson) in json["item"] {
+       if let title = subJson["title"].string {
+           print(title)
+       }
+   }
+```
+
