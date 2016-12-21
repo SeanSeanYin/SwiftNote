@@ -18,4 +18,6 @@
   * 先選擇想解散的stackview
   * 按下option鍵，點選```Embed In Stack```按鈕
   * 選擇```unembed```即可
+* 遇到```apple mach o linker error```
+  * 到```Project Navigator->Target->Build Phases->Link Binary With Libraries```新增```libsqlite3.tbd```
 
