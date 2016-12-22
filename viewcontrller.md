@@ -47,4 +47,8 @@ let lineView = UIView(frame: CGRect(x: 0,
   * 
 在 ```viewDidAppear``` 呼叫就能避免現象，說是在 ```viewDidLoad``` 時沒有 ```Window Hierarchy ```資訊。
 
+* PopOver on iPad
 
+ * Button:actionSheet.popoverPresentationController?.sourceView = button
+actionSheet.popoverPresentationController?.sourceRect = button.bounds;
+actionSheet.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirecti * BarButtonItem:
