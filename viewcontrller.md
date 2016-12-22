@@ -62,9 +62,3 @@ actionSheet.popoverPresentationController?.permittedArrowDirections = UIPopoverA
 actionSheet.popoverPresentationController?.barButtonItem = button
 actionSheet.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection.Up;
    ```
-
-* PopOver on iPad
-
- * Button:actionSheet.popoverPresentationController?.sourceView = button
-actionSheet.popoverPresentationController?.sourceRect = button.bounds;
-actionSheet.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirecti * BarButtonItem:
