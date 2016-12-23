@@ -20,5 +20,5 @@
 
 ```print("目前日期時間：\(dformatter.string(from: now as Date))")```
 
-
+* DatePicker內的時間想要顯示成24小時制，不要設定``` DatePicker的locale```屬性
 
