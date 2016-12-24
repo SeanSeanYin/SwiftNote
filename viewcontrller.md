@@ -62,3 +62,8 @@ actionSheet.popoverPresentationController?.permittedArrowDirections = UIPopoverA
 actionSheet.popoverPresentationController?.barButtonItem = button
 actionSheet.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection.Up;
    ```
+   
+* 在ViewController內新增TableView，然後能控制TableView內的Component的方式
+  
+ *  先創造```UITableCell的SubClass```，然後將Table的Cell的Class指定為剛剛建立的SubClass，並且讓```ViewController多繼承UITableViewDelegate, UITableViewDataSource```，並且在ViewController的viewDidLoad函式內，新增```table.delegate = self & table.dataSource = self```，最後是在ViewController的Class內實作```tableView(_: didSelectRowAt:) & tableView(_: cellForRowAt:) & numberOfSectionsInTableView``` 這三個函式
+ * 然後要取用Table內的元件，可以這樣調用```let cell = tableView.dequeueReusableCellWithIdentifier("MyCustomTableViewCell", forIndexPath: indexPath) as! MyCustomTableViewCell```，之後再用```cell.MyLabel.text = someString```賦予值
