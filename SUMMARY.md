@@ -4,7 +4,6 @@
 * [Introduction](README.md)
 * [String](string.md)
 * [URL](url.md)
-* [Keyboard](keyboard.md)
 * [sha1](outside function/sha1.md)
 * [Date](date.md)
 * [Basic functions](basic_functions.md)
