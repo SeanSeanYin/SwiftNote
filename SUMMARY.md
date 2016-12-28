@@ -17,6 +17,7 @@
 ## Tools
 * [CocoaPods](cocoapods.md)
 * [Xcode](xcode.md)
+* [Git](git.md)
 
 ## AppleKits & Frameworks
 * [CoreLocation](corelocation.md)
