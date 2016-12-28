@@ -17,18 +17,19 @@
 
   * 先宣告 @IBOutlet var spinner:UIActivityIndicatorView!
   * 在要顯示的地方新增
- 
-   `self.spinner.hidesWhenStopped = true 
+  
+  ` self.spinner.hidesWhenStopped = true 
+    
     self.spinner.center = self.view.center
+    
     view.addSubview(spinner)
-    spinner.startAnimating`
+    spinner.startAnimating
+  ```
   * 在要停止的地方新增
   
-  ```
-  OperationQueue.main.addOperation {
-       self.spinner.stopAnimating()
-  }
-  ```
+   `OperationQueue.main.addOperation {
+       self.spinner.stopAnimating()}
+   `
 * #### popover 要能顯示在多種Size的螢幕上
 
   * 先讓viewcontroller follow protocol：`UIPopoverPresentationControllerDelegate`
@@ -96,7 +97,7 @@
     }
     ```
 * ### 隱藏鍵盤
-* * 使用[Extension Class](http://stackoverflow.com/questions/24126678/close-ios-keyboard-by-touching-anywhere-using-swift)的方式來擴充隱藏鍵盤功能，可支援任意個ViewContrller。
+ * 使用[Extension Class](http://stackoverflow.com/questions/24126678/close-ios-keyboard-by-touching-anywhere-using-swift)的方式來擴充隱藏鍵盤功能，可支援任意個ViewContrller。
 
 
 
