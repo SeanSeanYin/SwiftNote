@@ -21,9 +21,8 @@
 
 * ### 隱藏鍵盤
 
-  ```
-  使用Extension Class的方式來擴充隱藏鍵盤功能，可支援任意個ViewController。
-  ```
+  使用[Extension Class](/com/questions/24126678/close-ios-keyboard-by-touching-anywhere-using-swift)的方式來擴充隱藏鍵盤功能，可支援任意個ViewController。
+  
 
 
 
