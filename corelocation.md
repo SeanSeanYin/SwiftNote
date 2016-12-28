@@ -20,11 +20,20 @@ func locationManager(manager: CLLocationManager!, didUpdateLocations locations: 
  
         if placemarks.count != 0 {
             let pm = placemarks[0] as CLPlacemark
-            self.displayLocationInfo(pm)
+            if pm != nil {
+                //stop updating location to save battery life
+                locationManager.stopUpdatingLocation()
+                println(pm.locality ? placemark.locality : "")
+                println(pm.postalCode ? placemark.postalCode : "")
+                println(pm.administrativeArea ? pm.administrativeArea : "")
+                print(pm.country ? pm.country : "")
+            }
         } else {
-            println("Problem with the data received from geocoder")
+            print("Problem with the data received from geocoder")
         }
 })}
-func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) { }
+func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
+        print("Error while updating location " + error.localizedDescription)
+}
 ```
  * 
