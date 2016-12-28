@@ -3,19 +3,21 @@
 iOS有四種儲存的方式：NSUserDefaults、Sqlite、CoreData、讀寫File
 
 NSUerDefaults：適合儲存單一使用者的基本設定，但是不適合儲存多個使用者的資訊。簡單使用。
+
 * 儲存值
-  * ```UserDefaults.standard.set(value: Any?, forKey: String)```
+  * `UserDefaults.standard.set(value: Any?, forKey: String)`
 * 讀取值
-  * ```UserDefaults.standard.string(forKey: String)```
-使用set不會馬上儲存，需要調用
+  * `UserDefaults.standard.string(forKey: String)`
+    使用set不會馬上儲存，需要調用
 
+## CoreData：
 
-CoreData：
-* 在現有專案內新增Core Data：
-  * 先在 AppDelegate.swift 內新增 ```import CoreData```
+* ### 在未使用CoreData的現有專案內新增Core Data：
+
+  * 先在 AppDelegate.swift 內新增 `import CoreData`
   * 再將下面程式碼取代 AppDelegate.swift 的原有內容
 
-```  
+```
 //  AppDelegate.swift
 //  CoreDataDemo
 
@@ -71,7 +73,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.
                 // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                 
+
                 /*
                  Typical reasons for an error here include:
                  * The parent directory does not exist, cannot be created, or disallows writing.
@@ -103,15 +105,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 ```
-然後記得更改```let container = NSPersistentContainer(name: "CoreDataDemo")``` 中的 ```name``` 參數成你的 Porject Name。
 
-最後在 ```applicationWillTerminate``` 函式
-  內，新增 ```self.saveContext()```。
+然後記得更改`let container = NSPersistentContainer(name: "CoreDataDemo")` 中的 `name` 參數成你的 Porject Name。
 
-  * 在CoreDataDemo.xcdatamodeld替Entity用Editor-> Create NSManagedObject Subclass時，自動產生的檔案EntityProperties.swift在build會錯誤時，需要更改Data Model Inspector的Module欄位為空白，Codegen為Manual/None
+最後在 `applicationWillTerminate` 函式  
+  內，新增 `self.saveContext()`。
 
-* Relationship delete rules
+* ### CoreData Autogen 檔案
+
+  * 在CoreDataDemo.xcdatamodeld替Entity用Editor-&gt; Create NSManagedObject Subclass時，自動產生的檔案EntityProperties.swift在build會錯誤時，需要更改Data Model Inspector的Module欄位為空白，Codegen為Manual/None
+
+* ### Relationship delete rules
+
   * Deny: Destination至少有一筆資料的情況下，就不刪除Source
-  * Nullify:  刪除Relationship但是不刪除objects (Destination or Source)
+  * Nullify:  刪除Relationship但是不刪除objects \(Destination or Source\)
   * Cascade: 刪除Source的時候一併刪除Detination
   * No Action: 刪除Source的時候，什麼都不對Destinationy做
+
+
+

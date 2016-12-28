@@ -1,20 +1,23 @@
 # Summary
 
+## Foundation
 * [Introduction](README.md)
-* [JSON](json.md)
 * [String](string.md)
 * [URL](url.md)
 * [Keyboard](keyboard.md)
-* [CocoaPods](cocoapods.md)
+* [Guard](foundation/guard.md)
+* [sha1](outside function/sha1.md)
 * [Date](date.md)
+* [Basic functions](basic_functions.md)
 * [ViewContrller](viewcontrller.md)
-* [Outside Function](outside_function.md)
-    * [sha1](outside function/sha1.md)
-* [Foundation](foundation.md)
-    * [Guard](foundation/guard.md)
-    * [Basic functions](basic_functions.md)
 * [Storage Data](storage_data.md)
-* [Xcode](xcode.md)
-* [Alamofire](alamofire.md)
+
+## Third Party Library
+* [SwiftyJSON](json.md)
 * [FMDB](fmdb.md)
+* [Alamofire](alamofire.md)
+
+## Tools
+* [CocoaPods](cocoapods.md)
+* [Xcode](xcode.md)
 

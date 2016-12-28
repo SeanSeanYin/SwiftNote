@@ -1,23 +1,28 @@
 # Xcode
 
-  * 要Build App到手機發生 ```iPhone6 is busy: Processing symbol files ```
-    * 拔掉手機重新插入
-    * 重新啟動Xcode
-    * 確認AppID有沒有登入到Xcode上
-    * 看此台裝置是否有加入到AppID下
-    * 等待Processing symbol完畢
-    
-  * 產生這個警告訊息然後按Button又都沒反應的解決方式![](uHQ3p.png)
-    * 先強制關閉xcode
-    * 用別的編輯器打開Main.storyboard
-    * 然後搜尋height，把破萬的異常值都改成千位數以內
-    * 存檔後離開Main.stroyboard
-    * 再重新啟動這個專案
+* ### 要Build App到手機發生 `iPhone6 is busy: Processing symbol files`
 
-* 要在IB內解除stackview的方法
+  * 拔掉手機重新插入
+  * 重新啟動Xcode
+  * 確認AppID有沒有登入到Xcode上
+  * 看此台裝置是否有加入到AppID下
+  * 等待Processing symbol完畢
+* ### 產生這個警告訊息然後按Button又都沒反應的解決方式![](uHQ3p.png)
+
+  * 先強制關閉xcode
+  * 用別的編輯器打開Main.storyboard
+  * 然後搜尋height，把破萬的異常值都改成千位數以內
+  * 存檔後離開Main.stroyboard
+  * 再重新啟動這個專案
+
+* ### 要在IB內解除stackview的方法
+
   * 先選擇想解散的stackview
-  * 按下option鍵，點選```Embed In Stack```按鈕
-  * 選擇```unembed```即可
-* 遇到```apple mach o linker error```
-  * 到```Project Navigator->Target->Build Phases->Link Binary With Libraries```新增```libsqlite3.tbd```
+  * 按下option鍵，點選`Embed In Stack`按鈕
+  * 選擇`unembed`即可
+* ### 遇到`apple mach o linker error`
+
+  * 到`Project Navigator->Target->Build Phases->Link Binary With Libraries`新增`libsqlite3.tbd`
+
+
 
