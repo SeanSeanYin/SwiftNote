@@ -36,4 +36,14 @@ func locationManager(manager: CLLocationManager!, didFailWithError error: NSErro
         print("Error while updating location " + error.localizedDescription)
 }
 ```
- * 
+ * 很重要！在plist內新增詢問使用者是否允許給予定位權限的字串
+   * `NSLocationAlwaysUsageDescription` -> 是否允許永遠使用定位
+   * `NSLocationWhenInUseUsageDescription` -> 是否允許使用中使用定位
+
+  
+  
+  
+  
+  
+  
+  
