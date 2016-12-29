@@ -3,7 +3,7 @@
 * ### 很重要！
 
   ```
-    想要用此git server的mac電腦，都要安裝dropbox的App，並且登入相同帳號
+  想要用此git server的mac電腦，都要安裝dropbox的App，並且登入相同帳號
   ```
 * ### 先在Dropbox的資料節內建立Git的repository
 
@@ -29,6 +29,13 @@
   ```
 
   ### 現在就可以開始協同合作寫Code囉！
+
+
+
+### Rename branch
+
+* `git branch -m <origin name> <new name>  //rename any branch`
+* `git branch -m <new name> //rename current branch`
 
 
 
