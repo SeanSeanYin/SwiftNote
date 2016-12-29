@@ -110,5 +110,7 @@ spinner.startAnimating
  * 使用[Extension Class](http://stackoverflow.com/questions/24126678/close-ios-keyboard-by-touching-anywhere-using-swift)的方式來擴充隱藏鍵盤功能，可支援任意個ViewContrller。
 
 * ### 標籤要顯示圓角
- * myLabel.layer.masksToBounds = true //先開啟遮罩
-   myLabel.layercornerRadius = 5.0 //指定圓角幅度
+```
+myLabel.layer.masksToBounds = true //先開啟遮罩
+myLabel.layercornerRadius = 5.0 //指定圓角幅度
+```
