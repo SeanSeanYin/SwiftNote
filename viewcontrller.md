@@ -111,4 +111,4 @@ spinner.startAnimating
 
 * ### 標籤要顯示圓角
  * myLabel.layer.masksToBounds = true //先開啟遮罩
-   myLabel.layer.corner = true
+   myLabel.layercornerRadius = 5.0
