@@ -114,3 +114,6 @@ spinner.startAnimating
 myLabel.layer.masksToBounds = true //先開啟遮罩
 myLabel.layercornerRadius = 5.0 //指定圓角幅度
 ```
+* ### 當使用Segue傳資料給有Navigation Bar的ViewController時，畫面跳到ViewController，Navigation Bar卻會不見的解法
+
+  * let nv = segue.destination as! UINavigationController 

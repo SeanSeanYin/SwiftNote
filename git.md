@@ -30,8 +30,6 @@
 
   ### 現在就可以開始協同合作寫Code囉！
 
-
-
 ### Rename branch
 
 * `git branch -m <origin name> <new name>  //rename any branch`
