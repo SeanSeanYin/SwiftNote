@@ -26,7 +26,7 @@
     ```
 * 在要停止的地方新增
 
-  `OperationQueue.main.addOperation {            
+  `OperationQueue.main.addOperation {              
      self.spinner.stopAnimating() }`
 
 * #### popover 要能顯示在多種Size的螢幕上
