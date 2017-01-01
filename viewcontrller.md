@@ -15,22 +15,22 @@
   ```
 * #### 新增Spinner
 
- * 先宣告 `@IBOutlet var spinner:UIActivityIndicatorView!`
- * 在要顯示的地方新增
+  * 先宣告 `@IBOutlet var spinner:UIActivityIndicatorView!`
+  * 在要顯示的地方新增
 
-   ```
-self.spinner.hidesWhenStopped = true
-self.spinner.center = self.view.center
-view.addSubview\(spinner\)  
-spinner.startAnimating
-
-   ```
+    ```
+    self.spinner.hidesWhenStopped = true
+    self.spinner.center = self.view.center
+    view.addSubview\(spinner\)  
+    spinner.startAnimating
+    ```
 * 在要停止的地方新增
 
-  `OperationQueue.main.addOperation {      
+  `OperationQueue.main.addOperation {          
      self.spinner.stopAnimating() }`
 
 * #### popover 要能顯示在多種Size的螢幕上
+
   * 先讓viewcontroller follow protocol：`UIPopoverPresentationControllerDelegate`
 
   * 再新增該function
@@ -41,7 +41,6 @@ spinner.startAnimating
       return .none
   }
   ```
-
 * #### popover要能正確切齊顯示在anchor下方
 
   * 使用下面方法
@@ -54,11 +53,9 @@ spinner.startAnimating
       controller.sourceRect = (self.navigationItem.rightBarButtonItem?.accessibilityFrame)!
   }
   ```
-
 * #### 出現`whose view is not in the window hierarchy!`的解法
 
   * 在 `viewDidAppear` 呼叫就能避免現象，說是在 `viewDidLoad` 時沒有 `Window Hierarchy`資訊
-
 * #### Popover for iPad
 
   * Button
@@ -75,20 +72,18 @@ spinner.startAnimating
   actionSheet.popoverPresentationController?.barButtonItem = button
   actionSheet.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection.Up;
   ```
-
 * #### 在ViewController內新增TableView，然後能控制TableView內的Component的方式
 
   * 先創造`UITableCell的SubClass`，然後將Table的Cell的Class指定為剛剛建立的SubClass，並且讓`ViewController多繼承UITableViewDelegate, UITableViewDataSource`，並且在ViewController的viewDidLoad函式內，新增`table.delegate = self & table.dataSource = self`，最後是在ViewController的Class內實作`tableView(_: didSelectRowAt:) & tableView(_: cellForRowAt:) & numberOfSectionsInTableView` 這三個函式
 
   * 然後要取用Table內的元件，可以這樣調用`let cell = tableView.dequeueReusableCellWithIdentifier("MyCustomTableViewCell", forIndexPath: indexPath) as! MyCustomTableViewCell`，之後再用`cell.MyLabel.text = someString`賦予值
-
 * #### Segue用法
 
- * 呼叫特定的Segue
+  * 呼叫特定的Segue
 
   `performSegue(withIdentifier: "showPopover", sender: sender )`
 
- * 然後實作要傳遞到下一個Scene的資料
+  * 然後實作要傳遞到下一個Scene的資料
 
   ```
   override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
@@ -107,28 +102,35 @@ spinner.startAnimating
 
 * ### 隱藏鍵盤
 
- * 使用[Extension Class](http://stackoverflow.com/questions/24126678/close-ios-keyboard-by-touching-anywhere-using-swift)的方式來擴充隱藏鍵盤功能，可支援任意個ViewContrller。
+  * 使用[Extension Class](http://stackoverflow.com/questions/24126678/close-ios-keyboard-by-touching-anywhere-using-swift)的方式來擴充隱藏鍵盤功能，可支援任意個ViewContrller。
+* ### 使用Segue傳遞到有Navigation Bar的Viewcontroller時，Navigation Bar會顯示失敗的處理方式
 
-* ###使用Segue傳遞到有Navigation Bar的Viewcontroller時，Navigation Bar會顯示失敗的處理方式
-  
- ```
- let nav = segue.destinationViewController as! UINavigationController
- let myViewController = nav.topViewController as! MyViewController
-   ```
+  ```
+  let nav = segue.destinationViewController as! UINavigationController
+  let myViewController = nav.topViewController as! MyViewController
+  ```
 * ### Unwind的使用方式
+
   * 在想要返回的目的ViewController內，建立收到unwind後的處理函式，參數的類型為`UIStoryboardSegue`，這很重要！
-```
-@IBAction func backToCafeDetail (_ segue:UIStoryboardSegue) {
-        
+
+    ```
+    @IBAction func backToCafeDetail (_ segue:UIStoryboardSegue) {
+
         let sourceController = segue.source as! SortTableViewController
         self.sortItem = sourceController.sortItem
-        
+
         if (self.cafes != nil){
             self.sortedCafes = sort(with: self.cafes, and: self.sortItem)
         }
         self.cafeDetailTable.reloadData()
-    } 
-```
- * 在發送unwind segue的ViewController內，透過Main.storyboard建立unwind segue，先選取ViewController，然後點選此ViewController的icon，以Ctrl-Drag的方式拉到右邊的Exit icon上再放掉，剛剛建立的unwind處理函式（在這個例子是backToCafeDetail）會出現在下拉式選單內，然後
- 
- ![](/assets/螢幕快照 2017-01-01 11.44.10.png)
+    }
+    ```
+
+  * 在發送unwind segue的ViewController內，透過Main.storyboard建立unwind segue，先選取ViewController，然後點選此ViewController的icon，以Ctrl-Drag的方式拉到右邊的Exit icon上再放掉，剛剛建立的unwind處理函式（在這個例子是backToCafeDetail）會出現在下拉式選單內，然後選取backToCafeDetail，完成建立Unwind Segue。
+
+  ![](/assets/螢幕快照 2017-01-01 11.44.10.png)
+
+* * 之之候選曲
+
+
+
