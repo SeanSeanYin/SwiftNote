@@ -115,4 +115,19 @@ spinner.startAnimating
  let nav = segue.destinationViewController as! UINavigationController
  let myViewController = nav.topViewController as! MyViewController
    ```
+* ### Unwind的使用方式
+  * 在想要返回的目的ViewController內，建立收到unwind後的處理函式，參數的類型為`UIStoryboardSegue`，這很重要！
+```
+@IBAction func backToCafeDetail (_ segue:UIStoryboardSegue) {
+        
+        let sourceController = segue.source as! SortTableViewController
+        self.sortItem = sourceController.sortItem
+        
+        if (self.cafes != nil){
+            self.sortedCafes = sort(with: self.cafes, and: self.sortItem)
+        }
+        self.cafeDetailTable.reloadData()
+    } 
+```
+ * 在發送unwind segue的ViewController內，透過Main.storyboard建立unwind segue
  
