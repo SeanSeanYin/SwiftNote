@@ -129,6 +129,6 @@ spinner.startAnimating
         self.cafeDetailTable.reloadData()
     } 
 ```
- * 在發送unwind segue的ViewController內，透過Main.storyboard建立unwind segue，先選取ViewController，然後點選此ViewController的icon，以Ctrl-Drag的方式拉到右邊的Exit icon上再放掉，會出現剛剛建立的unwind處理函式（在這個例子是backToCafeDetail），然後
+ * 在發送unwind segue的ViewController內，透過Main.storyboard建立unwind segue，先選取ViewController，然後點選此ViewController的icon，以Ctrl-Drag的方式拉到右邊的Exit icon上再放掉，剛剛建立的unwind處理函式（在這個例子是backToCafeDetail）會出現在下拉式選單內，然後
  
  ![](/assets/螢幕快照 2017-01-01 11.44.10.png)
