@@ -26,7 +26,7 @@
     ```
 * 在要停止的地方新增
 
-  `OperationQueue.main.addOperation {              
+  `OperationQueue.main.addOperation {                
      self.spinner.stopAnimating() }`
 
 * #### popover 要能顯示在多種Size的螢幕上
@@ -131,6 +131,7 @@
   ![](/assets/螢幕快照 2017-01-01 11.44.10.png)
 
 * * 然後在ViewController內選取該Unwind Segue，將Identifier欄位填上backToCafeDetail（名字一樣比較不容易搞混）
+  * 最後是在函式內利用`self.performSegue(withIdentifier: "backToCafeDetail", sender: self)`的方式呼叫Unwind Segue
 
 
 
