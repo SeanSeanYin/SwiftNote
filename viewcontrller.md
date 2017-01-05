@@ -26,7 +26,7 @@
     ```
 * 在要停止的地方新增
 
-  `OperationQueue.main.addOperation {        
+  `OperationQueue.main.addOperation {          
      self.spinner.stopAnimating() }`
 
 * #### popover 要能顯示在多種Size的螢幕上
@@ -56,7 +56,7 @@
 * #### 出現`whose view is not in the window hierarchy!`的解法
 
   * 在 `viewDidAppear` 呼叫就能避免現象，說是在 `viewDidLoad` 時沒有 `Window Hierarchy`資訊
-* #### Button想要圓角
+
 * #### Popover for iPad
 
   * Button
