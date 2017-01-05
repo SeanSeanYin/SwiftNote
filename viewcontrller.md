@@ -26,7 +26,7 @@
     ```
 * 在要停止的地方新增
 
-  `OperationQueue.main.addOperation {          
+  `OperationQueue.main.addOperation {            
      self.spinner.stopAnimating() }`
 
 * #### popover 要能顯示在多種Size的螢幕上
@@ -56,7 +56,6 @@
 * #### 出現`whose view is not in the window hierarchy!`的解法
 
   * 在 `viewDidAppear` 呼叫就能避免現象，說是在 `viewDidLoad` 時沒有 `Window Hierarchy`資訊
-
 * #### Popover for iPad
 
   * Button
@@ -104,7 +103,7 @@
 * ### 隱藏鍵盤
 
   * 使用[Extension Class](http://stackoverflow.com/questions/24126678/close-ios-keyboard-by-touching-anywhere-using-swift)的方式來擴充隱藏鍵盤功能，可支援任意個ViewContrller。
-* ### 標籤要顯示圓角
+* ### Label要顯示圓角（Button也適用）
 
   ```
   myLabel.layer.masksToBounds = true //先開啟遮罩
