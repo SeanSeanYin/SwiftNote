@@ -24,7 +24,7 @@
     view.addSubview\(spinner\)  
     spinner.startAnimating
     ```
-* 在要停止的地方新增
+ * 在要停止的地方新增
 
   `OperationQueue.main.addOperation {                  
      self.spinner.stopAnimating() }`
