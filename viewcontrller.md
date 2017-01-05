@@ -26,7 +26,7 @@
     ```
 * 在要停止的地方新增
 
-  `OperationQueue.main.addOperation {                
+  `OperationQueue.main.addOperation {                  
      self.spinner.stopAnimating() }`
 
 * #### popover 要能顯示在多種Size的螢幕上
@@ -103,16 +103,35 @@
 * ### 隱藏鍵盤
 
   * 使用[Extension Class](http://stackoverflow.com/questions/24126678/close-ios-keyboard-by-touching-anywhere-using-swift)的方式來擴充隱藏鍵盤功能，可支援任意個ViewContrller。
-* ### Label 要顯示圓角（Button也適用）
+* ### 使用Segue傳遞到有Navigation Bar的Viewcontroller時，Navigation Bar會顯示失敗的處理方式
 
-  * 都是呼叫 layer，然後調用參數
   ```
-  myLabel.layer.masksToBounds = true //先開啟遮罩
-  myLabel.layercornerRadius = 5.0 //指定圓角幅度
+  let nav = segue.destinationViewController as! UINavigationController
+  let myViewController = nav.topViewController as! MyViewController
   ```
-* ### 當使用Segue傳資料給有Navigation Bar的ViewController時，畫面跳到ViewController，Navigation Bar卻會不見的解法
+* ### Unwind的使用方式
 
-  * let nv = segue.destination as! UINavigationController 
+  * 在想要返回的目的ViewController內，建立收到unwind後的處理函式，參數的類型為`UIStoryboardSegue`，這很重要！
+
+    ```
+    @IBAction func backToCafeDetail (_ segue:UIStoryboardSegue) {
+
+        let sourceController = segue.source as! SortTableViewController
+        self.sortItem = sourceController.sortItem
+
+        if (self.cafes != nil){
+            self.sortedCafes = sort(with: self.cafes, and: self.sortItem)
+        }
+        self.cafeDetailTable.reloadData()
+    }
+    ```
+
+  * 在發送unwind segue的ViewController內，透過Main.storyboard建立unwind segue，先選取ViewController，然後點選此ViewController的icon，以Ctrl-Drag的方式拉到右邊的Exit icon上再放掉，剛剛建立的unwind處理函式（在這個例子是backToCafeDetail）會出現在下拉式選單內，然後選取backToCafeDetail，完成建立Unwind Segue。
+
+  ![](/assets/螢幕快照 2017-01-01 11.44.10.png)
+
+* * 然後在ViewController內選取該Unwind Segue，將Identifier欄位填上backToCafeDetail（名字一樣比較不容易搞混）
+  * 最後是在函式內利用`self.performSegue(withIdentifier: "backToCafeDetail", sender: self)`的方式呼叫Unwind Segue
 
 
 
