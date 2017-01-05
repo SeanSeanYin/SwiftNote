@@ -13,6 +13,10 @@
   lineView.backgroundColor = UIColor.blackColor();
   label.addSubview(lineView)
   ```
+* #### Label顯示圓角
+ *  myLabel.layer.masksToBounds = true
+ 
+    myLabel.layer.cornerRadius = 5
 * #### 新增Spinner
 
   * 先宣告 `@IBOutlet var spinner:UIActivityIndicatorView!`
