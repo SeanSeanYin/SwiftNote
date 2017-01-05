@@ -105,16 +105,16 @@
   }
   ```
 
-* ### 隱藏鍵盤
+* #### 隱藏鍵盤
 
   * 使用[Extension Class](http://stackoverflow.com/questions/24126678/close-ios-keyboard-by-touching-anywhere-using-swift)的方式來擴充隱藏鍵盤功能，可支援任意個ViewContrller。
-* ### 使用Segue傳遞到有Navigation Bar的Viewcontroller時，Navigation Bar會顯示失敗的處理方式
+* #### 使用Segue傳遞到有Navigation Bar的Viewcontroller時，Navigation Bar會顯示失敗的處理方式
 
   ```
   let nav = segue.destinationViewController as! UINavigationController
   let myViewController = nav.topViewController as! MyViewController
   ```
-* ### Unwind的使用方式
+* #### Unwind的使用方式
 
   * 在想要返回的目的ViewController內，建立收到unwind後的處理函式，參數的類型為`UIStoryboardSegue`，這很重要！
 
