@@ -1,5 +1,5 @@
 * #### 在Objective C專案內，使用Swift Class的步驟
-  * 先從File -> File，
+  * 先從Xcode的 File -> New -> File新增檔案，到最後會詢問要不要自動新增Bridging-Header.h檔案
   * 在剛剛宣告的Class前面新增@objc
   * 在Project和Target的Build Settings內，把下面的值
    * Always Embed Swift Standard Libraries = YES
