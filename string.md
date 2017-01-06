@@ -18,5 +18,5 @@
  * 實例
 ```var responseString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)```
 
-#### 將Double轉成String的方式
-* ```let newStr = String(someDouble)```
+* #### 將Double轉成String的方式
+ * ```let newStr = String(someDouble)```
