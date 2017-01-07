@@ -3,7 +3,6 @@
 @IBAction func showSortSheet(sender: AnyObject) {
 
     let sortMenu = UIAlertController(title: nil, message: "Sort by", preferredStyle: .ActionSheet)
-
     let wifiAction = UIAlertAction(title: "WIFI", style: .Default, handler: {
       (alert: UIAlertAction!) -> Void in
       println("File Deleted")
@@ -17,10 +16,10 @@
       (alert: UIAlertAction!) -> Void in
       println("Cancelled")
   
-    optionMenu.addAction(deleteAction)
-    optionMenu.addAction(saveAction)
-    optionMenu.addAction(cancelAction)
+    sortMenu.addAction(deleteAction)
+    sortMenu.addAction(saveAction)
+    sortMenu.addAction(cancelAction)
 
-    self.presentViewController(optionMenu, animated: true, completion: nil)
+    self.presentViewController(sortMenu, animated: true, completion: nil)
   }
 ```
