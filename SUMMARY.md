@@ -7,7 +7,7 @@
 * [Basic functions](basic_functions.md)
 * [ViewContrller](viewcontrller.md)
 * [Storage Data](storage_data.md)
-* Segue
+* [Segue](segue.md)
 
 ## Third Party Library
 * [SwiftyJSON](json.md)
