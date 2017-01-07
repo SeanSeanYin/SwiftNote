@@ -106,6 +106,11 @@
   ```
 * #### Navigation Bar換顏色
   * `navigationController.navigationBar.barTintColor = UIColor.greenColor()`
+* #### 使用RGB的顏色
+ * `cell.backgroundColor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1.0)`
+
+
+  
 * #### 隱藏鍵盤
 
   * 使用[Extension Class](http://stackoverflow.com/questions/24126678/close-ios-keyboard-by-touching-anywhere-using-swift)的方式來擴充隱藏鍵盤功能，可支援任意個ViewContrller。
