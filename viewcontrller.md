@@ -34,30 +34,6 @@
    `OperationQueue.main.addOperation {                  
      self.spinner.stopAnimating() }`
 
-* #### popover 要能顯示在多種Size的螢幕上
-
-  * 先讓viewcontroller follow protocol：`UIPopoverPresentationControllerDelegate`
-
-  * 再新增該function
-
-  ```
-  // 注意：Swift 2.2和3的此function name不一樣
-  func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
-      return .none
-  }
-  ```
-* #### popover要能正確切齊顯示在anchor下方
-
-  * 使用下面方法
-
-  ```
-  let vc = segue.destination
-  if let controller = vc.popoverPresentationController {
-      controller.delegate = self
-      controller.sourceView = self.view
-      controller.sourceRect = (self.navigationItem.rightBarButtonItem?.accessibilityFrame)!
-  }
-  ```
 * #### 出現`whose view is not in the window hierarchy!`的解法
 
   * 在 `viewDidAppear` 呼叫就能避免現象，說是在 `viewDidLoad` 時沒有 `Window Hierarchy`資訊
