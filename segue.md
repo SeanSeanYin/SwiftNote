@@ -15,3 +15,8 @@ override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
 }
 ```
   
+* #### Unwind無效的情況
+
+ * 現在有三個ViewController：`MainViewController`、`SecondViewController`、`ThirdViewController`，在 `ThirdViewController` 建立 `unwindToMain` 和`unwindToSecond`的`Unwind Segue`，然後 `MainViewController`是`Initial ViewController`
+ * 一開始從`MainViewController`直接跳到`ThirdViewController`後，因為沒有載入過SecondViewController，
+
