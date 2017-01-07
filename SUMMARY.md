@@ -7,7 +7,6 @@
 * [Basic functions](basic_functions.md)
 * [ViewContrller](viewcontrller.md)
 * [Storage Data](storage_data.md)
-* [Objective C](objective-c.md)
 
 ## Third Party Library
 * [SwiftyJSON](json.md)
@@ -24,4 +23,5 @@
 * [CoreLocation](corelocation.md)
 
 ## Others
+* [Objective C](objective-c.md)
 
