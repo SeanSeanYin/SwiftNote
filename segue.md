@@ -38,7 +38,7 @@ override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
     }
     ```
 
-  * 在發送unwind segue的ViewController內，透過Main.storyboard建立unwind segue，先選取ViewController，然後點選此ViewController的icon，以Ctrl-Drag的方式拉到右邊的Exit icon上再放掉，剛剛建立的unwind處理函式（在這個例子是backToCafeDetail）會出現在下拉式選單內，然後選取backToCafeDetail，完成建立Unwind Segue。
+  * 在發送`unwind segue`的`ViewController`內，透過`Main.storyboard`建立`unwind segue`，先選取`ViewController`，然後點選此`ViewController``Home的icon`，以Ctrl-Drag的方式拉到右邊的`Exit icon`上再放掉，剛剛建立的unwind處理函式（在這個例子是backToCafeDetail）會出現在下拉式選單內，然後選取backToCafeDetail，完成建立Unwind Segue。
 
   ![](/assets/螢幕快照 2017-01-01 11.44.10.png)
 
