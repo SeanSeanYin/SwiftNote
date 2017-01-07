@@ -59,8 +59,7 @@
 override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.view.superview?.layer.cornerRadius = 0.0
-        self.preferredContentSize = CGSize(width: 120, height: 220)
-    }
+}
 ``` 
 * #### 在ViewController內新增TableView，然後能控制TableView內的Component的方式
 
