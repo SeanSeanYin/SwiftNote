@@ -82,28 +82,7 @@
   * 先創造`UITableCell的SubClass`，然後將Table的Cell的Class指定為剛剛建立的SubClass，並且讓`ViewController多繼承UITableViewDelegate, UITableViewDataSource`，並且在ViewController的viewDidLoad函式內，新增`table.delegate = self & table.dataSource = self`，最後是在ViewController的Class內實作`tableView(_: didSelectRowAt:) & tableView(_: cellForRowAt:) & numberOfSectionsInTableView` 這三個函式
 
   * 然後要取用Table內的元件，可以這樣調用`let cell = tableView.dequeueReusableCellWithIdentifier("MyCustomTableViewCell", forIndexPath: indexPath) as! MyCustomTableViewCell`，之後再用`cell.MyLabel.text = someString`賦予值
-* #### Segue用法
 
-  * 呼叫特定的Segue
-
-  `performSegue(withIdentifier: "showPopover", sender: sender )`
-
-  * 然後實作要傳遞到下一個Scene的資料
-
-  ```
-  override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
-
-     if segue.identifier == "showPopover" {
-
-         let viewController = segue.destination as! UITableViewController
-
-         if let popoverController = viewController.popoverPresentationController {
-
-             popoverController.delegate = self
-         }
-     }
-  }
-  ```
 * #### Navigation Bar換顏色
   * `navigationController.navigationBar.barTintColor = UIColor.greenColor()`
 * #### 使用RGB的顏色
