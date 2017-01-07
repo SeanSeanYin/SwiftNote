@@ -8,6 +8,7 @@
 * [ViewContrller](viewcontrller.md)
 * [Storage Data](storage_data.md)
 * [Segue](segue.md)
+* [AlertController](alertcontroller.md)
 
 ## Third Party Library
 * [SwiftyJSON](json.md)
