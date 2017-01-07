@@ -97,29 +97,7 @@
   let nav = segue.destinationViewController as! UINavigationController
   let myViewController = nav.topViewController as! MyViewController
   ```  
-* #### Unwind的使用方式
 
-  * 在想要返回的目的ViewController內，建立收到unwind後的處理函式，參數的類型為`UIStoryboardSegue`，這很重要！
-
-    ```
-    @IBAction func backToCafeDetail (_ segue:UIStoryboardSegue) {
-
-        let sourceController = segue.source as! SortTableViewController
-        self.sortItem = sourceController.sortItem
-
-        if (self.cafes != nil){
-            self.sortedCafes = sort(with: self.cafes, and: self.sortItem)
-        }
-        self.cafeDetailTable.reloadData()
-    }
-    ```
-
-  * 在發送unwind segue的ViewController內，透過Main.storyboard建立unwind segue，先選取ViewController，然後點選此ViewController的icon，以Ctrl-Drag的方式拉到右邊的Exit icon上再放掉，剛剛建立的unwind處理函式（在這個例子是backToCafeDetail）會出現在下拉式選單內，然後選取backToCafeDetail，完成建立Unwind Segue。
-
-  ![](/assets/螢幕快照 2017-01-01 11.44.10.png)
-
- * 然後在ViewController內選取該Unwind Segue，將Identifier欄位填上backToCafeDetail（名字一樣比較不容易搞混）
- * 最後是在函式內利用`self.performSegue(withIdentifier: "backToCafeDetail", sender: self)`的方式呼叫Unwind Segue
 
 
 
