@@ -23,7 +23,7 @@ override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
 
 * #### Unwind的使用方式
 
-  * 在想要返回的目的ViewController內，建立收到unwind後的處理函式，參數的類型為`UIStoryboardSegue`，這很重要！
+  * 在想要返回的目的`ViewController`內，建立收到`unwind segue`後的處理函式，參數的類型為`UIStoryboardSegue`，這很重要！
 
     ```
     @IBAction func backToCafeDetail (_ segue:UIStoryboardSegue) {
