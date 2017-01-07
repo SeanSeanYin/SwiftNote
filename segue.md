@@ -14,6 +14,12 @@ override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
        }
 }
 ```
+* #### 使用Segue傳遞到有Navigation Bar的Viewcontroller時，Navigation Bar會顯示失敗的處理方式
+
+  ```
+  let nav = segue.destinationViewController as! UINavigationController
+  let myViewController = nav.topViewController as! MyViewController
+  ```  
   
 * #### Unwind無效的情況
 
