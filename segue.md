@@ -18,5 +18,6 @@ override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
 * #### Unwind無效的情況
 
  * 現在有三個ViewController：`MainViewController`、`SecondViewController`、`ThirdViewController`，在 `ThirdViewController` 建立 `unwindToMain` 和`unwindToSecond`的`Unwind Segue`，然後 `MainViewController`是`Initial ViewController`
- * 一開始從`MainViewController`直接跳到`ThirdViewController`後，因為沒有載入過SecondViewController，
+ * 一開始從`MainViewController`直接跳到`ThirdViewController`後，因為沒有載入過SecondViewController，執行unwindToSecond的unwind segue會無效，但是執行unwindToMain的會正常跳轉頁面
+ * 推測原因是因為沒讀取過SecondViewController，所以程式不知道要跳到哪一頁
 
