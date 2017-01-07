@@ -56,7 +56,7 @@
 * #### Popover 出現的 View 不要圓角，改回直角的方法
  * 
  ```
- viewWillAppear:(animated: Bool) {
+ viewWillAppear (animated: Bool) {
        [super viewWillAppear:animated];
        self.view.superview.layer.cornerRadius = 0;
 }
