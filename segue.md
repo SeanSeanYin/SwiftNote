@@ -8,9 +8,7 @@
 override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
      if segue.identifier == "showPopover" {
          let viewController = segue.destination as! UITableViewController
-
          if let popoverController = viewController.popoverPresentationController {
-
              popoverController.delegate = self
          }
      }
