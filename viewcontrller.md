@@ -53,6 +53,14 @@
   actionSheet.popoverPresentationController?.barButtonItem = button
   actionSheet.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection.Up;
   ```
+* #### Popover 出現的 View 不要圓角，改回直角的方法
+ * 
+ ```
+ viewWillAppear:(BOOL)animated {
+       [super viewWillAppear:animated];
+       self.view.superview.layer.cornerRadius = 0;
+}
+``` 
 * #### 在ViewController內新增TableView，然後能控制TableView內的Component的方式
 
   * 先創造`UITableCell的SubClass`，然後將Table的Cell的Class指定為剛剛建立的SubClass，並且讓`ViewController多繼承UITableViewDelegate, UITableViewDataSource`，並且在ViewController的viewDidLoad函式內，新增`table.delegate = self & table.dataSource = self`，最後是在ViewController的Class內實作`tableView(_: didSelectRowAt:) & tableView(_: cellForRowAt:) & numberOfSectionsInTableView` 這三個函式
