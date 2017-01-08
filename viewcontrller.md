@@ -70,7 +70,8 @@ override func viewWillAppear(_ animated: Bool) {
 * #### Navigation Bar換顏色
   * `navigationController.navigationBar.barTintColor = UIColor.greenColor()`
 * #### Navigation Bar設定Title
-  * `navigationController.navigationBar.barTintColor = UIColor.greenColor()`
+  * `self.myButton.setTitle(titleString, for: .normal)`，字串一定會顯示完整
+  * 使用`self.myButton.titleLabel?.text = titleString`的話，會有字串顯示不完全的問題
   
 * #### 使用RGB的顏色
  * `cell.backgroundColor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1.0)`
