@@ -76,7 +76,8 @@ override func viewWillAppear(_ animated: Bool) {
 
   * 使用[Extension Class](http://stackoverflow.com/questions/24126678/close-ios-keyboard-by-touching-anywhere-using-swift)的方式來擴充隱藏鍵盤功能，可支援任意個ViewContrller。
 
-
+* ####做xib的注意事項
+ * `xib最底下那層View是UIView類別`
 
 
 
