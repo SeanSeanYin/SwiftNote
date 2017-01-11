@@ -8,9 +8,14 @@
  * Layer有兩個座標系統，Postion和AnchorPoint
    * Postion：Layer的AnchorPoint在SuperLayer的點
    * AnchorPoint：Layer內部的點，(0.0)代表這Layer的左上角，(1,1)代表右下角。預設值為(0.5,0.5)
-   * ```
+   * Postion和AnchorPoint的關係
+   ```
    position.x = frame.origin.x + anchorPoint.x * bounds.size.width  
    position.y = frame.origin.y + anchorPoint.y * bounds.size.height 
 ```
- 
+   * 變換Position或AnchorPoint的值，不相互影響，只影響Frame的x和y值，上面公式可換為
+```
+frame.origin.x = position.x - anchorPoint.x * bounds.size.width
+frame.origin.y = position.y - anchorPoint.y * bounds.size.height 
+```   
  
