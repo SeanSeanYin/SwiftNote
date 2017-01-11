@@ -7,6 +7,6 @@
  * `Layer`創建時，預設的`frame是(0,0,0,0)`，所以要給定`Width＆Height`再`addSublayer`，才會看得到
  * Layer有兩個座標系統，Postion和AnchorPoint
    * Postion：Layer的AnchorPoint在SuperLayer的點
-   * AnchorPoint：Layer內部的點，(0.0)代表這Layer的左上角，(1,1)代表右下角
+   * AnchorPoint：Layer內部的點，(0.0)代表這Layer的左上角，(1,1)代表右下角。預設值為(0.5,0.5)
  
  
