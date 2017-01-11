@@ -15,6 +15,6 @@
  * 先獲得Storyboard，再抓到ViewContrller，最後present出來
  ``` 
  UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
- UIViewController * vc = [storyboard instantiateViewControllerWithIdentifier:@"viewContrllerName"];
- [self presentViewController:vc, animated:YES, comletion:nil];
+ UIViewController * vc = [storyboard instantiateViewControllerWithIdentifier:@"viewContrllerIdentifierName"];
+ [self presentViewController:vc, animated:YES, completion:nil];
 ``` 
