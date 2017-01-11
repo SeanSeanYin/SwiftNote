@@ -89,7 +89,8 @@
   * 先建立一個UIView
   * 再把Search Bar新增到剛剛的UIView
 
-
+* #### 取消當前的View
+ * `dismiss(animated: true, completion: nil)`
 
 
 
