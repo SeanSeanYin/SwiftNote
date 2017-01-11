@@ -18,4 +18,4 @@
 frame.origin.x = position.x - anchorPoint.x * bounds.size.width
 frame.origin.y = position.y - anchorPoint.y * bounds.size.height 
 ```   
- 
+ * ScrollerLayer適合用來呈現需要滑動點or視窗的效果
