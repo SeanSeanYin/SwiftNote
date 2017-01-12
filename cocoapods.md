@@ -20,22 +20,10 @@
     之後就可以利用 `pod install` 安裝囉
 * #### 當顯示以下的錯誤的解決方式：``[!] The XCloud [Release] target overrides the ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES build setting defined in `Pods/Target Support Files/Pods-XCloud/Pods-VCloud.release.xcconfig'. This can lead to problems with the CocoaPods installation``
 
-  -`Use the $(inherited) flag, or`  
-  - `Remove the build settings from the target.`
+  -`Use the $(inherited) flag, or`
+
+  * `Remove the build settings from the target.`
 
   * 直接刪除build settings：ㄒ選擇專案的project.xcodeproj，用xcode以外的文字編輯器打開，直接把 ALWAYS\_EMBED\_SWIFT\_STANDARD\_LIBRARIES給刪除，再次pod install
-
-    `显示包内容`
-
-    ，用文本编辑器打开
-
-    `project.pbxproj`
-
-    ，删除
-
-    `OTHER_LDFLAGS`
-
-    的地
-
 
 
