@@ -18,9 +18,9 @@
    之後就可以利用 `pod install` 安裝囉
 
    
-*  #### 顯示[!] The `Paopao [Debug]\` target overrides the \`PODS_ROOT\` build setting defined in \`Pods/Target Support Files/Pods/Pods.debug.xcconfig\'. This can lead to problems with the CocoaPods installation
- \- Use the \`$(inherited)\` flag, or 
+*  #### 顯示[!] The `Paopao [Debug]` target overrides the `PODS_ROOT` build setting defined in `Pods/Target Support Files/Pods/Pods.debug.xcconfig'. This can lead to problems with the CocoaPods installation
+ - Use the `$(inherited)` flag, or 
  
- \- Remove the build settings from the target.
+ - Remove the build settings from the target.
 
  * 
