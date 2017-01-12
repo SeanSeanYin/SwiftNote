@@ -24,6 +24,6 @@
 
   * `Remove the build settings from the target.`
 
-  * 直接刪除build settings：ㄒ選擇專案的project.xcodeproj，用xcode以外的文字編輯器打開，直接把 ALWAYS\_EMBED\_SWIFT\_STANDARD\_LIBRARIES給刪除，再次pod install
+  * 直接刪除build settings：選擇專案的project.xcodeproj，用xcode以外的文字編輯器打開，直接把 ALWAYS\_EMBED\_SWIFT\_STANDARD\_LIBRARIES給刪除，再次pod install
 
 
