@@ -22,8 +22,8 @@
 
   -`Use the $(inherited) flag, or`
 
-  * `Remove the build settings from the target.`
+  -`Remove the build settings from the target.`
 
-  * 直接刪除build settings：選擇專案的project.xcodeproj，用xcode以外的文字編輯器打開，直接把 ALWAYS\_EMBED\_SWIFT\_STANDARD\_LIBRARIES給刪除，再次pod install
+  * 直接刪除build settings：選擇專案的`project.xcodeproj`，用`xcode以外`的文字編輯器打開，直接把 `ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES`給刪除，再次`pod install`
 
 
