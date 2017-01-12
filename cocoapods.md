@@ -20,8 +20,8 @@
     之後就可以利用 `pod install` 安裝囉
 * #### 當顯示以下的錯誤時：``[!] The VCloud [Release] target overrides the ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES build setting defined in `Pods/Target Support Files/Pods-VCloud/Pods-VCloud.release.xcconfig'. This can lead to problems with the CocoaPods installation``
 
-  * `Use the $(inherited) flag, or`
-  * `Remove the build settings from the target.`
+  - `Use the $(inherited) flag, or`
+  - `Remove the build settings from the target.`
 
 
 
