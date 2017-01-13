@@ -26,7 +26,8 @@ CGRect rec = [model.msg boundingRectWithSize:CGSizeMake(260 / kWidthScale, CGFLO
 ```
    * CGSizeMake(width, CGFLOAT_MAN)：通常給寬度，讓函式算高度
    * options：算多行請用`NSStringDrawingUsesLineFragmentOrigin`
-   * attributes：@{NSFontAttributeName : [UIFont systemFontOfSize:14.0]}
+   * attributes：`@{NSFontAttributeName : [UIFont systemFontOfSize:14.0]}` 字體的資訊
+   * context：可以為nil
    
    
    
