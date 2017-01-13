@@ -19,4 +19,8 @@
  [self presentViewController:vc, animated:YES, completion:nil];
 ``` 
 * #### 計算字串所需要的寬度和高度
- * `NSTextAlignmentToCTTextAlignment`
+ * NSTextAlignmentToCTTextAlignment
+
+   ```
+CGRect rec = [model.msg boundingRectWithSize:CGSizeMake(260 / kWidthScale, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:14.0]} context:nil];
+```
