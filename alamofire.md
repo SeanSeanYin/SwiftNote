@@ -36,3 +36,4 @@
                 print("No network")
             }
         }
+ * 因為上面程式是放在`AppDelegate.swift`內，所以自行先創造一個`Window`，然後才能產生`AlertController`
