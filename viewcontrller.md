@@ -83,5 +83,15 @@ override func viewWillAppear(_ animated: Bool) {
 * ####做xib的注意事項
  * `xib最底下那層View是UIView類別`
 
-
-
+* #### PickerView改變選項的字型和顏色的方法
+```
+func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView!) -> UIView
+{
+    var pickerLabel = UILabel()
+    pickerLabel.textColor = UIColor.blackColor()
+    pickerLabel.text = "PickerView Cell Title"
+    pickerLabel.font = UIFont(name: "Arial-BoldMT", size: 15) 
+    pickerLabel.textAlignment = NSTextAlignment.Center
+    return pickerLabel
+}
+```
