@@ -26,5 +26,5 @@
 
   * 直接刪除build settings：選擇專案的`project.xcodeproj`，用`xcode以外`的文字編輯器打開，直接把 `ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES`給刪除，再次`pod install`
 
- * #### Unable to find a specification for \`xxxxx (~> 1.x.x)\` depended upon by Podfile.
- 
+* #### Unable to find a specification for \`xxxxx (~> 1.x.x)\` depended upon by Podfile.
+  *  
