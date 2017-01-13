@@ -92,6 +92,7 @@ func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent comp
     pickerLabel.text = "PickerView Cell Title"
     pickerLabel.font = UIFont(name: "Arial-BoldMT", size: 15) 
     pickerLabel.textAlignment = NSTextAlignment.Center
+    
     return pickerLabel
 }
 ```
