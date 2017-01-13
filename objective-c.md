@@ -24,10 +24,11 @@
    ```
 CGRect rec = [model.msg boundingRectWithSize:CGSizeMake(260 / kWidthScale, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:14.0]} context:nil];
 ```
+   * model.msg：你要計算的字串
    * CGSizeMake(width, CGFLOAT_MAN)：通常給寬度，讓函式算高度
    * options：算多行請用`NSStringDrawingUsesLineFragmentOrigin`
    * attributes：`@{NSFontAttributeName : [UIFont systemFontOfSize:14.0]}` 字體的資訊
-   * context：可以為nil
+   * context：通常為nil
    
    
    
