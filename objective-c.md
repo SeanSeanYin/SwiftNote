@@ -18,3 +18,5 @@
  UIViewController * vc = [storyboard instantiateViewControllerWithIdentifier:@"viewContrllerIdentifierName"];
  [self presentViewController:vc, animated:YES, completion:nil];
 ``` 
+* #### 計算字串所需要的寬度和高度
+ * NSTextAlignmentToCTTextAlignment
