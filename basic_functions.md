@@ -58,5 +58,8 @@
 
   * DatePicker內的時間想要顯示成24小時制，不要設定`DatePicker的locale`屬性
 
-
-
+* #### 陣列的Search方法
+```
+matchingItems = self.cafes.filter { term in
+            return (term.name.contains(searchBarText) || term.address.contains(searchBarText))}
+```
