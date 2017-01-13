@@ -19,8 +19,16 @@
  [self presentViewController:vc, animated:YES, completion:nil];
 ``` 
 * #### 計算字串所需要的寬度和高度
- * NSTextAlignmentToCTTextAlignment
+ * 使用`NSTextAlignmentToCTTextAlignment`
 
    ```
 CGRect rec = [model.msg boundingRectWithSize:CGSizeMake(260 / kWidthScale, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:14.0]} context:nil];
 ```
+   * CGSizeMake(width, CGFLOAT_MAN)：通常給寬度，讓函式算高度
+   * options：算多行請用`NSStringDrawingUsesLineFragmentOrigin`
+   * attributes：@{NSFontAttributeName : [UIFont systemFontOfSize:14.0]}
+   
+   
+   
+   
+   
