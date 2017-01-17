@@ -51,7 +51,7 @@ override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
  * 然後在`ViewController`內選取該`Unwind Segue`，將`Identifier`欄位填上`backToCafeDetail`（名字一樣比較不容易搞混）
  * 最後是在函式內利用`self.performSegue(withIdentifier: "backToCafeDetail", sender: self)`的方式呼叫`Unwind Segue`
 
-* #### Custom Delegate
+* #### Custom Delegate （[參考這篇](http://eddychang.me/blog/swift/66-delegation-example.html)）
 假設我們有兩個Class：Class1 & Class2，我們想要把Class1的某些事情委託給Class2做，我們需要如下的實作方式
  * Class1.swift
  
@@ -89,3 +89,5 @@ class Class2: UITableViewController, Class1Delegate {
      }
  } 
 ```
+ * `protocol Class1Delegate: class`後面加上`:class`，是為了讓在`Class1`內宣告`delegate`的時候，可以使用`weak`，避免`Retain cycles`。由於`struct和enum`都是`value type`，所以都只能用`strong`。
+ * `let title = delegate?.getCellTitle(0) ?? "No Title"` 當`delegate?.getCellTitle(0)`回傳`nil`時，會因為`??`的關係，給`title`一個預設值`"No title"`
