@@ -50,3 +50,22 @@ override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
 
  * 然後在`ViewController`內選取該`Unwind Segue`，將`Identifier`欄位填上`backToCafeDetail`（名字一樣比較不容易搞混）
  * 最後是在函式內利用`self.performSegue(withIdentifier: "backToCafeDetail", sender: self)`的方式呼叫`Unwind Segue`
+
+* #### Custom Delegate
+假設我們有兩個Class：Class1 & Class2，我們想要把Class1的某些事情委託給Class2做，我們需要如下的實作方式
+ * Class1.swift
+ 
+ ```
+protocol Class1Delegate: class {
+    func getCellTitle(_ index:Int!) -> String?
+}
+class Class1: UIView {
+    weak var delegate:Class1Delegate?
+ 
+    let title = delegate?.getCellTitle(0) ?? "No Title"
+}
+```
+ * Class2.swift
+ ```
+ 
+ ```

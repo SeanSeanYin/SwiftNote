@@ -7,7 +7,7 @@
 * [Basic functions](basic_functions.md)
 * [ViewContrller](viewcontrller.md)
 * [Storage Data](storage_data.md)
-* [Segue](segue.md)
+* [Segue & Delegate](segue.md)
 * [AlertController](alertcontroller.md)
 * [View & Layer & Animation](view--layer--animation.md)
 
