@@ -2,7 +2,7 @@
 
 ## Foundation
 * [Introduction](README.md)
-* [String](string.md)
+* [Basic Data](string.md)
 * [sha1](outside function/sha1.md)
 * [Basic functions](basic_functions.md)
 * [ViewContrller](viewcontrller.md)
