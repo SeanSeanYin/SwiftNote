@@ -89,5 +89,5 @@ class Class2: UITableViewController, Class1Delegate {
      }
  } 
 ```
- * `protocol Class1Delegate: class`後面加上`:class`，是為了讓在`Class1`內宣告`delegate`的時候，可以使用`weak`，避免`Retain cycles`。由於`struct和enum`都是`value type`，所以都只能用`strong`。
+ * `protocol Class1Delegate: class`後面加上`:class`，是為了讓在`Class1`內宣告`delegate`的時候，可以使用`weak`屬性，避免`Retain cycles`。由於`struct和enum`都是`value type`，所以都只能用`strong`。
  * `let title = delegate?.getCellTitle(0) ?? "No Title"` 當`delegate?.getCellTitle(0)`回傳`nil`時，會因為`??`的關係，給`title`一個預設值`"No title"`
