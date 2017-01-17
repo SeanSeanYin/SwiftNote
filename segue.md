@@ -56,16 +56,36 @@ override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
  * Class1.swift
  
  ```
+// 制定Protocol
 protocol Class1Delegate: class {
+    // 制定代理方法內，要實作的function
     func getCellTitle(_ index:Int!) -> String?
 }
-class Class1: UIView {
+class Class1: UITableViewCell {
+    // 宣告protocol的變數
     weak var delegate:Class1Delegate?
  
+    // 使用protocl變數:delegate來呼叫function
     let title = delegate?.getCellTitle(0) ?? "No Title"
 }
 ```
  * Class2.swift
- ```
  
  ```
+class Class2: UITableViewController, Class1Delegate {
+     //宣告要代理的Class1的實體
+     var cell:Class1!
+ 
+     override func viewDidLoad () {
+         super.viewDidLoad()
+         // 指定要實作代理方法的對象為self(自己)
+         self.cell.delegate = self
+     }
+     
+     // 實作代理的function
+     func getCellTitle(_ index:Int!) -> String? {         
+         if (cell != nil) { return cell.title }
+         return nil
+     }
+ } 
+```
