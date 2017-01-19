@@ -34,13 +34,9 @@
     * context：通常為nil
 
 * #### 改變標籤的字體大小
-`
+```
 [nameLabel setFont:[UIFont fontWithName:@"Arial" size:15]];
-`
-
- 也可以是這樣
-
- ```
+------------------ or this way ------------------
  UIFont * font = typeLabel.font;
  [nameLabel setFont:[UIFont fontWithName:font.fontName size:15]];
  ```
