@@ -33,6 +33,15 @@ if let path = urls?[indexPath.row] {
     cell.textLabel?.text = path.path
 }
 ```
+* #### 找尋字串在另一個字串內的位置
+
+```
+// 先找出要搜尋的字串在被搜尋字串內的Range
+let index = directory.absoluteString.range(of: documentURL.path, options: .backwards, range: directory.absoluteString.startIndex..<directory.absoluteString.endIndex, locale: nil)
+// 再用substring從某個index開始往後取剩下的字串
+let subDirectoryName = directory.absoluteString.substring(from: (index?.upperBound)!)
+
+```
 
 # Array
 * #### 陣列使用append()
