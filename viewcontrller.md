@@ -33,7 +33,7 @@
 
   * 在要停止的地方新增
 
-    `OperationQueue.main.addOperation {                    
+    `OperationQueue.main.addOperation {                      
      self.spinner.stopAnimating() }`
 * #### 出現`whose view is not in the window hierarchy!`的解法
 
@@ -83,25 +83,31 @@
 * #### 做xib的注意事項
 
   * `xib最底下那層View是UIView類別`
-
 * #### 要把SearchBar固定在不是TableHaed和Navigation Bar的方法
 
   * 先建立一個UIView
   * 再把Search Bar新增到剛剛的UIView
-
 * #### 取消當前的View
- * `dismiss(animated: true, completion: nil)`
 
+  * `dismiss(animated: true, completion: nil)`
 * #### PickerView改變選項的字型和顏色的方法
-```
-func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView!) -> UIView
-{
+
+  ```
+  func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView!) -> UIView
+  {
     var pickerLabel = UILabel()
     pickerLabel.textColor = UIColor.blackColor()
     pickerLabel.text = "PickerView Cell Title"
     pickerLabel.font = UIFont(name: "Arial-BoldMT", size: 15) 
     pickerLabel.textAlignment = NSTextAlignment.Center
-    
+
     return pickerLabel
-}
-```
+  }
+  ```
+
+* ####取消Table的Cell之間的線
+ 
+  `sel.tableView.separatorStyle= .none`
+
+
+
