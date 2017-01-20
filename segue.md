@@ -50,3 +50,44 @@ override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
 
  * 然後在`ViewController`內選取該`Unwind Segue`，將`Identifier`欄位填上`backToCafeDetail`（名字一樣比較不容易搞混）
  * 最後是在函式內利用`self.performSegue(withIdentifier: "backToCafeDetail", sender: self)`的方式呼叫`Unwind Segue`
+
+* #### Custom Delegate （[參考這篇](http://eddychang.me/blog/swift/66-delegation-example.html)）
+假設我們有兩個Class：Class1 & Class2，我們想要把Class1的某些事情委託給Class2做，我們需要如下的實作方式
+ * Class1.swift
+ 
+ ```
+// 制定Protocol
+protocol Class1Delegate: class {
+    // 制定代理方法內，要實作的function
+    func getCellTitle(_ index:Int!) -> String?
+}
+class Class1: UITableViewCell {
+    // 宣告protocol的變數
+    weak var delegate:Class1Delegate?
+ 
+    // 使用protocl變數:delegate來呼叫function
+    let title = delegate?.getCellTitle(0) ?? "No Title"
+}
+```
+ * Class2.swift
+ 
+ ```
+class Class2: UITableViewController, Class1Delegate {
+     //宣告要代理的Class1的實體
+     var cell:Class1!
+ 
+     override func viewDidLoad () {
+         super.viewDidLoad()
+         // 指定要實作代理方法的對象為self(自己)
+         self.cell.delegate = self
+     }
+     
+     // 實作代理的function
+     func getCellTitle(_ index:Int!) -> String? {         
+         if (cell != nil) { return cell.title }
+         return nil
+     }
+ } 
+```
+ * `protocol Class1Delegate: class`後面加上`:class`，是為了讓在`Class1`內宣告`delegate`的時候，可以使用`weak`屬性，避免`Retain cycles`。由於`struct和enum`都是`value type`，所以都只能用`strong`。
+ * `let title = delegate?.getCellTitle(0) ?? "No Title"` 當`delegate?.getCellTitle(0)`回傳`nil`時，會因為`??`的關係，給`title`一個預設值`"No title"`

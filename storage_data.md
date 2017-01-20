@@ -114,7 +114,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 * ### CoreData Autogen 檔案
 
   * 在CoreDataDemo.xcdatamodeld替Entity用Editor-&gt; Create NSManagedObject Subclass時，自動產生的檔案EntityProperties.swift在build會錯誤時，需要更改Data Model Inspector的Module欄位為空白，Codegen為Manual/None
-
 * ### Relationship delete rules
 
   * Deny: Destination至少有一筆資料的情況下，就不刪除Source
