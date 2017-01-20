@@ -27,3 +27,9 @@
   var imgData: NSData = NSData(data: UIImageJPEGRepresentation((image), 1)) 
   var imageSize: Int = imgData.length
 ```
+* #### 抓取url的路徑
+```
+if let path = urls?[indexPath.row] {
+    cell.textLabel?.text = path.path
+}
+```
