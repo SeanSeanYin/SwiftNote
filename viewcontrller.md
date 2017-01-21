@@ -110,4 +110,8 @@
   `sel.tableView.separatorStyle= .none`
 
 
-
+* #### 更換button的文字和圖片
+```
+self.mapButton.setTitle("Map", for: .normal)
+self.sortButton.setImage(UIImage(named: "btn_sort_n"), for: .normal)
+```
