@@ -20,19 +20,20 @@
 * #### 將Double轉成String的方式
 
   * `let newStr = String(someDouble)`
-
 * #### 計算Image的size
-```
+
+  ```
   var image = info[UIImagePickerControllerOriginalImage] as! UIImage
   var imgData: NSData = NSData(data: UIImageJPEGRepresentation((image), 1)) 
   var imageSize: Int = imgData.length
-```
+  ```
 * #### 抓取url的路徑
-```
-if let path = urls?[indexPath.row] {
+
+  ```
+  if let path = urls?[indexPath.row] {
     cell.textLabel?.text = path.path
-}
-```
+  }
+  ```
 * #### 找尋字串在另一個字串內的位置
 
 ```
@@ -40,9 +41,15 @@ if let path = urls?[indexPath.row] {
 let index = directory.absoluteString.range(of: documentURL.path, options: .backwards, range: directory.absoluteString.startIndex..<directory.absoluteString.endIndex, locale: nil)
 // 再用substring從某個index開始往後取剩下的字串
 let subDirectoryName = directory.absoluteString.substring(from: (index?.upperBound)!)
-
 ```
 
 # Array
-* #### 陣列使用append()
-假設宣告一陣列 `var directoryList:[URL]!` 直接使用`append()`新增元素會遇到`unwrapped error`，原因是這時候的陣列還是`nil`狀態，所以要先給陣列值，像是 `directoryList = getList()` 或是宣告的時候就指定到空陣列 `var directoryList:[URL]! = []`
+
+* #### 陣列使用append\(\)
+
+  假設宣告一陣列 `var directoryList:[URL]!` 直接使用`append()`新增元素會遇到`unwrapped error`，原因是這時候的陣列還是`nil`狀態，所以要先給陣列值，像是 `directoryList = getList()` 或是宣告的時候就指定到空陣列 `var directoryList:[URL]! = []`
+
+# NSURL
+
+* #### 獲取url最後的component
+`let fileName = fileURL.lastPathComponent`
