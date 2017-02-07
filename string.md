@@ -52,4 +52,8 @@ let subDirectoryName = directory.absoluteString.substring(from: (index?.upperBou
 # NSURL
 
 * #### 獲取url最後的component
-`let fileName = fileURL.lastPathComponent`
+
+  `let fileName = fileURL.lastPathComponent`
+
+
+
