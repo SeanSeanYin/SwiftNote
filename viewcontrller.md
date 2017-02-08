@@ -116,9 +116,9 @@
   ```
 * #### UIImagePickerController
 
-  * 要使用的viewController的class，要實作UIImagePickerControllerDelegate, UINavigationControllerDelegate這兩個delegate
-  * 在class內宣告let imagePicker = UIImagePickerController\(\)
-  * 在viewDidLoad\(\)內宣告imagePicker.delegate = self
+  * 要使用的viewController的class，要實作`UIImagePickerControllerDelegate, UINavigationControllerDelegate`這兩個delegate
+  * 在class內宣告`let imagePicker = UIImagePickerController\(\)`
+  * 在`viewDidLoad\(\)`內宣告`imagePicker.delegate = self`
   * 實作
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
