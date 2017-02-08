@@ -114,11 +114,6 @@
   self.mapButton.setTitle("Map", for: .normal)
   self.sortButton.setImage(UIImage(named: "btn_sort_n"), for: .normal)
   ```
-* #### UIImagePickerController
 
-  * 要使用的viewController的class，要實作`UIImagePickerControllerDelegate, UINavigationControllerDelegate`這兩個delegate
-  * 在class內宣告`let imagePicker = UIImagePickerController\(\)`
-  * 在`viewDidLoad\(\)`內宣告`imagePicker.delegate = self`
-  * 實作
 
 
