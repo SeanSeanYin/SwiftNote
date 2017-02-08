@@ -11,7 +11,7 @@
 * [Segue & Delegate](segue.md)
 * [AlertController](alertcontroller.md)
 * [View & Layer & Animation](view--layer--animation.md)
-* UIImagePickerController
+* [UIImagePickerController](uiimagepickercontroller.md)
 
 ## Third Party Library
 
