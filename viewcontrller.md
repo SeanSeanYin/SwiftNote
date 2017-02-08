@@ -33,7 +33,7 @@
 
   * 在要停止的地方新增
 
-    `OperationQueue.main.addOperation {                        
+    `OperationQueue.main.addOperation {                          
      self.spinner.stopAnimating() }`
 * #### 出現`whose view is not in the window hierarchy!`的解法
 
@@ -115,4 +115,10 @@
   self.sortButton.setImage(UIImage(named: "btn_sort_n"), for: .normal)
   ```
 * #### UIImagePickerController
- * 要使用的viewController的class，要實作UIImagePickerControllerDelegate, UINavigationControllerDelegate這兩個delegate
+
+  * 要使用的viewController的class，要實作UIImagePickerControllerDelegate, UINavigationControllerDelegate這兩個delegate
+  * 在class內宣告let imagePicker = UIImagePickerController\(\)
+  * 在viewDidLoad\(\)內宣告imagePicker.delegate = self
+
+
+
