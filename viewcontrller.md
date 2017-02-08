@@ -33,7 +33,7 @@
 
   * 在要停止的地方新增
 
-    `OperationQueue.main.addOperation {                      
+    `OperationQueue.main.addOperation {                        
      self.spinner.stopAnimating() }`
 * #### 出現`whose view is not in the window hierarchy!`的解法
 
@@ -104,14 +104,15 @@
     return pickerLabel
   }
   ```
+* #### 取消Table的Cell之間的線
 
-* ####取消Table的Cell之間的線
- 
   `sel.tableView.separatorStyle= .none`
 
-
 * #### 更換button的文字和圖片
-```
-self.mapButton.setTitle("Map", for: .normal)
-self.sortButton.setImage(UIImage(named: "btn_sort_n"), for: .normal)
-```
+
+  ```
+  self.mapButton.setTitle("Map", for: .normal)
+  self.sortButton.setImage(UIImage(named: "btn_sort_n"), for: .normal)
+  ```
+* #### UIImagePickerController
+ * 要使用的viewController的class，要實作UIImagePickerControllerDelegate, UINavigationControllerDelegate這兩個delegate
