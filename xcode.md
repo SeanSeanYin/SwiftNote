@@ -25,4 +25,10 @@
   * 到`Project Navigator->Target->Build Phases->Link Binary With Libraries`新增`libsqlite3.tbd`
 
 
+* ### 遇到 `Couldn’t communicate with a helper application` 的解法
+ 
+ ```
+ xcrun git config --global user.email you@yourdomain.com
+ xcrun git config --global user.name "Your Name Here"
+ ```
 
