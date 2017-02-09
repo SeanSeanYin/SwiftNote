@@ -67,6 +67,21 @@
   * 先創造`UITableCell的SubClass`，然後將Table的Cell的Class指定為剛剛建立的SubClass，並且讓`ViewController多繼承UITableViewDelegate, UITableViewDataSource`，並且在ViewController的viewDidLoad函式內，新增`table.delegate = self & table.dataSource = self`，最後是在ViewController的Class內實作`tableView(_: didSelectRowAt:) & tableView(_: cellForRowAt:) & numberOfSectionsInTableView` 這三個函式
 
   * 然後要取用Table內的元件，可以這樣調用`let cell = tableView.dequeueReusableCellWithIdentifier("MyCustomTableViewCell", forIndexPath: indexPath) as! MyCustomTableViewCell`，之後再用`cell.MyLabel.text = someString`賦予值
+  
+* #### Slider用法
+ * 設定maximumValue & minimumValue & value
+   ```
+   self.slider.maximumValue = 10
+   self.slider.minimumValue = 1
+   self.slider.setValue(1, animated: true)
+   ```
+ * 設定滑動事件
+ ```
+ @IBAction func sliderValueChanged(sender: UISlider){
+ 
+ }
+ ```
+  
 * #### Navigation Bar換顏色
 
   * `navigationController.navigationBar.barTintColor = UIColor.greenColor()`
