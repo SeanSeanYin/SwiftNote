@@ -78,8 +78,8 @@
  * 設定滑動事件
  ```
  @IBAction func sliderValueChanged (sender: UISlider){
-   self.currentPage = Int(sender.value)
-   self.changePage(currentPage: self.currentPage)
+     self.currentPage = Int(sender.value)
+     self.changePage(currentPage: self.currentPage)
  }
  ```  
 * #### Navigation Bar換顏色
