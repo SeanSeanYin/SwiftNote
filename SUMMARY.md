@@ -18,6 +18,7 @@
 * [SwiftyJSON](json.md)
 * [FMDB](fmdb.md)
 * [Alamofire](alamofire.md)
+* [Firebase](firebase.md)
 
 ## Tools
 
