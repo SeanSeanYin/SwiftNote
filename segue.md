@@ -96,4 +96,5 @@
   * `let title = delegate?.getCellTitle(0) ?? "No Title"` 當`delegate?.getCellTitle(0)`回傳`nil`時，會因為`??`的關係，給`title`一個預設值`"No title"`
 
 
-
+* #### 在AppDelegate創造custom delegate去呼叫某個ViewController
+ * 會失敗，因為在`ViewController`內宣告的`AppDelegate`的`Instance`，根本不會被`init`，所以`AppDelegate class`內的`delegate is always nil`
