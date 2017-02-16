@@ -16,3 +16,15 @@
              <string>weixin</string>
       </array>
 ```
+
+* #### 被開啟的App
+ * 要parse url內的參數的用法
+```
+ var userInfo:Dictionary<String, String> = Dictionary()
+ let components = URLComponents(url: url, resolvingAgainstBaseURL: false)
+        if let queryItems = components?.queryItems {
+            for item in queryItems {
+                userInfo[item.name] = item.value
+            }
+        }
+```
