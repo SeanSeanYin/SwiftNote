@@ -55,5 +55,8 @@ let subDirectoryName = directory.absoluteString.substring(from: (index?.upperBou
 
   `let fileName = fileURL.lastPathComponent`
 
+# Dictionary
 
-
+* #### 宣告
+ * `var dic:<String,String> = Dictionary()`
+ * `var dic = Dictionary<String,String>`
