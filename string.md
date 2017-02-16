@@ -58,5 +58,7 @@ let subDirectoryName = directory.absoluteString.substring(from: (index?.upperBou
 # Dictionary
 
 * #### 宣告
- * `var dic:<String,String> = Dictionary()`
- * `var dic = [String,String]()`
+ * `var dic:<String, String> = Dictionary()`
+ * `var dic = [String, String]()`
+ * `var dic:[String, String] = [:]`
+ * `var dic:[String, String] = Dictionary()`
