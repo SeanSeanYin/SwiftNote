@@ -11,7 +11,6 @@
   * [UIImagePickerController](viewcontrller/uiimagepickercontroller.md)
 * [Storage Data](storage_data.md)
 * [View & Layer & Animation](view--layer--animation.md)
-* [UIImagePickerController](uiimagepickercontroller.md)
 * [URL Scheme](url-schema.md)
 * [User Notification](pass-data/user-notification.md)
 * [Pass Data](pass-data.md)
