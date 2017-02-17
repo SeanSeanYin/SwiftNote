@@ -34,3 +34,8 @@
      UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
  }
  ```
+ * 觸發條件其實有這幾種
+   * `UNTimeIntervalNotificationTrigger`:幾秒後觸發
+   * `UNCalendarNotificationTrigger`:特定時間觸發
+   * `UNLocationNotificationTrigger`:特定位置觸發
+   * `UNPushNotificationTrigger`:從APNS觸發
