@@ -105,5 +105,5 @@
 
 * #### 在AppDelegate創造custom delegate去呼叫某個ViewController
  * 會失敗，因為在`ViewController`內宣告的`AppDelegate`的`Instance`，根本不會被`init`，所以`AppDelegate class`內的`delegate is always nil`
- * 改用`NSNotificationCenter`
+ * 改用`Notification`
 ---
