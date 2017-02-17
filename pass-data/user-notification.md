@@ -28,14 +28,19 @@
      content.badge = 1
      content.sound = UNNotificationSound.default()
      
-     // 設定觸發條件並觸發
+     // 設定觸發條件->產生request->觸發
      let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
      let request = UNNotificationRequest(identifier: "notification", content: content, trigger: trigger)
      UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
  }
  ```
  * 觸發條件其實有這幾種
-   * `UNTimeIntervalNotificationTrigger`:幾秒後觸發
-   * `UNCalendarNotificationTrigger`:特定時間觸發
-   * `UNLocationNotificationTrigger`:特定位置觸發
-   * `UNPushNotificationTrigger`:從APNS觸發
+   * `UNTimeIntervalNotificationTrigger：`幾秒後觸發
+   * `UNCalendarNotificationTrigger：`特定時間觸發
+   * `UNLocationNotificationTrigger：`特定位置觸發
+   * `UNPushNotificationTrigger：`從APNS觸發
+ * 要取消`request`的方法
+   * `open func removePendingNotificationRequests(withIdentifiers identifiers: [String])`
+   * `open func removeAllPendingNotificationRequests()`
+   * `open func removeDeliveredNotifications(withIdentifiers identifiers: [String])`
+   * `open func removeAllDeliveredNotifications()`
