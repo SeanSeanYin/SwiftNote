@@ -3,7 +3,7 @@
 * 獲得使用者的允許
  * 在AppDelegate內的`didFinishLaunchingWithOptions`新增
  ```
- UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound], completionHandler: { success, error in
+ UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound, .carPlay], completionHandler: { success, error in
         guard (error == nil) else {
             print("錯誤：\(error?.localizedDescription)")
             return 
