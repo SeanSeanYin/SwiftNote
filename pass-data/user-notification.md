@@ -16,3 +16,10 @@
         print("感謝大大的同意")
     })
  ```
+* 要發送的function內
+    
+ ```
+ @IBAction func sendNotification(_ sender: AnyObject){
+
+ }
+ ```
