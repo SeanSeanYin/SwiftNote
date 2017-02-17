@@ -116,9 +116,12 @@
 * #### Notification的使用方式
 
   * 在送的ViewContoller內，先宣告Notification Name，然後用post發送訊息（參數userInfo的格式為`[AnyHashable : Any]? = nil`，舉例：`["userInformation"：userInfo]`，也可為`nil`）
+
     * `let myNotificaion = Notification.Name(rawValue: "NotificationIdentifier")`
 
     * `NotificationCenter.default.post(name: myNotificaion, object: nil, userInfo: ["userInfomation":userInfo])`
+
+    在收的ViewConroller內，宣告Notification Name（`要跟想要收的Notification sender的Notification Name一樣`），然後用`addObserver`收，記得ViewContoller消失的時候，要做`removeObserver`
 
 ---
 
