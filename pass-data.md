@@ -123,6 +123,8 @@
 
     在收的ViewConroller內，宣告Notification Name（`要跟想要收的Notification sender的Notification Name一樣`），然後用`addObserver`收，記得ViewContoller消失的時候，要做`removeObserver`
 
+    * let myNotificaion = Notification.Name\(rawValue:"NotificationIdentifier"\)
+    * 
 ---
 
 
