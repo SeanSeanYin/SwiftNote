@@ -16,7 +16,8 @@
         print("感謝大大的同意")
     })
  ```
-* 要發送的function內
+--------------
+* 發送Notification
     
  ```
  @IBAction func sendNotification(_ sender: AnyObject){
@@ -44,3 +45,5 @@
    * `open func removeAllPendingNotificationRequests()`
    * `open func removeDeliveredNotifications(withIdentifiers identifiers: [String])`
    * `open func removeAllDeliveredNotifications()`
+--------------
+* 允許在App在前景時，收Notification
