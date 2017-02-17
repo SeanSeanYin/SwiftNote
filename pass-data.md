@@ -5,7 +5,7 @@
  * ##### Notification：適合一對多，一個ViewController傳遞（post），其他ViewContoller收（addObserver）
  * ##### Singleton：任意ViewController都可以讀寫，但是要注意到Singleton的life cycle
 ---
-* #### Segue用法
+* #### Segue的使用方式
 
   * 呼叫特定的Segue  
     `performSegue(withIdentifier: "showPopover", sender: sender )`
