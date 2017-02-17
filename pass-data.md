@@ -5,3 +5,4 @@
  * Singleton：任意ViewController都可以讀寫，但是要注意到Singleton的life cycle
  * Notification：一個ViewController傳遞（post）
  ，其他ViewContoller收（addObserver）
+
