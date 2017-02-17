@@ -8,7 +8,6 @@
 * [Basic functions](basic_functions.md)
 * [ViewContrller](viewcontrller.md)
   * [AlertController](viewcontrller/alertcontroller.md)
-* [AlertController](alertcontroller.md)
 * [Storage Data](storage_data.md)
 * [View & Layer & Animation](view--layer--animation.md)
 * [UIImagePickerController](uiimagepickercontroller.md)
