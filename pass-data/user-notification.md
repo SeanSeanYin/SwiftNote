@@ -47,7 +47,7 @@
    * `open func removeAllDeliveredNotifications()`
 --------------
 * 允許在App在前景時，收Notification
- * 讓`AppDelegate`實作`UNUserNotificationCenterDelegate`
+ * 讓`AppDelegate`實作`UNUserNotificationCenterDelegate的willPresent`這個函式
  ```
  extension AppDelegate: UNUserNotificationCenterDelegate {
  
