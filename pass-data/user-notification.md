@@ -60,4 +60,5 @@
    `UNUserNotificationCenter.current().delegate = self`
 --------------
 * 傳送客製化資訊
- * 把客製化資訊給值`content`的`userInfo`
+ * 利用`content`的`userInfo`變數（Dictionary類別）
+ `content.userInfo = ["action":"createMap"]` 
