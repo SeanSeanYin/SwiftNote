@@ -4,7 +4,7 @@
  * ##### Delegate：適合一對一，一個ViewController送，另外一個ViewController收
  * ##### Notification：適合一對多，一個ViewController傳遞（post），其他ViewContoller收（addObserver）
  * ##### Singleton：任意ViewController都可以讀寫，但是要注意到Singleton的life cycle
-----------------
+---
 * #### Segue用法
 
   * 呼叫特定的Segue  
@@ -33,7 +33,7 @@
   * 現在有三個ViewController：`MainViewController`、`SecondViewController`、`ThirdViewController`，在 `ThirdViewController` 建立 `unwindToMain` 和`unwindToSecond`的`Unwind Segue`，然後 `MainViewController`是`Initial ViewController`
   * 一開始從`MainViewController`直接跳到`ThirdViewController`後，因為沒有載入過`SecondViewController`，執行`unwindToSecond`的`unwind segue`會無效，但是執行`unwindToMain`的會正常跳轉頁面
   * 推測原因是因為沒讀取過`SecondViewController`，所以程式不知道要跳到哪一頁
-* #### Unwind的使用方式
+* #### Unwind Sugue的使用方式
 
   * 在想要返回的目的`ViewController`內，建立收到`unwind segue`後的處理函式，參數的類型為`UIStoryboardSegue`，這很重要！
 
