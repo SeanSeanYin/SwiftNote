@@ -47,3 +47,12 @@
    * `open func removeAllDeliveredNotifications()`
 --------------
 * 允許在App在前景時，收Notification
+ * 讓`AppDelegate`實作`UNUserNotificationCenterDelegate`
+ ```
+ extension AppDelegate: UNUserNotificationCenterDelegate {
+ 
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.badge, .sound, .alert])
+    }
+ }
+ ```
