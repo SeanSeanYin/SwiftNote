@@ -64,7 +64,7 @@
  
    `content.userInfo = ["action":"createMap"]` 
    
- * 收訊息端在`userNotificationCenter(_:didReceive:withCompletionHandler:)`內處理
+ * 收訊息端(AppDelegate)在`userNotificationCenter(_:didReceive:withCompletionHandler:)`內處理
  ```
  func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler:  @escaping () -> Void) {
         
@@ -73,3 +73,4 @@
         completionHandler()
  }
  ```
+--------------
