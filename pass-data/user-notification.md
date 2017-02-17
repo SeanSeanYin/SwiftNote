@@ -51,7 +51,7 @@
  ```
  extension AppDelegate: UNUserNotificationCenterDelegate {
         func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-            completionHandler([.cartPlay, .badge, .sound, .alert])
+            completionHandler([.carPlay, .badge, .sound, .alert])
         }
  }
  ```
