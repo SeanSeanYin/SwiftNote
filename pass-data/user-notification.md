@@ -60,3 +60,4 @@
    `UNUserNotificationCenter.current().delegate = self`
 --------------
 * 傳送客製化資訊
+ * 把客製化資訊給值`content`的`userInfo`
