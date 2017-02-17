@@ -1,4 +1,6 @@
-* ### 實作UIImagePickerController
+# UIImagePickerController
+
+* #### 實作UIImagePickerController
 
   * 在要使用的viewController的class內，要宣告`UIImagePickerControllerDelegate, UINavigationControllerDelegate`這兩個delegate
   * 在class內宣告`let imagePicker = UIImagePickerController\(\)`
