@@ -90,3 +90,4 @@ UNUserNotificationCenter.current().setNotificationCategories([category])
  * 在發送端新增`content`的`categoryIdentifier`
  
    `content.categoryIdentifier = "basic"`
+ * 所以可以利用很多`Identifier`創造很多組不同的按鈕，然後在發送訊息的時候設定`content`的`categoryIdentifier`為想要使用的`Identifier`即可
