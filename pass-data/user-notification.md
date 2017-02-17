@@ -70,7 +70,6 @@
         
         let content = response.notification.request.content
         print("userInfo \(content.userInfo)")
- 
         completionHandler()
  }
  ```
