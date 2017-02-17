@@ -58,3 +58,5 @@
  * 再讓`didFinishLaunchingWithOptions`代理
  
    `UNUserNotificationCenter.current().delegate = self`
+--------------
+* 傳送客製化資訊
