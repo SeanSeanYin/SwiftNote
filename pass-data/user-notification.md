@@ -82,3 +82,7 @@ let cancelAction = UNNotificationAction(identifier: "cancel", title: "Cancel", o
 let category = UNNotificationCategory(identifier: "basic", actions: [okAction, cancelAction], intentIdentifiers: [], options: [])
 UNUserNotificationCenter.current().setNotificationCategories([category])
  ```
+ * `Action`的`options`有下面三種
+   * `public static var authenticationRequired: UNNotificationActionOptions { get }`
+   * `public static var destructive: UNNotificationActionOptions { get }`   
+   * `public static var foreground: UNNotificationActionOptions { get }`
