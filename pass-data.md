@@ -2,6 +2,6 @@
 
  * Segue：適合用在有上下頁關係的ViewController之間相互傳遞資料
  * Delegate：一個ViewController送，另外一個ViewController收
- * Singleton：一個ViewController
+ * Singleton：任意ViewController都可以讀寫，但是要注意到Singleton的life cycle
  * Notification：一個ViewController傳遞（post）
  ，其他ViewContoller收（addObserver）
