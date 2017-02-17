@@ -50,9 +50,8 @@
  * 讓`AppDelegate`實作`UNUserNotificationCenterDelegate的willPresent`這個函式
  ```
  extension AppDelegate: UNUserNotificationCenterDelegate {
- 
-    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         completionHandler([.badge, .sound, .alert])
-    }
+        }
  }
  ```
