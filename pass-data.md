@@ -121,7 +121,7 @@
 
     * `NotificationCenter.default.post(name: myNotificaion, object: nil, userInfo: ["userInfomation":userInfo])`
 
-    * 在收的ViewConroller內，宣告Notification Name（`要跟想要收的Notification sender的Notification Name一樣`），然後用`addObserver`收，並實作用來收的`function`，記得ViewContoller消失的時候，要做`removeObserver`
+  * 在收的ViewConroller內，宣告Notification Name（`要跟想要收的Notification sender的Notification Name一樣`），然後用`addObserver`收，並實作用來收的`function`，記得ViewContoller消失的時候，要做`removeObserver`
 
     * `let myNotificaion = Notification.Name\(rawValue:"NotificationIdentifier"\)`
     * `NotificationCenter.default.addObserver(forName: myNotificaion, object: nil, queue: nil, using: fillUserInfo)`
