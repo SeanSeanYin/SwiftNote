@@ -45,6 +45,7 @@
    * `open func removeAllPendingNotificationRequests()`
    * `open func removeDeliveredNotifications(withIdentifiers identifiers: [String])`
    * `open func removeAllDeliveredNotifications()`
+ * 利用同一個`request`發送推播的話，若是使用者讓此`request`的推播留在通知中心，則可以不用再通知中心產生新推播，覆蓋先前`request`的推播內容
 --------------
 * 允許在App在前景時，收Notification
  * 先讓`AppDelegate`實作`UNUserNotificationCenterDelegate的willPresent`這個函式
