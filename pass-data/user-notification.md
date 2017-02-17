@@ -60,6 +60,17 @@
    `UNUserNotificationCenter.current().delegate = self`
 --------------
 * 傳送客製化資訊
- * 利用`content`的`userInfo`變數（Dictionary類別）
+ * 發送端利用`content`的`userInfo`變數（`Dictionary類別`）
  
    `content.userInfo = ["action":"createMap"]` 
+   
+ * 收訊息端在`userNotificationCenter(_:didReceive:withCompletionHandler:)`內處理
+ ```
+ func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler:  @escaping () -> Void) {
+        
+        let content = response.notification.request.content
+        print("userInfo \(content.userInfo)")
+ 
+        completionHandler()
+ }
+ ```
