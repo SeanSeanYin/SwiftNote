@@ -74,3 +74,11 @@
  }
  ```
 --------------
+* 替訊息客製化按鈕
+ * 在`AppDelegate`的`application(_:didFinishLaunchingWithOptions:)`新增以下
+ ```
+ let okAction = UNNotificationAction(identifier: "ok", title: "Ok", options: [.foreground])
+let cancelAction = UNNotificationAction(identifier: "cancel", title: "Cancel", options: [])
+let category = UNNotificationCategory(identifier: "basic", actions: [okAction, cancelAction], intentIdentifiers: [], options: [])
+UNUserNotificationCenter.current().setNotificationCategories([category])
+ ```
