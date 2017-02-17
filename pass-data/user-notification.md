@@ -61,4 +61,5 @@
 --------------
 * 傳送客製化資訊
  * 利用`content`的`userInfo`變數（Dictionary類別）
- `content.userInfo = ["action":"createMap"]` 
+ 
+   `content.userInfo = ["action":"createMap"]` 
