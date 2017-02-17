@@ -1,10 +1,12 @@
-###在Swift內，有ViewController之間，有幾種方式可以傳遞資料
+### 在Swift內，有ViewController之間，有幾種方式可以傳遞資料
 
- * ##### Segue：適合用在有上下頁關係的ViewController之間相互傳遞資料
- * ##### Delegate：適合一對一，一個ViewController送，另外一個ViewController收
- * ##### Notification：適合一對多，一個ViewController傳遞（post），其他ViewContoller收（addObserver）
- * ##### Singleton：任意ViewController都可以讀寫，但是要注意到Singleton的life cycle
--------------------------------------------------
+* ##### Segue：適合用在有上下頁關係的ViewController之間相互傳遞資料
+* ##### Delegate：適合一對一，一個ViewController送，另外一個ViewController收
+* ##### Notification：適合一對多，一個ViewController傳遞（post），其他ViewContoller收（addObserver）
+* ##### Singleton：任意ViewController都可以讀寫，但是要注意到Singleton的life cycle
+
+---
+
 * #### Segue的使用方式
 
   * 呼叫特定的Segue  
@@ -56,7 +58,9 @@
 
   * 然後在`ViewController`內選取該`Unwind Segue`，將`Identifier`欄位填上`backToCafeDetail`（名字一樣比較不容易搞混）
   * 最後是在函式內利用`self.performSegue(withIdentifier: "backToCafeDetail", sender: self)`的方式呼叫`Unwind Segue`
--------------------------------------------------
+
+---
+
 * #### Custom Delegate的使用方式（[參考這篇](http://eddychang.me/blog/swift/66-delegation-example.html)）
 
   假設我們有兩個Class：Class1 & Class2，我們想要把Class1的某些事情委託給Class2做，我們需要如下的實作方式
@@ -102,14 +106,21 @@
   * `protocol Class1Delegate: class`後面加上`:class`，是為了讓在`Class1`內宣告`delegate`的時候，可以使用`weak`屬性，避免`Retain cycles`。由於`struct和enum`都是`value type`，所以都只能用`strong`。
   * `let title = delegate?.getCellTitle(0) ?? "No Title"` 當`delegate?.getCellTitle(0)`回傳`nil`時，會因為`??`的關係，給`title`一個預設值`"No title"`
 
-
 * #### 在AppDelegate創造custom delegate去呼叫某個ViewController
- * 會失敗，因為在`ViewController`內宣告的`AppDelegate`的`Instance`，根本不會被`init`，所以`AppDelegate class`內的`delegate is always nil`
- * 改用`Notification`
--------------------------------------------------
+
+  * 會失敗，因為在`ViewController`內宣告的`AppDelegate`的`Instance`，根本不會被`init`，所以`AppDelegate class`內的`delegate is always nil`
+  * 改用`Notification`
+
+---
+
 * #### Notification的使用方式
 
- * 在送的ViewContoller內，
- 
- 
--------------------------------------------------
+  * 在送的ViewContoller內，先宣告Notification Name，然後用post發送訊息（參數userInfo的格式為`[AnyHashable : Any]? = nil`，舉例：`["userInformation"：userInfo]`，也可為`nil`）
+    * `let myNotificaion = Notification.Name(rawValue: "NotificationIdentifier")`
+
+    * `NotificationCenter.default.post(name: myNotificaion, object: nil, userInfo: ["userInfomation":userInfo])`
+
+---
+
+
+
