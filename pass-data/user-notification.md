@@ -20,6 +20,17 @@
     
  ```
  @IBAction func sendNotification(_ sender: AnyObject){
-
+     // 設定傳送的資訊
+     let content = UNMutableNotificationContent()
+     content.title = "聽說這是主題"
+     content.subtitle = "聽說這是副主題"
+     content.body = "聽說這才是本體"
+     content.badge = 1
+     content.sound = UNNotificationSound.default()
+     
+     // 設定觸發條件並觸發
+     let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+     let request = UNNotificationRequest(identifier: "notification", content: content, trigger: trigger)
+     UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
  }
  ```
