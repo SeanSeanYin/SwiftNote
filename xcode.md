@@ -14,7 +14,6 @@
   * 然後搜尋height，把破萬的異常值都改成千位數以內
   * 存檔後離開Main.stroyboard
   * 再重新啟動這個專案
-
 * ### 要在IB內解除stackview的方法
 
   * 先選擇想解散的stackview
@@ -24,11 +23,14 @@
 
   * 到`Project Navigator->Target->Build Phases->Link Binary With Libraries`新增`libsqlite3.tbd`
 
-
 * ### 遇到 `Couldn’t communicate with a helper application` 的解法
- 
- ```
- xcrun git config --global user.email you@yourdomain.com
- xcrun git config --global user.name "Your Name Here"
- ```
+
+  ```
+  xcrun git config --global user.email you@yourdomain.com
+  xcrun git config --global user.name "Your Name Here"
+  ```
+
+* 新增字型
+ * 先將字型新增到專案內
+ * 在plist內新增`"Fonts provided by application"`的`Array`，Item設定`String`類別，Value填入字型的名稱
 
