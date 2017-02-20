@@ -17,7 +17,7 @@
     })
  ```
 --------------
-* 發送Notification
+* 發送Local Notification
     
  ```
  @IBAction func sendNotification(_ sender: AnyObject){
@@ -92,3 +92,6 @@ UNUserNotificationCenter.current().setNotificationCategories([category])
  
    `content.categoryIdentifier = "basic"`
  * 所以可以利用很多`Identifier`創造很多組不同的按鈕，然後在發送訊息的時候設定`content`的`categoryIdentifier`為想要使用的`Identifier`即可
+ 
+ # Push Notification
+  * [AppCoda](http://www.appcoda.com.tw/push-notification-ios/)
