@@ -95,3 +95,10 @@ UNUserNotificationCenter.current().setNotificationCategories([category])
  
  # Push Notification
   * [AppCoda](http://www.appcoda.com.tw/push-notification-ios/)
+  * DeviceToken的處理
+  
+  `let tokenString = NSData(data: deviceToken).description.trimmingCharacters(in: .capitalizedLetters).replacingOccurrences(of: " ", with: "").replacingOccurrences(of: "<", with: "").replacingOccurrences(of: ">", with: "")`
+  
+  
+  
+  
