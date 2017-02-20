@@ -34,3 +34,7 @@
  * `pod remove repo master`
  * `pod setup`
  * `pod install`
+ 
+ * #### 執行pod setup 太久的原因：master有519MB大！直接到目錄底下從github上clone比較快
+  * `cd ~/.cocoapods/repos ` 
+  * `git clone --depth 1 https://github.com/CocoaPods/Specs.git master`
