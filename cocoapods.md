@@ -29,3 +29,8 @@
 * #### Unable to find a specification for \`xxxxx (~> 1.x.x)\` depended upon by Podfile.
   * `pod repo remove master`
   * `pod setup`
+
+* #### 在更新Xcode之後下`pod install`會卡在`Installing`的解決方法
+ * `pod remove repo master`
+ * `pod setup`
+ * `pod install`
