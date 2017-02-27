@@ -49,10 +49,13 @@ extension customViewController:UIPickerViewDelegate, UIPickerViewDataSource {
  * 點擊UIPickerView以外的地方取消UIPickerView
  ```
  override func viewDidLoad() {
-        // 指定點擊textfiled後要出現的鍵盤為pickerview
+        // 新增手勢，點擊時觸發FullfillUserInfoViewController.hideKeyboard(tapG:)
         let tap = UITapGestureRecognizer(target: self, action: #selector(FullfillUserInfoViewController.hideKeyboard(tapG:)))
         tap.cancelsTouchesInView = false
  } 
+ func hideKeyboard(tapG:UITapGestureRecognizer){
+        self.view.endEditing(true)
+ }
  ```
 
 
