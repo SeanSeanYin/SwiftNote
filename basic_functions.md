@@ -63,3 +63,6 @@
 matchingItems = self.cafes.filter { term in
             return (term.name.contains(searchBarText) || term.address.contains(searchBarText))}
 ```
+
+* #### selector語法
+`#selector(ViewController.getData(name:))`
