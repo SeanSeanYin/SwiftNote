@@ -4,7 +4,7 @@
 
 * [Introduction](README.md)
 * [Basic Data](string.md)
-* [sha1](outside function/sha1.md)
+* \[sha1\]\(outside function/sha1.md\)
 * [Basic functions](basic_functions.md)
 * [ViewContrller](viewcontrller.md)
   * [AlertController](viewcontrller/alertcontroller.md)
@@ -22,6 +22,7 @@
 * [FMDB](fmdb.md)
 * [Alamofire](alamofire.md)
 * [Firebase](firebase.md)
+* [Facebook](facebook.md)
 
 ## Tools
 
