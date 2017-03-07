@@ -50,3 +50,35 @@ ios-sim launch --devicetypeid="iPhone-5, 10.0" ~/Desktop/Agora.app/
  
 * ####要求權限
  * 
+```
+    func getUserFacebookProfile(token:FBSDKAccessToken){
+        
+        let parameters = ["fields":"id, name"]
+        let request = FBSDKGraphRequest(graphPath: "me", parameters: parameters, httpMethod: "GET")
+        let _ = request?.start(completionHandler: { (connection, result, error) in
+            
+            guard connection != nil else {
+                print("Failed to get connection")
+                return
+            }
+            guard error == nil else {
+                print ("Error : \(error?.localizedDescription)")
+                return
+            }
+            guard let result = result as? NSDictionary else {
+                print("Failed to get result")
+                return
+            }
+            
+            guard let userId = result.value(forKey: "id") as? String,
+                let userName = result.value(forKey: "name") as? String else {
+                    
+                    print("Failed to get result data:\(result)")
+                    return
+            }
+            
+            self.user = UserInfo(id: userId, name: userName, token: token.tokenString)
+            self.performSegue(withIdentifier: "goToMainPage", sender: self)
+        })
+    }
+```
