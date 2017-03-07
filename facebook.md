@@ -48,3 +48,5 @@ ios-sim launch --devicetypeid="iPhone-5, 10.0" ~/Desktop/Agora.app/
  ```
  * 參數 --devicetypeid是用來選擇模擬器要run在哪種型號跟os
  
+* ####要求權限
+ * 
