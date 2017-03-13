@@ -82,3 +82,27 @@ ios-sim launch --devicetypeid="iPhone-5, 10.0" ~/Desktop/Agora.app/
         })
     }
 ```
+
+* ### 利用shareButton分享照片到facebook
+ * `import FBSDKShareKit`
+ * 在`imagePickerController:didFinishPickingMediaWithInfo`這function內
+ ```
+func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            // 設定照片
+            let photo = FBSDKSharePhoto()
+            photo.image = pickedImage
+            photo.isUserGenerated = true
+            // 設定分享內容
+            let content = FBSDKSharePhotoContent()
+            content.photos = [photo]
+            // 建立fb專用的分享按鈕
+            let shareButton = FBSDKShareButton()
+            shareButton.center = self.view.center
+            shareButton.shareContent = content
+            self.view.addSubview(shareButton)
+        }        
+        dismiss(animated: true)
+    }
+ ```
