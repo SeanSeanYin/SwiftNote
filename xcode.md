@@ -29,8 +29,15 @@
   xcrun git config --global user.email you@yourdomain.com
   xcrun git config --global user.name "Your Name Here"
   ```
+* ### 遇到`Could not build Objectiovmee-C module 'some module'`的解決方法
 
-* 新增字型
+ * Clean the project, including the build cache (Command-Option-Shift-K)
+ * Removing the pod.lock file and the pods.xcodeproj files
+ * And then closing Xcode and running pod update again
+ * Then building again.
+
+
+* ### 新增字型
  * 先將字型新增到專案內
  * 在plist內新增`"Fonts provided by application"`的`Array`，Item設定`String`類別，Value填入字型的名稱
 
