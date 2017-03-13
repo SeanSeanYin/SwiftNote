@@ -84,6 +84,7 @@ ios-sim launch --devicetypeid="iPhone-5, 10.0" ~/Desktop/Agora.app/
 ```
 
 * ### 利用shareButton分享照片到facebook
+ * 這方法是透過已安裝的FB App或是Safari內的FB 帳號來分享，所以不用額外要求publish_actions權限
  * `import FBSDKShareKit`
  * 在`imagePickerController:didFinishPickingMediaWithInfo`這function內
  ```
