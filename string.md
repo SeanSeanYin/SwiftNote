@@ -42,6 +42,11 @@ let index = directory.absoluteString.range(of: documentURL.path, options: .backw
 // 再用substring從某個index開始往後取剩下的字串
 let subDirectoryName = directory.absoluteString.substring(from: (index?.upperBound)!)
  ```
+* #### 把字串內的空白字元移除掉
+```
+let str = " Swift 3.0 "
+let trimmed = str.trimmingCharacters(in: .whitespacesAndNewlines)
+```
 
 # Array
 
