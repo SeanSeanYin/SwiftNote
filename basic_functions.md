@@ -66,3 +66,10 @@ matchingItems = self.cafes.filter { term in
 
 * #### selector語法
 `#selector(ViewController.getData(name:))`
+
+* #### 讓使用者跳到此App在手機內的設定頁面
+```
+if #available(iOS 10.0, *) {                            
+UIApplication.shared.open(appSettings, options: [:], completionHandler: nil)
+}
+```
