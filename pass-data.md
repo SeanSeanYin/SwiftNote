@@ -137,7 +137,8 @@
         self.passwordTextfield.text = userInfomation["p"]
       }
       ```
-    * `deinit { nc.removeObserver(self, name: myNotificaion, object: nil) }`
+    * 在class內
+    `deinit { nc.removeObserver(self, name: myNotificaion, object: nil) }`
 ---
 
 
