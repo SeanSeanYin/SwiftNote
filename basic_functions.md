@@ -4,36 +4,39 @@
 
   * 語言
 
-    ```
-     let langStr = Locale.current.languageCode
-    ```
+  ```
+  let langStr = Locale.current.languageCode
+  ```
 
-  * ```Swift
-    let deviceName = UIDevice.currentDevice().name
-    ```
-
-    ```
-    //获取设备名称 例如：梓辰的手机
-    let
-     sysName = UIDevice.currentDevice().systemName 
-    //获取系统名称 例如：iPhone OS
-    let
-     sysVersion = UIDevice.currentDevice().systemVersion 
-    //获取系统版本 例如：9.2
-    let
-     deviceUUID = UIDevice.currentDevice().identifierForVendor?.UUIDString  
-    //获取设备唯一标识符 例如：FBF2306E-A0D8-4F4B-BDED-9333B627D3E6
-    let
-     deviceModel = UIDevice.currentDevice().model 
-    //获取设备的型号 例如：iPhone
-    ```
   * 使用者設置的手機名稱
 
   ```
-  let deviceName = UIDevice.currentDevice().name
+  let deviceName = UIDevice.currentDevice().name // 例如： 我的手機
   ```
 
-  * 
+  * 系統名稱
+
+  ```
+  let sysName = UIDevice.currentDevice().systemName // 例如： iPhone O
+  ```
+
+  * 作業系統版本
+
+  ```
+  let sysVersion = UIDevice.currentDevice().systemVersion // 例如：9.2
+  ```
+
+  * 裝置唯一識別碼
+
+  ```
+  let uuid = UIDevice.currentDevice().identifierForVendor?.UUIDString  // 例如：FBF2306E-A0D8-4F4B-BDED-9333B627D3E6
+  ```
+
+  * 設備型號
+
+  ```
+  let model = UIDevice.currentDevice().model // 例如：iPhone
+  ```
 * ### 獲取UUID
 
   * `UIDevice.current.identifierForVendor!.uuidString`
