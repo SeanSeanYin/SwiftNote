@@ -37,7 +37,15 @@
   ```
   let model = UIDevice.currentDevice().model // 例如：iPhone
   ```
-* ### 獲取UUID
+* #### 抓取App資訊
+
+  ```
+  let infoDic = NSBundle.mainBundle().infoDictionary 
+  let appVersion = infoDic?["CFBundleShortVersionString"] // App的版本
+  let appBuildVersion = infoDic?["CFBundleVersion"] // App的build版本
+  let appName = infoDic?["CFBundleDisplayName"] // App的名稱
+  ```
+* #### 獲取UUID
 
   * `UIDevice.current.identifierForVendor!.uuidString`
   * 現在的UUID是表示這個Vender在這台裝置上的unique ID，若是移除掉這Vender的所有App後再重新安裝App，UUID會不一樣
