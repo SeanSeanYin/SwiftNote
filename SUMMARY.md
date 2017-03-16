@@ -15,6 +15,7 @@
 * [User Notification](pass-data/user-notification.md)
 * [Pass Data](pass-data.md)
 * [plist](plist.md)
+* [Third Party Functions](third-party-functions.md)
 
 ## Third Party Library
 
