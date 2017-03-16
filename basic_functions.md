@@ -9,7 +9,7 @@
     ```
 
   * ```Swift
-    let deviceName = UIDevice.currentDevice().name  
+    let deviceName = UIDevice.currentDevice().name
     ```
 
     ```
@@ -28,6 +28,10 @@
     //获取设备的型号 例如：iPhone
     ```
   * 使用者設置的手機名稱
+
+  ```
+  let deviceName = UIDevice.currentDevice().name
+  ```
 
   * 
 * ### 獲取UUID
