@@ -1,8 +1,12 @@
 # Basic function
 
-* ### 抓取手機目前的語言
+* #### 抓取手機資訊
 
-  * `let langStr = Locale.current.languageCode`
+  * 語言
+
+         `let langStr = Locale.current.languageCode`
+  * 
+
 * ### 獲取UUID
 
   * `UIDevice.current.identifierForVendor!.uuidString`
@@ -57,20 +61,24 @@
     ```
 
   * DatePicker內的時間想要顯示成24小時制，不要設定`DatePicker的locale`屬性
-
 * #### 陣列的Search方法
-```
-matchingItems = self.cafes.filter { term in
-            return (term.name.contains(searchBarText) || term.address.contains(searchBarText))}
-```
 
+  ```
+  matchingItems = self.cafes.filter { term in
+            return (term.name.contains(searchBarText) || term.address.contains(searchBarText))}
+  ```
 * #### selector語法
-`#selector(ViewController.getData(name:))`
+
+  `#selector(ViewController.getData(name:))`
 
 * #### 讓使用者跳到此App在手機內的設定頁面
-```
-if #available(iOS 10.0, *) {                            
+
+  ```
+  if #available(iOS 10.0, *) {                            
 
   UIApplication.shared.open(appSettings, options: [:], completionHandler: nil)
-}
-```
+  }
+  ```
+
+
+
