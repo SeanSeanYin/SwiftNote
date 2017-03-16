@@ -49,7 +49,7 @@
 
   * `UIDevice.current.identifierForVendor!.uuidString`
   * 現在的UUID是表示這個Vender在這台裝置上的unique ID，若是移除掉這Vender的所有App後再重新安裝App，UUID會不一樣
-* ### Guard
+* #### Guard
 
   guard 條件式 else {
 
@@ -61,11 +61,11 @@
 
         由於`guard`只判斷`true or false`，要注意條件式不能回傳為`optional(true) or optional(false)`
 
-* ### 隱藏鍵盤
+* #### 隱藏鍵盤
 
   使用[Extension Class](/com/questions/24126678/close-ios-keyboard-by-touching-anywhere-using-swift)的方式來擴充隱藏鍵盤功能，可支援任意個ViewController。
 
-* ### 獲取時間的用法
+* #### 獲取時間的用法
 
   * 先獲取現在時間
 
@@ -112,9 +112,8 @@
 * #### 讓使用者跳到此App在手機內的設定頁面
 
   ```
-  if #available(iOS 10.0, *) {                            
-
-  UIApplication.shared.open(appSettings, options: [:], completionHandler: nil)
+  if #available(iOS 10.0, *) {
+      UIApplication.shared.open(appSettings, options: [:], completionHandler: nil)
   }
   ```
 
