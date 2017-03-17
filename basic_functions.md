@@ -117,5 +117,14 @@
   }
   ```
 
+* #### 轉移到AppStore的評分頁面
+
+  ```
+  let openAppStoreForRating = "itms-apps://itunes.apple.com/gb/app/id1190355913?action=write-review&mt=8"
+  if UIApplication.shared.canOpenURL(URL(string: openAppStoreForRating)!) {
+     UIApplication.shared.openURL(URL(string: openAppStoreForRating)!)
+  }
+  ```
+
 
 
