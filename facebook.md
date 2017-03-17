@@ -107,22 +107,21 @@
         dismiss(animated: true)
     }
     ```
-
 * #### 呼叫Graph API時，要抓取result的值的方式
 
 ```
         let request = FBSDKGraphRequest(graphPath: "/me/live_videos", parameters: nil, httpMethod: "POST")
         request?.start(completionHandler: { connection, result, error in
-            
+
             guard error == nil else {
                 print("error:\(error?.localizedDescription)")
                 return
             }
-            
+
             if (connection != nil) {
                 print("connection:\(connection)")
             }
-            
+
             guard let data = result as? Dictionary<String, Any>, let streamId = data["id"], let streamUrl = data["stream_url"] else {
                 return
             }
