@@ -100,7 +100,7 @@
          if (cell != nil) { return cell.title }
          return nil
      }
-  } 
+  }
   ```
 
   * `protocol Class1Delegate: class`後面加上`:class`，是為了讓在`Class1`內宣告`delegate`的時候，可以使用`weak`屬性，避免`Retain cycles`。由於`struct和enum`都是`value type`，所以都只能用`strong`。
@@ -138,7 +138,8 @@
       }
       ```
     * 在class內
-    `deinit { nc.removeObserver(self, name: myNotificaion, object: nil) }`
+      `deinit { nc.removeObserver(self, name: myNotificaion, object: nil) }`
+
 ---
 
 
