@@ -48,7 +48,6 @@
   let str = " Swift 3.0 "
   let trimmed = str.trimmingCharacters(in: .whitespacesAndNewlines)
   ```
-
 * #### Decode url格式的字串
 
 ```
