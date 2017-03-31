@@ -36,16 +36,23 @@
   ```
 * #### 找尋字串在另一個字串內的位置
 
- ```
-// 先找出要搜尋的字串在被搜尋字串內的Range
-let index = directory.absoluteString.range(of: documentURL.path, options: .backwards, range: directory.absoluteString.startIndex..<directory.absoluteString.endIndex, locale: nil)
-// 再用substring從某個index開始往後取剩下的字串
-let subDirectoryName = directory.absoluteString.substring(from: (index?.upperBound)!)
- ```
+  ```
+  // 先找出要搜尋的字串在被搜尋字串內的Range
+  let index = directory.absoluteString.range(of: documentURL.path, options: .backwards, range: directory.absoluteString.startIndex..<directory.absoluteString.endIndex, locale: nil)
+  // 再用substring從某個index開始往後取剩下的字串
+  let subDirectoryName = directory.absoluteString.substring(from: (index?.upperBound)!)
+  ```
 * #### 把字串內的空白字元移除掉
+
+  ```
+  let str = " Swift 3.0 "
+  let trimmed = str.trimmingCharacters(in: .whitespacesAndNewlines)
+  ```
+
+* #### Decode url格式的字串
+
 ```
-let str = " Swift 3.0 "
-let trimmed = str.trimmingCharacters(in: .whitespacesAndNewlines)
+let title = obj["title"].stringValue.removingPercentEncoding
 ```
 
 # Array
@@ -63,10 +70,14 @@ let trimmed = str.trimmingCharacters(in: .whitespacesAndNewlines)
 # Dictionary
 
 * #### 宣告
- * `var dic:<String, String> = Dictionary()`
- * `var dic = [String, String]()`
- * `var dic:[String, String] = [:]`
- * `var dic:[String, String] = Dictionary()`
- 
+
+  * `var dic:<String, String> = Dictionary()`
+  * `var dic = [String, String]()`
+  * `var dic:[String, String] = [:]`
+  * `var dic:[String, String] = Dictionary()`
 * #### 印在Console上
- * `dump(dictionary)`
+
+  * `dump(dictionary)`
+
+
+
