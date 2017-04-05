@@ -54,6 +54,12 @@
 let title = obj["title"].stringValue.removingPercentEncoding
 ```
 
+* #### 計算字串長度
+
+```
+string1.characters.count
+```
+
 # Array
 
 * #### 陣列使用append\(\)
