@@ -40,9 +40,14 @@
     ```
 
   * 很重要！在plist內新增詢問使用者是否允許給予定位權限的字串
+
     * `NSLocationAlwaysUsageDescription` -&gt; 是否允許永遠使用定位
     * `NSLocationWhenInUseUsageDescription` -&gt; 是否允許使用中使用定位
 * #### 顯示縣市
+
+```
+placemark.locality
+```
 
 
 
