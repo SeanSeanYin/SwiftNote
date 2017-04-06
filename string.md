@@ -60,6 +60,17 @@ let title = obj["title"].stringValue.removingPercentEncoding
 string1.characters.count
 ```
 
+* #### 字串切割
+
+```
+let line = "apple,peach,kiwi"
+// 將字串切割並塞入陣列
+let parts = line.components(separatedBy: ",")
+for part in parts {
+    print(part)
+}
+```
+
 # Array
 
 * #### 陣列使用append\(\)
