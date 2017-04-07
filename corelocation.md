@@ -25,15 +25,16 @@
             if pm != nil {
                 //stop updating location to save battery life
                 locationManager.stopUpdatingLocation()
-                println(pm.locality ? placemark.locality : "")
-                println(pm.postalCode ? placemark.postalCode : "")
-                println(pm.administrativeArea ? pm.administrativeArea : "")
+                print(pm.locality ? placemark.locality : "")
+                print(pm.postalCode ? placemark.postalCode : "")
+                print(pm.administrativeArea ? pm.administrativeArea : "")
                 print(pm.country ? pm.country : "")
             }
         } else {
             print("Problem with the data received from geocoder")
         }
     })}
+
     func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
         print("Error while updating location " + error.localizedDescription)
     }
@@ -43,6 +44,7 @@
 
     * `NSLocationAlwaysUsageDescription` -&gt; 是否允許永遠使用定位
     * `NSLocationWhenInUseUsageDescription` -&gt; 是否允許使用中使用定位
+* #### 使用simulator測試位置
 * #### 顯示縣市
 
 ```
