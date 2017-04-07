@@ -10,10 +10,10 @@
             let id = self.newsArray[indexPath.row].id
             // 先取抓快取裡面的圖，沒有的話再下載
             if let imageUrl = imageCache.object(forKey: id as AnyObject) as? URL {
-                
+
                 cell.imageview.image = UIImage(contentsOfFile: imageUrl.path)
             } else {
-                
+
                 if let imageUrl = self.newsArray[indexPath.row].imagePath {
                     let destination: DownloadRequest.DownloadFileDestination = { _, _ in
                         let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
@@ -25,7 +25,6 @@
                             OperationQueue.main.addOperation () {
                                 let image = UIImage(contentsOfFile: imagePath)
                                 cell.imageview.image = image
-                                //
                                 self.imageCache.setObject(response.destinationURL! as AnyObject, forKey: id as AnyObject)
                             }
                         }
