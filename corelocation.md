@@ -44,12 +44,9 @@
 
     * `NSLocationAlwaysUsageDescription` -&gt; 是否允許永遠使用定位
     * `NSLocationWhenInUseUsageDescription` -&gt; 是否允許使用中使用定位
-* #### 使用simulator測試位置
-* #### 顯示縣市
+* #### 
 
-```
-placemark.locality
-```
+
 
 
 
