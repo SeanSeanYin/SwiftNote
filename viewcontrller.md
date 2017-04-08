@@ -33,7 +33,7 @@
 
   * 在要停止的地方新增
 
-    `OperationQueue.main.addOperation {                                        
+    `OperationQueue.main.addOperation {                                          
      self.spinner.stopAnimating() }`
 * #### 出現`whose view is not in the window hierarchy!`的解法
 
@@ -150,10 +150,17 @@
   * 在viewDidLoad內宣告手勢
 
   ```
-
+          let tap = UITapGestureRecognizer(target: self, action: #selector(zoomInOutImage))
+          self.crashImgView.addGestureRecognizer(tap)
   ```
 
   * 然後實作function
+
+  ```
+  func zoomInOutImage(_ sender: UITapGestureRecognizer) {
+      print("Do somthimg hehe....")
+  }
+  ```
 * #### 隱藏NavigationBar和TabBar
 
 ```
