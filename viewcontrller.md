@@ -33,7 +33,7 @@
 
   * 在要停止的地方新增
 
-    `OperationQueue.main.addOperation {                              
+    `OperationQueue.main.addOperation {                                
      self.spinner.stopAnimating() }`
 * #### 出現`whose view is not in the window hierarchy!`的解法
 
@@ -132,6 +132,20 @@
 * #### 想要每次返回ViewController的時候重新load data
 
   * 寫在viewWillAppear內，viewDidLoad不會重新再被call到
+
+* #### TextView的鍵盤要收起來
+
+  * 讓viewController實作 `UITextViewDelegate`
+
+  * ```
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if (text == "\n") {
+            textView.resignFirstResponder()
+            return false
+        }
+        return true
+    }
+    ```
 
 #### 
 
