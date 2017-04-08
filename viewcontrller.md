@@ -33,7 +33,7 @@
 
   * 在要停止的地方新增
 
-    `OperationQueue.main.addOperation {                                      
+    `OperationQueue.main.addOperation {                                        
      self.spinner.stopAnimating() }`
 * #### 出現`whose view is not in the window hierarchy!`的解法
 
@@ -145,6 +145,15 @@
         return true
     }
     ```
+* #### 新增手勢
+
+  * 在viewDidLoad內宣告手勢
+
+  ```
+
+  ```
+
+  * 然後實作function
 * #### 隱藏NavigationBar和TabBar
 
 ```
