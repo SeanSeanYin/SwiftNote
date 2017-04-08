@@ -33,7 +33,7 @@
 
   * 在要停止的地方新增
 
-    `OperationQueue.main.addOperation {                            
+    `OperationQueue.main.addOperation {                              
      self.spinner.stopAnimating() }`
 * #### 出現`whose view is not in the window hierarchy!`的解法
 
@@ -129,10 +129,9 @@
   self.mapButton.setTitle("Map", for: .normal)
   self.sortButton.setImage(UIImage(named: "btn_sort_n"), for: .normal)
   ```
-
 * #### 想要每次返回ViewController的時候重新load data
 
-  * 寫在viewWillAppear內，viewDidLoad
+  * 寫在viewWillAppear內，viewDidLoad不會重新再被call到
 
 #### 
 
