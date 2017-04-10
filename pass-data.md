@@ -122,7 +122,7 @@
 
   * 讀取陣列
 
-    * 
+    * `UserDefaults.standard.array(forKey:"userName")as! [String]`
 
 ---
 
