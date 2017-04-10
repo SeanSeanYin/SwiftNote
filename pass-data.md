@@ -4,7 +4,7 @@
 * ##### Delegate：適合一對一，一個ViewController送，另外一個ViewController收
 * ##### Notification：適合一對多，一個ViewController傳遞（post），其他ViewContoller收（addObserver）
 * ##### Singleton：任意ViewController都可以讀寫，但是要注意到Singleton的life cycle
-* ##### UserDefaults：適合少量、永久性儲存的資料
+* ##### UserDefaults：適合輕量、永久性儲存的資料
 
 ---
 
@@ -111,6 +111,18 @@
 
   * 會失敗，因為在`ViewController`內宣告的`AppDelegate`的`Instance`，根本不會被`init`，所以`AppDelegate class`內的`delegate is always nil`
   * 改用`Notification`
+
+---
+
+* #### UserDefaults
+
+  * 儲存陣列
+
+    * `UserDefaults.standard.set(self.userNameArray, forKey:"userName"`
+
+  * 讀取陣列
+
+    * 
 
 ---
 
