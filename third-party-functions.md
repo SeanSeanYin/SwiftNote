@@ -2,7 +2,7 @@
 
 ```
 public extension UIDevice {
-    
+
     var modelName: String {
         var systemInfo = utsname()
         uname(&systemInfo)
@@ -11,7 +11,7 @@ public extension UIDevice {
             guard let value = element.value as? Int8, value != 0 else { return identifier }
             return identifier + String(UnicodeScalar(UInt8(value)))
         }
-        
+
         switch identifier {
             case "iPod5,1":                                 return "iPod Touch 5"
             case "iPod7,1":                                 return "iPod Touch 6"
@@ -46,6 +46,18 @@ public extension UIDevice {
 ```
 
 #### 
+
+* #### 判斷Email格式
+
+```
+ func isValidEmail(string:String) -> Bool {
+    // print("validate calendar: \(testStr)")
+    let regEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+
+    let finalString = NSPredicate(format:"SELF MATCHES %@", regEx)
+    return finalString.evaluateWithObject(string)
+}
+```
 
 
 
