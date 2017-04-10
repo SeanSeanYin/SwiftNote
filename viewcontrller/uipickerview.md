@@ -60,7 +60,23 @@
         self.view.endEditing(true)
     }
     ```
+* #### 用程式新增PickerView的Done按鈕
+* ```
+  // 先做出按鈕 
+  let doneButton = UIBarButtonItem(title: "確認", style: UIBarButtonItemStyle.plain, target: self, action: #selector(donePicker))
 
+  // 新增ToolBar，並且把按鈕加到ToolBar的Items內
+  let toolBar = UIToolbar()
+  toolBar.barStyle = UIBarStyle.default
+  toolBar.isTranslucent = true
+  toolBar.tintColor = UIColor.black
+  toolBar.sizeToFit()
+  toolBar.setItems([doneButton], animated: false)
+  toolBar.isUserInteractionEnabled = true
+
+  // 指定inputAccessoryView為ToolBar
+  customerNameTextField.inputAccessoryView = toolBar
+  ```
 * #### 出現`hild view controller:<UICompatibilityInputViewController: 0x14f9c6850> should have parent view controller:<CCCreateActionController: 0x14e9c8c00> but requested parent is:<UIInputWindowController: 0x14e912200>'`錯誤的處理方式
 
   * 原因：在`IB建立此UIPickerView`並也建立`@IBOutlet`到某個`UIViewController`，之後又`Assign`給`Textfield`作為`inputview`，導致要呼叫`UIPickerView`時，不知道才是真的`Parent`
