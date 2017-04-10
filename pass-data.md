@@ -4,6 +4,7 @@
 * ##### Delegate：適合一對一，一個ViewController送，另外一個ViewController收
 * ##### Notification：適合一對多，一個ViewController傳遞（post），其他ViewContoller收（addObserver）
 * ##### Singleton：任意ViewController都可以讀寫，但是要注意到Singleton的life cycle
+* ##### UserDefault
 
 ---
 
