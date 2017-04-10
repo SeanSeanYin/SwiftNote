@@ -109,6 +109,12 @@
 
 `UIImagePNGRepresentation(result.forwardImg as! UIImage)! as NSData`
 
+* #### NSPredicate要使用Bool的方法
+
+```
+let predicate = NSPredicate(format: "isFinished == %@", NSNumber(booleanLiteral: false))
+```
+
 * #### selector語法
 
   `#selector(ViewController.getData(name:))`
