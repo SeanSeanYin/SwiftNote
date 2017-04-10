@@ -105,6 +105,10 @@
   matchingItems = self.cafes.filter { term in
             return (term.name.contains(searchBarText) || term.address.contains(searchBarText))}
   ```
+* #### 將圖片轉成NSData
+
+`UIImagePNGRepresentation(result.forwardImg as! UIImage)! as NSData`
+
 * #### selector語法
 
   `#selector(ViewController.getData(name:))`
