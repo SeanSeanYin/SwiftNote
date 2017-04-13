@@ -7,6 +7,13 @@
 * ```
   self.promoTextField.keyboardType = UIKeyboardType.EmailAddress
   ```
+* #### 新增分頁控制器的做法
+
+  * 先從Xcode的Editor -&gt; Embed in -&gt; Tab Bar Controller 新增一個TabBarController
+
+  * 再新增一個NavigationController
+
+  * 按住 CTRL + TabBarController的空白處，拖曳到NavigationController上後放開，選擇Relationshp Segue - View Controller
 * #### 用Label畫直線
 
   ```
@@ -37,7 +44,7 @@
 
   * 在要停止的地方新增
 
-    `OperationQueue.main.addOperation {                                                
+    `OperationQueue.main.addOperation {                                                  
      self.spinner.stopAnimating() }`
 * #### 出現`whose view is not in the window hierarchy!`的解法
 
