@@ -37,7 +37,7 @@
 
   * 在要停止的地方新增
 
-    `OperationQueue.main.addOperation {                                            
+    `OperationQueue.main.addOperation {                                              
      self.spinner.stopAnimating() }`
 * #### 出現`whose view is not in the window hierarchy!`的解法
 
@@ -123,6 +123,16 @@
     return pickerLabel
   }
   ```
+* #### NavigationBar的BackItem屬於前一頁ViewController的，不是當頁的
+* #### 用程式顯示其他的ViewController
+
+* ```
+      if let vc = self.storyboard?.instantiateViewController(withIdentifier: "TabBarViewController") {
+        
+          self.present(vc, animated: true, completion: nil)
+      }
+  ```
+
 * #### 取消Table的Cell之間的線
 
   `sel.tableView.separatorStyle= .none`
