@@ -39,7 +39,7 @@
       controller.sourceRect = (self.navigationItem.rightBarButtonItem?.accessibilityFrame)!
   }
   ```
-* #### popover 出現在NavigationBarItem的下方的做法
+* #### popover 出現在NavigationBarButtonItem下方的做法
 
   * 先建立一個TableViewController，這個TableVC的內容，就會是後來popover出來的選單內容，建議是用靜態Table做就好，因為選單的選項都是已知且固定的
   * 在viewWillAppear做一些設定
@@ -52,6 +52,7 @@
   ```
 
   * 再回到要呈現選單的ViewController內，讓此VC遵循`UIPopoverPresentationControllerDelegate,UIAdaptivePresentationControllerDelegate`
+  * 在storyboard內，從呈現選單的ViewController，拉一個segue到TableViewController，選擇「Present As Popover」，然後將Anchor設定到BarButtonItem內的Button上
   * 實作
 
   ```
@@ -65,9 +66,9 @@
 
   ```
       override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
-        
+
           if (segue.identifier == "showOptions") {
-            
+
               let destinationVC = segue.destination as! OptionsTableViewController
               if let popoverController = destinationVC.popoverPresentationController {
                   popoverController.delegate = self
@@ -77,9 +78,6 @@
           }
       }
   ```
-
-  * 
-* 顆
 
 
 
