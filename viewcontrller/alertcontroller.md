@@ -1,20 +1,20 @@
 # AlertContrller
 
 * #### AlertSheet
-```
-@IBAction func showSortSheet(sender: AnyObject) {
+
+  ```
+  @IBAction func showSortSheet(sender: AnyObject) {
 
     let sortMenu = UIAlertController(title: nil, message: "Sort by", preferredStyle: .ActionSheet)
 
     let wifiAction = UIAlertAction(title: "Wifi", style: .Default, handler: nil)
     let cheapAction = UIAlertAction(title: "Cheap", style: .Default, handler: nil)
-  
+
     sortMenu.addAction(wifiAction)
     sortMenu.addAction(cheapAction)
     self.presentViewController(sortMenu, animated: true, completion: nil)
   }
-```
-
+  ```
 * #### popover 要能顯示在多種Size的螢幕上
 
   * 先讓viewcontroller follow protocol：`UIPopoverPresentationControllerDelegate`
@@ -39,3 +39,32 @@
       controller.sourceRect = (self.navigationItem.rightBarButtonItem?.accessibilityFrame)!
   }
   ```
+
+* #### popover 出現在NavigationBarItem的下方的做法
+
+  * 先建立一個TableViewController，這個TableVC的內容，就會是後來popover出來的選單內容，建議是用靜態Table做就好，因為選單的選項都是已知且固定的
+  * 在viewWillAppear做一些設定
+
+  ```
+  // 設定讓呈現出來的選單不要是圓角
+  self.view.superview?.layer.cornerRadius = 0.0
+  // 設定出來的選單大小
+  self.preferredContentSize = CGSize(width: 80, height: 130)
+  ```
+
+  * 再回到要呈現選單的ViewController內，讓此VC遵循`UIPopoverPresentationControllerDelegate,UIAdaptivePresentationControllerDelegate`
+  * 實作
+
+  ```
+  func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle { 
+      // 讓選單TableViewController的格式為none
+      return .none 
+  }
+  ```
+
+  * 
+
+* 顆
+
+
+
