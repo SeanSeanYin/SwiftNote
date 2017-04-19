@@ -136,5 +136,25 @@ let predicate = NSPredicate(format: "isFinished == %@", NSNumber(booleanLiteral:
   }
   ```
 
+* #### 獲得高度
+
+  * 螢幕高度
+
+  ```
+  UIScreen.main.bounds.size.height
+  ```
+
+  * Navigation高度
+
+  ```
+  (self.navigationController?.navigationBar.frame.size.height)!
+  ```
+
+  * TabBar高度
+
+  ```
+  (self.tabBarController?.tabBar.frame.height)!)
+  ```
+
 
 
