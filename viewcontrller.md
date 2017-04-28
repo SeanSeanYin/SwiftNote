@@ -3,6 +3,16 @@
 * #### 新增背景圖片
 
   * `self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background.png"))`
+* #### 取消鍵盤的方式
+
+```
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+
+        super.touchesBegan(touches, withEvent:event)
+        self.view.endEditing(true)
+    }
+```
+
 * #### 設定Textfield的鍵盤格式
 * ```
   self.promoTextField.keyboardType = UIKeyboardType.EmailAddress
@@ -44,7 +54,7 @@
 
   * 在要停止的地方新增
 
-    `OperationQueue.main.addOperation {                                                    
+    `OperationQueue.main.addOperation {                                                      
      self.spinner.stopAnimating() }`
 * #### 出現`whose view is not in the window hierarchy!`的解法
 
