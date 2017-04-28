@@ -34,7 +34,6 @@
   * Removing the pod.lock file and the pods.xcodeproj files
   * And then closing Xcode and running pod update again
   * Then building again.
-
 * #### 將數個ViewController獨立成一個storyboard的方法
 
   * 選取想要獨立出來的ViewController

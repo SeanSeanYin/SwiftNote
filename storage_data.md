@@ -12,6 +12,13 @@ NSUerDefaults：適合儲存單一使用者的基本設定，但是不適合儲�
 
 ## CoreData：
 
+* ### 出現filenames are used to distinguish private declarations with the same name的錯誤解法
+
+  * Delete your CoreData subclasses
+  * Delete your derived data folder
+  * Clean your project \(CMD+K\)
+  * Generate new CoreData subclasses, this time select 
+    `Codegen: Manual/None`and `Module: Current Product Module`
 * ### 在未使用CoreData的現有專案內新增Core Data：
 
   * 先在 AppDelegate.swift 內新增 `import CoreData`
