@@ -64,22 +64,23 @@ Alamofire.request(request).responseJSON { responseObject in
 class NetworkManager {
 
     static let share = NetworkManager()
-    
+
     let defaultManager: Alamofire.SessionManager = {
         let serverTrustPolicies: [String: ServerTrustPolicy] = [
             "apistage2.aisleconnect.us": .disableEvaluation
         ]
-        
+
         let configuration = URLSessionConfiguration.default
         configuration.httpAdditionalHeaders = Alamofire.SessionManager.defaultHTTPHeaders
-        
+
         return Alamofire.SessionManager(
             configuration: configuration,
             serverTrustPolicyManager: ServerTrustPolicyManager(policies: serverTrustPolicies)
         )
     }()
-    
 }
+
+之後要調用，呼叫 NetworkManager.share.defaultManager.request() 即可
 ```
 
 
