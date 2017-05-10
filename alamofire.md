@@ -39,15 +39,14 @@
   ```
 
   * 因為上面程式是放在`AppDelegate.swift`內，所以自行先創造一個`Window`，然後才能產生`AlertController`
-
 * #### 在httpbody內送出string的方式
 
 ```
 let url = "http://xxx.com.tw/api/"
-        
+
 let string = "\"{\\\"para1\\\":\\\"1317\\\", \\\"para2\\\":\\\"\\\", \\\"para3\\\":\\\"\\\", \\\"para4\\\":\\\"10\\\"}\""
 print("jsonString:\(string)")
-        
+
 var request = URLRequest(url: URL(string: url)!)
 request.httpMethod = "POST"
 request.setValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -57,6 +56,30 @@ let data = string.data(using: String.Encoding.utf8)!
 request.httpBody = data
 
 Alamofire.request(request).responseJSON { responseObject in
+```
+
+* #### 讓Alamofire可以和 Self signed certificate的Server溝通的方法
+
+```
+class NetworkManager {
+
+    static let share = NetworkManager()
+    
+    let defaultManager: Alamofire.SessionManager = {
+        let serverTrustPolicies: [String: ServerTrustPolicy] = [
+            "apistage2.aisleconnect.us": .disableEvaluation
+        ]
+        
+        let configuration = URLSessionConfiguration.default
+        configuration.httpAdditionalHeaders = Alamofire.SessionManager.defaultHTTPHeaders
+        
+        return Alamofire.SessionManager(
+            configuration: configuration,
+            serverTrustPolicyManager: ServerTrustPolicyManager(policies: serverTrustPolicies)
+        )
+    }()
+    
+}
 ```
 
 
