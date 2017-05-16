@@ -45,4 +45,6 @@
 ## Others
 
 * [Objective C](objective-c.md)
+* [Design Pattern](design-pattern.md)
+  * [Ch6. Singleton](design-pattern/singleton.md)
 
