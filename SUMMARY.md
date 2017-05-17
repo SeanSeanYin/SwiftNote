@@ -47,4 +47,5 @@
 * [Objective C](objective-c.md)
 * [Design Pattern](design-pattern.md)
   * [Ch6. Singleton](design-pattern/singleton.md)
+  * [Ch7. Object pool](design-pattern/ch7-object-pool.md)
 
