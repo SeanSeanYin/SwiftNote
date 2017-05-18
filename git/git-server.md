@@ -28,7 +28,10 @@ usermod -a -G [groupname] [username]
 // 更改將Group綁定到某個路徑上
 chgrp -R [groupname] [path] //ex chgrp -R git /var/git
 // 更改path底下所有檔案的rwx權限for group
-chown g+rwx -R [path]
+chmod g+rwx -R [path]
+// 讓其他使用者無法存取此repository
+chmod o-rwx -R [path] 
+
 ```
 
 
