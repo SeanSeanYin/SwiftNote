@@ -6,9 +6,9 @@
 * #### 取消鍵盤的方式
 
 ```
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-
-        super.touchesBegan(touches, withEvent:event)
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        super.touchesBegan(touches, with:event)
         self.view.endEditing(true)
     }
 ```
@@ -54,7 +54,7 @@
 
   * 在要停止的地方新增
 
-    `OperationQueue.main.addOperation {                                                        
+    `OperationQueue.main.addOperation {                                                          
      self.spinner.stopAnimating() }`
 * #### 出現`whose view is not in the window hierarchy!`的解法
 
