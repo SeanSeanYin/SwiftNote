@@ -33,7 +33,59 @@ chmod g+rwx -R [path]
 chmod o-rwx -R [path]
 ```
 
+* 架設gitolite的流程
+
+  * 先安裝好git server
+
+  * 選擇一台client端電腦作為晚點要設定gitolite的主帳號
+
+    * 利用ssh-keygen產生一對公鑰私鑰
+
+    * 透過scp將公鑰上傳到gitolite的server上（在此假設公鑰名稱叫做id\_rsa.pub）
+
+  * 在ubuntu內開啟一個名叫git的userid（這會是以後所有人要來存取此台gitolite的唯一帳號），再使用su - git的方式切換到git
+
+  * 然後在git的家目錄底下抓取gitiolite的source code
+
+  ```
+  git clone git://github.com/sitaramc/gitolite
+  ```
+
+  * 安裝gitolite
+
+  ```
+  cd $HOME
+  mkdir -p bin
+  gitolite/install -to $HOME/bin
+  ```
+
+  * 設定gitolite，並選擇gitolite帳號的公鑰
+
+  ```
+  cd $HOME
+  $HOME/bin/gitolite setup - /tmp/id_rsa.pub
+  ```
+
+  * 用client端（要有id\_rsa.pub這私鑰的別台電腦）測試gitolite是否安裝成功
+
+  ```
+  git ls-remote git@server:gitolite-admin
+
+  //如果有回覆類似下面的東西，代表安裝成功
+  9dd8aab60bac5e54ccf887a87b4f3d35c96b05e4    HEAD
+  9dd8aab60bac5e54ccf887a87b4f3d35c96b05e4    refs/heads/master
+  ```
+
+* 加入使用者的方式
+
+  * 把使用者的公鑰放入client端的gitolite-admin/keydir底下
+
+  * 假設公鑰名稱叫做user1.pub，這個user在repo裡面的名稱就會叫做user1
+
+  * 之後add & commit & push
+
 * 替使用者開新專案的流程
+
   * 先編輯gitolite-admin/conf/gitolite.conf來開啟專案，並同時給予使用者權限
 
   ```
