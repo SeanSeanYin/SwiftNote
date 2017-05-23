@@ -110,7 +110,9 @@ chmod o-rwx -R [path]
   ```
   host    gito
        user git  // 這裡要填gitolite對外使用的存取帳號，在我們這例子是git
-     
+       hostname  server ip or domain
+       port 22
+       identityfile ~/.ssh/admin
   ```
 
 * 使用者的權限設定
