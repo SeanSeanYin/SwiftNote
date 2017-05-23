@@ -103,5 +103,23 @@ chmod o-rwx -R [path]
 
   * 之後先把所有專案檔案拉入此專案資料夾底下，再add & commit & push即可
 
+* 使用者的權限設定
+  * 想要多瞭解可以看這兩篇
+
+    * [Tsung's blog](https://blog.longwin.com.tw/2011/03/linux-gitolite-git-server-2011/)
+
+    * [CrBoy's blog](http://blog.crboy.net/2012/06/gitolite-settings-and-managements.html)
+
+  * C, R, RW, RW+, RWC, RW+C, RWD, RW+D, RWCD, RW+CD, -
+
+    * R 讀取
+    * W 寫入或建立新的 refs \(branches, tags\)
+    * + 刪除或改變 refs `（允許push -f）`
+    * - 拒絕存取 \(可用以明確拒絕使用者存取此 repo，須寫在 R 權限之前\)
+    * C 和 D是比較特別的權限
+    * C（獨立）僅用於使用正規表示法的repo，表示可建立符合該正規表示法的repo名稱
+    * C（組合）僅用於使用正規表示法的refs，表示可建立符合該正規表示法的refs名稱
+    * D僅用於使用正規表示法的refs，表示可刪除符合該正規表示法的refs名稱
+
 
 
