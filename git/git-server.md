@@ -111,6 +111,14 @@ chmod o-rwx -R [path]
 
     * [CrBoy's blog](http://blog.crboy.net/2012/06/gitolite-settings-and-managements.html)
 
+  * 使用@來指定群組
+
+    * @rd1 = yura ken
+
+    * @rd2 = hani tzuyu
+
+    * @rdteam = @rd1 @rd2 mina
+
   * `<權限> [<引用>]* = [<user>]+`
 
   * C, R, RW, RW+, RWC, RW+C, RWD, RW+D, RWCD, RW+CD, -
