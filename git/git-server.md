@@ -115,6 +115,8 @@ chmod o-rwx -R [path]
        identityfile ~/.ssh/admin
   ```
 
+  * 之後用 git clone gito:gitolite-admin，就可以快速下載gitolite-admin這個專案了
+
 * 使用者的權限設定
 
   * 想要多瞭解可以看這兩篇
