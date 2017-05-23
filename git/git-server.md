@@ -103,6 +103,16 @@ chmod o-rwx -R [path]
 
   * 之後先把所有專案檔案拉入此專案資料夾底下，再add & commit & push即可
 
+* 使用者端的ssh alias設定
+
+  * 編輯 ~/.ssh/config檔案
+
+  ```
+  host    gito
+       user git  // 這裡要填gitolite對外使用的存取帳號，在我們這例子是git
+     
+  ```
+
 * 使用者的權限設定
 
   * 想要多瞭解可以看這兩篇
