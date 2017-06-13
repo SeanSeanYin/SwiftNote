@@ -105,6 +105,13 @@
   matchingItems = self.cafes.filter { term in
             return (term.name.contains(searchBarText) || term.address.contains(searchBarText))}
   ```
+* #### 取得時間的年、月、日
+
+```
+Calendar.current.component(.year, from: date) //年
+Calendar.current.component(.month, from: date) //月
+```
+
 * #### 將圖片轉成NSData
 
 `UIImagePNGRepresentation(result.forwardImg as! UIImage)! as NSData`
@@ -135,7 +142,6 @@ let predicate = NSPredicate(format: "isFinished == %@", NSNumber(booleanLiteral:
      UIApplication.shared.openURL(URL(string: openAppStoreForRating)!)
   }
   ```
-
 * #### 獲得高度
 
   * 螢幕高度
