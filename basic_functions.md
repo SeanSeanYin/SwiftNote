@@ -112,6 +112,12 @@ Calendar.current.component(.year, from: date) //年
 Calendar.current.component(.month, from: date) //月
 ```
 
+* #### 比較某個物件是否為特定class
+
+```
+obj is UIView
+```
+
 * #### 將圖片轉成NSData
 
 `UIImagePNGRepresentation(result.forwardImg as! UIImage)! as NSData`
