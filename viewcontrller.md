@@ -7,7 +7,7 @@
 
 ```
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
+
         super.touchesBegan(touches, with:event)
         self.view.endEditing(true)
     }
@@ -54,7 +54,7 @@
 
   * 在要停止的地方新增
 
-    `OperationQueue.main.addOperation {                                                          
+    `OperationQueue.main.addOperation {                                                            
      self.spinner.stopAnimating() }`
 * #### 出現`whose view is not in the window hierarchy!`的解法
 
@@ -117,6 +117,18 @@
 
   * 使用[Extension Class](http://stackoverflow.com/questions/24126678/close-ios-keyboard-by-touching-anywhere-using-swift)的方式來擴充隱藏鍵盤功能，可支援任意個ViewContrller。
 * #### 做xib的注意事項
+
+  * 增加xib的方式
+
+  ```
+  override func viewDidLoad () {
+      super.viewDidLoad()
+    
+      let nib = UINib(nibName: "NewBrowseStoreTableViewCell", bundle: nil)
+      tableView.register(nib, forCellReuseIdentifier: "NewBrowseStoreTableViewCell")
+  }
+
+  ```
 
   * `xib最底下那層View是UIView類別`
 * #### 要把SearchBar固定在不是TableHaed和Navigation Bar的方法
