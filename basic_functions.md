@@ -146,6 +146,13 @@ titleLabel.font = UIFont.systemFont(ofSize: 24 * scale, weight: UIFontWeightBold
       UIApplication.shared.open(appSettings, options: [:], completionHandler: nil)
   }
   ```
+* #### 給UI元件Constrain的方式
+
+```
+// item:子元件 toItem:父元件
+NSLayoutConstraint(item: image, attribute: .topMargin, relatedBy: .equal, toItem: scrollView, attribute: .topMargin, multiplier: 1.0, constant: 20.0 * scale).isActive = true
+```
+
 * #### 轉移到AppStore的評分頁面
 
   ```
