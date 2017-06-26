@@ -128,6 +128,13 @@ obj is UIView
 let predicate = NSPredicate(format: "isFinished == %@", NSNumber(booleanLiteral: false))
 ```
 
+* #### 給系統字型的方式
+
+```
+titleLabel.font = UIFont.boldSystemFont(ofSize: 24 * scale)
+titleLabel.font = UIFont.systemFont(ofSize: 24 * scale, weight: UIFontWeightBold)
+```
+
 * #### selector語法
 
   `#selector(ViewController.getData(name:))`
