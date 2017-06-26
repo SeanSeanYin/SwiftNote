@@ -54,7 +54,7 @@
 
   * 在要停止的地方新增
 
-    `OperationQueue.main.addOperation {                                                            
+    `OperationQueue.main.addOperation {                                                              
      self.spinner.stopAnimating() }`
 * #### 出現`whose view is not in the window hierarchy!`的解法
 
@@ -123,11 +123,10 @@
   ```
   override func viewDidLoad () {
       super.viewDidLoad()
-    
-      let nib = UINib(nibName: "NewBrowseStoreTableViewCell", bundle: nil)
-      tableView.register(nib, forCellReuseIdentifier: "NewBrowseStoreTableViewCell")
-  }
 
+      let nib = UINib(nibName: "NewBrowseStoreTableViewCell", bundle: nil) //nib的檔案名稱
+      tableView.register(nib, forCellReuseIdentifier: "NewBrowseStoreTableViewCell") //nib的Identifier
+  }
   ```
 
   * `xib最底下那層View是UIView類別`
