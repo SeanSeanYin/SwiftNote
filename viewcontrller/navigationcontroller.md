@@ -11,5 +11,21 @@ titleLabel.sizeToFit()
 self.navigationItem.titleView = titleLabel
 ```
 
+* #### 更改BackBarItem的Title
+
+  * 在要隱藏的viewController內的viewDidLoad呼叫
+
+  ```
+  self.navigationController?.navigationBar.topItem?.title = ""
+  ```
+
+  * 但是會造成前一頁的title不見，所以要在前一頁的viewDidLoad內呼叫
+
+```
+self.navigationController?.navigationBar.topItem?.title = "Title"
+```
+
+* 呵呵
+
 
 
