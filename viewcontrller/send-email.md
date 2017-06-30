@@ -3,7 +3,7 @@
 
 ```
 extension AboutViewController:MFMailComposeViewControllerDelegate {
-    
+
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         switch result {
             case .cancelled:
