@@ -162,6 +162,9 @@ NSLayoutConstraint(item: image, attribute: .topMargin, relatedBy: .equal, toItem
      UIApplication.shared.openURL(URL(string: openAppStoreForRating)!)
   }
   ```
+* #### Textfield的placeholder要變換顏色
+
+  * #### 
 * #### 獲得高度
 
   * 螢幕高度
