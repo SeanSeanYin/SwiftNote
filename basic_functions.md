@@ -164,7 +164,11 @@ NSLayoutConstraint(item: image, attribute: .topMargin, relatedBy: .equal, toItem
   ```
 * #### Textfield的placeholder要變換顏色
 
-  * #### 
+  * 先點選textfield，再選擇IB的Identity inspector
+
+  * 然後在User Defined Runtime Attributes內新增一筆record
+
+  * Key Path的值為：`_placeholderLabel.textColor`，Type選擇Color，Value就選顏色
 * #### 獲得高度
 
   * 螢幕高度
