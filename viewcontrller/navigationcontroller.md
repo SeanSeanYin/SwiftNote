@@ -25,5 +25,18 @@ self.navigationItem.titleView = titleLabel
 self.navigationController?.navigationBar.topItem?.title = "Title"
 ```
 
+* 移除特定的ViewController
+
+```
+// 移除全部
+self.navigationController!.viewControllers.removeAll()
+// 移除第一個
+self.navigationController?.viewControllers.removeFirst
+// 移除最後一個
+self.navigationController?.viewControllers.removeLast
+// 移除特定個
+self.navigationController?.viewControllers.remove(at: "insert here a number")
+```
+
 
 
