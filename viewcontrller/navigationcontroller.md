@@ -35,7 +35,7 @@ self.navigationController?.viewControllers.removeFirst
 // 移除最後一個
 self.navigationController?.viewControllers.removeLast
 // 移除特定個
-self.navigationController?.viewControllers.remove(at: "insert here a number")
+self.navigationController?.viewControllers.remove(at: index)
 ```
 
 
