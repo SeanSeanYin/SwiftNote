@@ -49,7 +49,7 @@
     }
 ```
 
-讓Search Bar的取消鍵有作用
+#### 讓Search Bar的取消鍵有作用
 
 ```
 func searchBarCancelButtonClicked(searchBar: UISearchBar) {
