@@ -15,7 +15,7 @@
 
 ```
     @IBAction func startSearch (_ sender:UIBarButtonItem) {
-        
+
         self.definesPresentationContext = true
         // 隱藏左右兩邊的Button Item
         self.navigationItem.leftBarButtonItem = nil
@@ -30,7 +30,7 @@
 
 ```
     func didDismissSearchController(_ searchController: UISearchController) {
-        
+
         self.navigationItem.titleView = nil
         self.title = "視訊"
         self.navigationItem.leftBarButtonItem = self.searchBarItem
@@ -42,11 +42,19 @@
 
 ```
     func didPresentSearchController(_ searchController: UISearchController) {
-        
+
         DispatchQueue.main.async {
             searchController.searchBar.becomeFirstResponder()
         }
     }
+```
+
+讓Search Bar的取消鍵有作用
+
+```
+func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+    self.searchBar.showCancelButton = false
+}
 ```
 
 
