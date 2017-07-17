@@ -60,6 +60,20 @@ let title = obj["title"].stringValue.removingPercentEncoding
 string1.characters.count
 ```
 
+* #### 計算字串在Label內所需的高度
+
+```
+// extension String
+func height(withConstrainedWidth width: CGFloat, font: UIFont) -> CGFloat {
+    let constraintRect = CGSize(width: width, height: .greatestFiniteMagnitude)
+    let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [NSFontAttributeName: font], context: nil)
+        
+    return boundingBox.height
+}
+// 使用方式
+let height =store.storeObj.about!.height(withConstrainedWidth: descriptionCell.contentLabel.frame.width, font: descriptionCell.contentLabel.font)
+```
+
 * #### 字串切割
 
 ```
