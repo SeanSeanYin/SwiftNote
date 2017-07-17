@@ -20,5 +20,11 @@
   cell.size = CGSize(width: UIScreen.main.bounds.width, height: 190 * self.getScreenScale(with: .height))
   ```
 
+* 更新Cell和Cell內元件的Frame
+  * 在要更新的地方呼叫 reloadRow
+    `self.storeTableView.reloadRows(at: [IndexPath.init(row:2, section:0)], with: .automatic)`
+
+  * 然後在 cellForRowAt 內更新Frame
+
 
 
