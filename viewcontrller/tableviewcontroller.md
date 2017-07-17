@@ -26,14 +26,12 @@
 
   * 然後在 cellForRowAt 內更新Frame
 
-  * 
-
 ```
 func tableView (_tableView:UITableView, cellForRowAt indexPath:IndexPath) ->UITableViewCell {
 
     switch indexPath.row {
         case2:
-        
+
         if let descriptionCell = tableView.dequeueReusableCell(withIdentifier:"StoreDescriptionCell")as?StoreDescriptionCell {
            // 計算寬高
            let height = store.storeObj.about!.height(withConstrainedWidth: UIScreen.main.bounds.width *0.9, font: descriptionCell.contentLabel.font)
@@ -44,7 +42,7 @@ func tableView (_tableView:UITableView, cellForRowAt indexPath:IndexPath) ->UITa
            } else { descriptionCell.expandableLabel.isHidden = false }
 
            if self.isExpand == true{
-           
+
                descriptionCell.expandableLabel.isEnabled =false
                descriptionCell.expandableLabel.text =""
                descriptionCell.contentLabel.numberOfLines =0
@@ -57,6 +55,8 @@ func tableView (_tableView:UITableView, cellForRowAt indexPath:IndexPath) ->UITa
        return descriptionCell
  }
 ```
+
+
 
 
 
