@@ -26,88 +26,37 @@
 
   * 然後在 cellForRowAt 內更新Frame
 
-  * functableView\(\_tableView:UITableView, cellForRowAt indexPath:IndexPath\) -&gt;UITableViewCell {
+  * 
+
+```
+func tableView (_tableView:UITableView, cellForRowAt indexPath:IndexPath) ->UITableViewCell {
 
     switch indexPath.row {
+        case2:
+        
+        if let descriptionCell = tableView.dequeueReusableCell(withIdentifier:"StoreDescriptionCell")as?StoreDescriptionCell {
+           // 計算寬高
+           let height = store.storeObj.about!.height(withConstrainedWidth: UIScreen.main.bounds.width *0.9, font: descriptionCell.contentLabel.font)
+           let width = store.storeObj.about!.width(withConstraintedHeight: descriptionCell.contentLabel.font.lineHeight, font: descriptionCell.contentLabel.font)
 
-    case2:
+           if height < (descriptionCell.contentLabel.font.lineHeight * 3) {
+               descriptionCell.expandableLabel.isHidden =true
+           } else { descriptionCell.expandableLabel.isHidden = false }
 
-    ifletdescriptionCell = tableView.dequeueReusableCell\(withIdentifier:"StoreDescriptionCell"\)as?StoreDescriptionCell{
-
-
-
-     descriptionCell.expandableLabel.isUserInteractionEnabled =true
-
-     descriptionCell.expandableLabel.addGestureRecognizer\(tap\)
-
-     descriptionCell.expandableLabel.sizeToFit\(\)
-
-
-
-     print\("store's infomation :\\(store.storeObj.about\)"\)
-
-    //設定字體大小
-
-    self.setFont\(with: descriptionCell.contentLabel, in:16\)
-
-    self.setFont\(with: descriptionCell.descriptionLabel, in:16\)
-
-
-
-     descriptionCell.contentLabel.text = \(store.storeObj.about ==""\) ? NSLocalizedString\("na", comment:""\) : store.storeObj.about
-
-  
-
-
-     print\("font size:\\(descriptionCell.contentLabel.font.pointSize\) height:\\(descriptionCell.contentLabel.font.lineHeight\)"\)
-
-    letheight = store.storeObj.about!.height\(withConstrainedWidth: UIScreen.main.bounds.width \*0.9, font: descriptionCell.contentLabel.font\)
-
-    letwidth = store.storeObj.about!.width\(withConstraintedHeight: descriptionCell.contentLabel.font.lineHeight, font: descriptionCell.contentLabel.font\)
-
-
-
-     print\("descriptionCell.contentLabel.frame.height:\\(descriptionCell.contentLabel.frame.height\)"\)
-
-    ifheight &lt; \(descriptionCell.contentLabel.font.lineHeight \*3\) {
-
-     descriptionCell.expandableLabel.isHidden =true
-
-     }else{ descriptionCell.expandableLabel.isHidden =false}
-
-
-
-
-
-    ifself.isExpand ==true{
-
-
-
-     descriptionCell.expandableLabel.isEnabled =false
-
-     descriptionCell.expandableLabel.text =""
-
-     descriptionCell.contentLabel.numberOfLines =0
-
-     descriptionCell.contentLabel.sizeToFit\(\)
-
-    self.newContentLabelHeight = height + CGFloat\(50\) + descriptionCell.descriptionLabel.frame.height
-
-     descriptionCell.contentView.frame = CGRect\(x:0.0, y:0.0, width: UIScreen.main.bounds.width \*0.9, height:self.newContentLabelHeight\)
-
-
-
-    self.storeTableView.layoutIfNeeded\(\)
-
-     }
-
-
-
-
-
-    returndescriptionCell
-
-     }
+           if self.isExpand == true{
+           
+               descriptionCell.expandableLabel.isEnabled =false
+               descriptionCell.expandableLabel.text =""
+               descriptionCell.contentLabel.numberOfLines =0
+               descriptionCell.contentLabel.sizeToFit()
+               self.newContentLabelHeight = height + CGFloat(50) + descriptionCell.descriptionLabel.frame.height
+               // 給新的寬高
+               descriptionCell.contentView.frame = CGRect(x:0.0, y:0.0, width: UIScreen.main.bounds.width *0.9, height:self.newContentLabelHeight)
+               self.storeTableView.layoutIfNeeded()
+            }
+       return descriptionCell
+ }
+```
 
 
 
