@@ -27,7 +27,7 @@
   * 然後在 cellForRowAt 內更新Frame，並且在heightForRowAt內傳回Cell的高度
 
 ```
-func tableView (_tableView:UITableView, cellForRowAt indexPath:IndexPath) ->UITableViewCell {
+func tableView (_tableView:UITableView, cellForRowAt indexPath:IndexPath) -> UITableViewCell {
 
     switch indexPath.row {
         case2:
@@ -54,14 +54,16 @@ func tableView (_tableView:UITableView, cellForRowAt indexPath:IndexPath) ->UITa
             }
        return descriptionCell
  }
- 
- func tableView (_tableView:UITableView, heightForRowAt indexPath:IndexPath) ->UITableViewCell {
+
+ func tableView (_tableView:UITableView, heightForRowAt indexPath:IndexPath) -> UITableViewCell {
 
     switch indexPath.row {
         case2:
             if let descriptionCell = tableView.dequeueReusableCell(withIdentifier: "StoreDescriptionCell") as? StoreDescriptionCell {
                 if self.isExpand { return CGFloat(self.newContentLabelHeight)}
             }
+    }
+}
 ```
 
 
