@@ -144,6 +144,8 @@ titleLabel.font = UIFont.systemFont(ofSize: 24 * scale, weight: UIFontWeightBold
   ```
   if #available(iOS 10.0, *) {
       UIApplication.shared.open(appSettings, options: [:], completionHandler: nil)
+  }else {
+      UIApplication.shared.openURL(appSettings)
   }
   ```
 * #### 給UI元件Constrain的方式
