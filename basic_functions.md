@@ -140,14 +140,15 @@ titleLabel.font = UIFont.systemFont(ofSize: 24 * scale, weight: UIFontWeightBold
   `#selector(ViewController.getData(name:))`
 
 * #### 讓使用者跳到此App在手機內的設定頁面
-
-  ```
+* ```
   if #available(iOS 10.0, *) {
       UIApplication.shared.open(appSettings, options: [:], completionHandler: nil)
   }else {
       UIApplication.shared.openURL(appSettings)
   }
   ```
+
+  * ##### [各個頁面的URL](https://stackoverflow.com/questions/28152526/how-do-i-open-phone-settings-when-a-button-is-clicked-ios "各個頁面的URL") 
 * #### 給UI元件Constrain的方式
 
 ```
