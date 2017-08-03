@@ -48,6 +48,20 @@
   let str = " Swift 3.0 "
   let trimmed = str.trimmingCharacters(in: .whitespacesAndNewlines)
   ```
+* #### 檢查email格式
+
+```
+func isValidEmail(with email:String) -> Bool {
+
+   print("validate emilId: \(email)")
+   let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
+   let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+   let result = emailTest.evaluate(with: email)
+   return result
+}
+
+```
+
 * #### Decode url格式的字串
 
 ```
@@ -67,7 +81,7 @@ string1.characters.count
 func height(withConstrainedWidth width: CGFloat, font: UIFont) -> CGFloat {
     let constraintRect = CGSize(width: width, height: .greatestFiniteMagnitude)
     let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [NSFontAttributeName: font], context: nil)
-        
+
     return boundingBox.height
 }
 // 使用方式
