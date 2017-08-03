@@ -27,6 +27,35 @@
       return .none
   }
   ```
+* #### 實作帶有Textfield的alertview
+
+```
+    // 建立AlertView
+    let alert = UIAlertController(title: "\(NSLocalizedString("forgotPassword", comment: ""))?", message: NSLocalizedString("enterYourEmailAddressToReceiveDirectionsToResetYourPassword", comment: ""), preferredStyle: .alert)
+        
+    // 增加textField和設定placeholder
+    alert.addTextField(configurationHandler: { textfield in
+        textfield.placeholder = NSLocalizedString("email", comment: "")
+        textfield.keyboardType = .emailAddress
+    })
+        
+    //設定cancel和send的按鈕
+    let cancel = UIAlertAction(title: NSLocalizedString("cancel", comment: ""), style: .cancel, handler: nil)
+    let send = UIAlertAction(title: NSLocalizedString("send", comment: ""), style: .default, handler: { action in
+        
+        if (alert.textFields?.first?.text?.isEmail)! {
+            self.forgotPassword(with: (alert.textFields?.first?.text)!)
+        } else {
+            self.showMessage(title: NSLocalizedString("invalidEmailFormat", comment: ""), message: NSLocalizedString("emailAddressFormatInvalid", comment: ""), action: nil)
+        }
+    })
+        
+    // 增加cancel和send按鈕到AlertView上
+    alert.addAction(send)
+    alert.addAction(cancel)
+    self.present(alert, animated: true, completion: nil)
+```
+
 * #### popover要能正確切齊顯示在anchor下方
 
   * 使用下面方法
