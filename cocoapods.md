@@ -26,15 +26,19 @@
 
   * 直接刪除build settings：選擇專案的`project.xcodeproj`，用`xcode以外`的文字編輯器打開，直接把 `ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES`給刪除，再次`pod install`
 
-* #### Unable to find a specification for \`xxxxx (~> 1.x.x)\` depended upon by Podfile.
+* #### Unable to find a specification for \`xxxxx \(~&gt; 1.x.x\)\` depended upon by Podfile.
+
   * `pod repo remove master`
   * `pod setup`
-
 * #### 在更新Xcode之後下`pod install`會卡在`Installing`的解決方法
- * `pod remove repo master`
- * `pod setup`
- * `pod install`
- 
- * #### 執行pod setup 太久的原因：master有519MB大！直接到目錄底下從github上clone比較快
-  * `cd ~/.cocoapods/repos ` 
+
+  * `pod remove repo master`
+  * `pod setup`
+  * `pod install`
+
+  * #### 執行pod setup 太久的原因：master有519MB大！直接到目錄底下從github上clone比較快
+  * `cd ~/.cocoapods/repos` 
   * `git clone --depth 1 https://github.com/CocoaPods/Specs.git master`
+
+
+
