@@ -148,7 +148,7 @@ titleLabel.font = UIFont.systemFont(ofSize: 24 * scale, weight: UIFontWeightBold
   }
   ```
 
-  * ##### [各個頁面的URL](https://stackoverflow.com/questions/28152526/how-do-i-open-phone-settings-when-a-button-is-clicked-ios "各個頁面的URL") 
+  * ##### [各個頁面的URL](https://stackoverflow.com/questions/28152526/how-do-i-open-phone-settings-when-a-button-is-clicked-ios "各個頁面的URL")
 * #### 給UI元件Constrain的方式
 
 ```
