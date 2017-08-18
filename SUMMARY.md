@@ -26,6 +26,7 @@
 * [Class & Struct](class-and-struct.md)
 * [AVFoundation](avfoundation.md)
 * [Button](button.md)
+* [StatusBar](statusbar.md)
 
 ## Third Party Library
 
