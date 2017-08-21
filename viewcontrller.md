@@ -54,7 +54,7 @@
 
   * 在要停止的地方新增
 
-    `OperationQueue.main.addOperation {                                                                
+    `OperationQueue.main.addOperation {                                                                  
      self.spinner.stopAnimating() }`
 * #### 出現`whose view is not in the window hierarchy!`的解法
 
@@ -134,6 +134,12 @@
 
   * 先建立一個UIView
   * 再把Search Bar新增到剛剛的UIView
+* #### 連續取消兩個ViewController的方式
+
+```
+self?.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+```
+
 * #### 取消當前的View
 
   * `dismiss(animated: true, completion: nil)`
