@@ -58,6 +58,9 @@ request.httpBody = data
 Alamofire.request(request).responseJSON { responseObject in
 ```
 
+* #### 得到"JSON could not be serialized because of error:\nThe data couldn’t be read because it isn’t in the correct format."的原因
+
+  * 在request內忘記加上`encoding:JSONEncoding.defaul `會導致Server端回傳String格式  
 * #### 讓Alamofire可以和 Self signed certificate的Server溝通的方法
 
 ```
