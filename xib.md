@@ -1,4 +1,4 @@
-* #### 使用Xib的方式來建立（[參考這篇](https://medium.com/@brianclouser/swift-3-creating-a-custom-view-from-a-xib-ecdfe5b3a960)）
+* #### 使用Xib的方式來建立UIView（[參考這篇](https://medium.com/@brianclouser/swift-3-creating-a-custom-view-from-a-xib-ecdfe5b3a960)）
 
   * 先New一個View的File（myView.xib），然後在裡面拉Layout
 
@@ -22,18 +22,18 @@
         @IBOutlet weak var subTitleLabel:UILabel!
         @IBOutlet weak var dateLabel:UILabel!
         @IBOutlet weak var priceLabel:UILabel!
-    
+
         override init(frame: CGRect) {
             super.init(frame:frame)
             commonInit()
-        
+
         }
-    
+
         required init?(coder aDecoder: NSCoder) {
             super.init(coder: aDecoder)
             commonInit()
         }
-    
+
         private func commonInit() {
             Bundle.main.loadNibNamed("CalendarUIView", owner: self, options: nil)
             addSubview(contentView)
