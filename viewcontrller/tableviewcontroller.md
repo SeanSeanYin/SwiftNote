@@ -66,6 +66,20 @@ func tableView (_tableView:UITableView, cellForRowAt indexPath:IndexPath) -> UIT
 }
 ```
 
+* #### 要使用客製化的Table Cell Action的話，推薦使用 SwipeCellKit
+* #### 更改Cell在移滑動時，action以外的部分的backgroundColor
+
+  * 下面這個function這要使用SwipeCellKit才有
+
+  * ```
+    func tableView(_ tableView: UITableView, editActionsOptionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> SwipeTableOptions {
+        var option = SwipeTableOptions()
+        option.expansionStyle = .none
+        option.transitionStyle = .reveal
+        option.backgroundColor = UIColor(patternImage: UIImage(named: "bg_browse")!)
+        return option
+    }
+    ```
 * #### CellAction的icon的backgroundColor更換的方法
 
   * 先create出Action，再Assign想要的顏色給 backgroundColor
