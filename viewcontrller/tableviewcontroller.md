@@ -66,7 +66,13 @@ func tableView (_tableView:UITableView, cellForRowAt indexPath:IndexPath) -> UIT
 }
 ```
 
+* #### CellAction的icon的backgroundColor更換的方法
 
+  * 先create出Action，再Assign想要的顏色給 backgroundColor
+
+  * ```
+    reviewAction.backgroundColor = UIColor(patternImage: UIImage(named: "bg_browse")!)
+    ```
 
 
 
