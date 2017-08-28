@@ -16,6 +16,8 @@
   * [ScrollView](viewcontrller/scrollview.md)
 * [UIImageView](basic_functions/uiimageview.md)
 * [Storage Data](storage_data.md)
+* [Component](component.md)
+  * [UITextView](component/uitextview.md)
 * [View & Layer & Animation](view--layer--animation.md)
 * [URL Scheme](url-schema.md)
 * [User Notification](pass-data/user-notification.md)
