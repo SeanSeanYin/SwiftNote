@@ -26,25 +26,26 @@
       }
   ```
 
+  * [這篇才對](https://grokswift.com/uitextview-placeholder/)
 * #### 計算字數
 
   * 在shouldChangeTextIn內來統計字數
 
   * ```
         func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        
+
             if(text == "\n") {
                 textView.endEditing(true)
                 return false
             } else {
-            
+
                 let count = (textView.text?.characters.count)! + text.characters.count - range.length
                 self.showWords(count: self.maxContentCount - count)
-            
+
                 if (self.maxContentCount - count) < 0 {
                     self.postButton?.isEnabled = false
                 } else { self.postButton?.isEnabled = true }
-            
+
                 return true
             }
         }
