@@ -54,7 +54,7 @@
 
   * 在要停止的地方新增
 
-    `OperationQueue.main.addOperation {                                                                  
+    `OperationQueue.main.addOperation {                                                                    
      self.spinner.stopAnimating() }`
 * #### 出現`whose view is not in the window hierarchy!`的解法
 
@@ -88,6 +88,19 @@
   * 先創造`UITableCell的SubClass`，然後將Table的Cell的Class指定為剛剛建立的SubClass，並且讓`ViewController多繼承UITableViewDelegate, UITableViewDataSource`，並且在ViewController的viewDidLoad函式內，新增`table.delegate = self & table.dataSource = self`，最後是在ViewController的Class內實作`tableView(_: didSelectRowAt:) & tableView(_: cellForRowAt:) & numberOfSectionsInTableView` 這三個函式
 
   * 然後要取用Table內的元件，可以這樣調用`let cell = tableView.dequeueReusableCellWithIdentifier("MyCustomTableViewCell", forIndexPath: indexPath) as! MyCustomTableViewCell`，之後再用`cell.MyLabel.text = someString`賦予值
+* #### 使用dismiss發生 `transitionViewForCurrentTransition is not set, presentation controller was dismissed during the presentation? (<_UIAlertControllerAlertPresentationController:0x78feff20>) 的`解決方式
+
+  * 直接關掉第二個ViewController，會連第一個一起關掉
+
+  * 使用DispatchQueue.main.async{} 去執行dismiss
+
+  * 發生原因可能是第一個ViewController還在dismiss時，第二個還在presenting的時候又要dismiss第二個所導致
+
+  * ```
+    DispatchQueue.main.async {
+        self?.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+    }
+    ```
 * #### Slider用法
 
   * 設定maximumValue & minimumValue & value
