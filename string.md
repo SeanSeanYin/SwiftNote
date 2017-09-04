@@ -59,7 +59,6 @@ func isValidEmail(with email:String) -> Bool {
    let result = emailTest.evaluate(with: email)
    return result
 }
-
 ```
 
 * #### Decode url格式的字串
@@ -100,6 +99,12 @@ for part in parts {
 ```
 
 # Array
+
+* #### Sort by date
+
+```
+let sortedArray = HistoryArray.sort({ $0.date.compare($1.date) == NSComparisonResult.OrderedDescending})
+```
 
 * #### 陣列使用append\(\)
 
