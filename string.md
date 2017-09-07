@@ -106,10 +106,16 @@ for part in parts {
 let sortedArray = HistoryArray.sort({ $0.date.compare($1.date) == NSComparisonResult.OrderedDescending})
 ```
 
-* #### 使用forEach的方式
+* #### forEach的用法
 
 ```
 imageViews.forEach { $0?.isHidden = true }
+```
+
+* #### contain的用法
+
+```
+attendees.contains(where: { ($0 as AnyObject).sid == User.shared.sid })
 ```
 
 * #### 陣列使用append\(\)
