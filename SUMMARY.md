@@ -31,6 +31,7 @@
 * [Button](button.md)
 * [StatusBar](statusbar.md)
 * [Xib](xib.md)
+* Animation
 
 ## Third Party Library
 
