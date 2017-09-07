@@ -106,6 +106,12 @@ for part in parts {
 let sortedArray = HistoryArray.sort({ $0.date.compare($1.date) == NSComparisonResult.OrderedDescending})
 ```
 
+* #### 使用forEach的方式
+
+```
+imageViews.forEach { $0?.isHidden = true }
+```
+
 * #### 陣列使用append\(\)
 
   假設宣告一陣列 `var directoryList:[URL]!` 直接使用`append()`新增元素會遇到`unwrapped error`，原因是這時候的陣列還是`nil`狀態，所以要先給陣列值，像是 `directoryList = getList()` 或是宣告的時候就指定到空陣列 `var directoryList:[URL]! = []`
