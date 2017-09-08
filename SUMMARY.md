@@ -19,6 +19,7 @@
 * [Component](component.md)
   * [UITextView](component/uitextview.md)
   * [UITextField](component/uitextfield.md)
+  * [UILabel](component/uilabel.md)
 * [View & Layer & Animation](view--layer--animation.md)
 * [URL Scheme](url-schema.md)
 * [User Notification](pass-data/user-notification.md)
