@@ -26,6 +26,7 @@
             captureSession.addInput(deviceInput)
             // 設定output
             self.addMetaDataCaptureOutToSession()
+            // 設定previewLayer
             self.setupPreviewLayer(completion: {
                 self.captureSession.startRunning()
             })
