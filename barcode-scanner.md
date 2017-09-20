@@ -46,10 +46,10 @@
         // 設定支援的code類型
         metadata?.metadataObjectTypes = [AVMetadataObjectTypeQRCode, AVMetadataObjectTypeCode128Code, AVMetadataObjectTypeCode39Code, AVMetadataObjectTypeCode93Code, AVMetadataObjectTypeUPCECode, AVMetadataObjectTypePDF417Code, AVMetadataObjectTypeEAN13Code, AVMetadataObjectTypeAztecCode,AVMetadataObjectTypeEAN8Code]
     }
-    
+
     // Set preview layer
     func setupPreviewLayer(completion:() -> ()){
-        
+
         self.captureLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         self.captureLayer?.frame = CGRect(x: 0.0, y: 0.0, width: self.screenWidth(), height: self.screenHeight())
         self.captureLayer?.borderColor = UIColor(red:0/255.0, green:0/255.0, blue:0/255.0, alpha: 0.0).cgColor
@@ -63,13 +63,13 @@
 
 ```
     func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [Any]!, from connection: AVCaptureConnection!) {
-        
+
         guard metadataObjects != nil && metadataObjects.count > 0 else {
             return
         }
         let decodedData = metadataObjects[0] as! AVMetadataMachineReadableCodeObject
         print("Barcode String \(decodedData.stringValue) Type \(decodedData.type)")
-        
+
         if decodedData.stringValue != nil && decodedData.stringValue.length > 0 {
             self.captureSession.stopRunning()
             callProductAPI(eanStr: decodedData.stringValue)
@@ -82,13 +82,12 @@
 ```
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         self.setupCaptureSession()
         NotificationCenter.default.addObserver(self, selector: #selector(self.avCaptureInputPortFormatDescriptionDidChangeNotification(notification:)), name: NSNotification.Name.AVCaptureInputPortFormatDescriptionDidChange, object: nil)
-    
 ```
 
-* 然後實作 
+* 然後實作 `avCaptureInputPortFormatDescriptionDidChangeNotification`
 
 ```
     func avCaptureInputPortFormatDescriptionDidChangeNotification(notification: NSNotification) {
