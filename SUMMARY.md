@@ -33,6 +33,7 @@
 * [StatusBar](statusbar.md)
 * [Xib](xib.md)
 * [Animation](animation.md)
+* [Barcode scanner](barcode-scanner.md)
 
 ## Third Party Library
 
