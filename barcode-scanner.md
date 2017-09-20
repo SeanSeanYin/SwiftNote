@@ -35,7 +35,7 @@
         }
     }
 
-    //MARK: Metadata capture
+    // Metadata capture
     func addMetaDataCaptureOutToSession(){
 
         metadata = AVCaptureMetadataOutput()
@@ -46,14 +46,56 @@
         // 設定支援的code類型
         metadata?.metadataObjectTypes = [AVMetadataObjectTypeQRCode, AVMetadataObjectTypeCode128Code, AVMetadataObjectTypeCode39Code, AVMetadataObjectTypeCode93Code, AVMetadataObjectTypeUPCECode, AVMetadataObjectTypePDF417Code, AVMetadataObjectTypeEAN13Code, AVMetadataObjectTypeAztecCode,AVMetadataObjectTypeEAN8Code]
     }
+    
+    // Set preview layer
+    func setupPreviewLayer(completion:() -> ()){
+        
+        self.captureLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+        self.captureLayer?.frame = CGRect(x: 0.0, y: 0.0, width: self.screenWidth(), height: self.screenHeight())
+        self.captureLayer?.borderColor = UIColor(red:0/255.0, green:0/255.0, blue:0/255.0, alpha: 0.0).cgColor
+        self.captureLayer?.videoGravity = AVLayerVideoGravityResize
+        self.previewView.layer.addSublayer(self.captureLayer!)
+        completion()
+    }
 ```
 
 * 然後實作 delegate `AVCaptureMetadataOutputObjectsDelegate`
 
 ```
-
+    func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [Any]!, from connection: AVCaptureConnection!) {
+        
+        guard metadataObjects != nil && metadataObjects.count > 0 else {
+            return
+        }
+        let decodedData = metadataObjects[0] as! AVMetadataMachineReadableCodeObject
+        print("Barcode String \(decodedData.stringValue) Type \(decodedData.type)")
+        
+        if decodedData.stringValue != nil && decodedData.stringValue.length > 0 {
+            self.captureSession.stopRunning()
+            callProductAPI(eanStr: decodedData.stringValue)
+        }
+    }
 ```
 
-* 
+* 想要限制掃描的區域，請在 `viewDidLoad()` 內先宣告 Notification
+
+```
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.setupCaptureSession()
+        NotificationCenter.default.addObserver(self, selector: #selector(self.avCaptureInputPortFormatDescriptionDidChangeNotification(notification:)), name: NSNotification.Name.AVCaptureInputPortFormatDescriptionDidChange, object: nil)
+    
+```
+
+* 然後實作 
+
+```
+    func avCaptureInputPortFormatDescriptionDidChangeNotification(notification: NSNotification) {
+    // metadataOutputRectOfInterest(for:) 內的CGRect的值，左下是(0,0)，右上是(1,1)，跟一般座標不一樣
+        self.metadata?.rectOfInterest = (self.captureLayer?.metadataOutputRectOfInterest(for: CGRect(x:  self.screenWidth() * 0.075, y: self.screenHeight() * 0.25, width: self.screenWidth() * 0.85, height: self.screenHeight() * 0.25)))!
+    }
+```
+
 
 
