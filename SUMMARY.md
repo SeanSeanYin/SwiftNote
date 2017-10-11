@@ -42,6 +42,7 @@
 * [Alamofire](alamofire.md)
 * [Firebase](firebase.md)
 * [Facebook](facebook.md)
+* [ObjectMapper](objectmapper.md)
 
 ## Tools
 
