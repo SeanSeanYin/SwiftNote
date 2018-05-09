@@ -36,6 +36,7 @@
 * [Animation](animation.md)
 * [Barcode scanner](barcode-scanner.md)
 * [Network Reachability](network-reachability.md)
+* [Timer](timer.md)
 
 ## Third Party Library
 
