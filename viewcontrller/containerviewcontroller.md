@@ -27,14 +27,16 @@
   * 然後寫顯示和移除ViewController的函式
 
   ```
-      //  
       fileprivate func add(asChildViewController viewController: UIViewController) {
+          // 新增viewController成原本viewcontroller的子viewcontroller
           self.addChildViewController(viewController)
+          // 新增viewController的view 成 原本viewcontroller的view的subview
           self.containView.addSubview(viewController.view)
           viewController.view.frame.origin = self.containView.bounds.origin
           viewController.view.frame.size = self.containView.frame.size
           viewController.didMove(toParentViewController: self)
       }
+    
       //
       fileprivate func remove(asChildViewController viewController: UIViewController) {
           viewController.willMove(toParentViewController: nil)
