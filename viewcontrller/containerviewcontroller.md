@@ -67,7 +67,6 @@
       override func viewDidLoad() {
 
           super.viewDidLoad()        
-        
           self.add(asChildViewController: infoViewController)
       }
   ```
