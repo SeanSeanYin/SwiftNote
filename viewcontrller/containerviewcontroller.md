@@ -64,10 +64,21 @@
   * 在viewDidLoad就先新增要首先顯示的ViewController
 
   ```
-      override func viewDidLoad() {
 
-          super.viewDidLoad()        
-          self.add(asChildViewController: infoViewController)
+  ```
+
+  * 實作切換子viewcontroller的函式
+
+  ```
+      private func showViewController(type:ContainerViewController) {
+
+          if type == .Feature {
+              self.remove(asChildViewController: infoViewController)
+              self.add(asChildViewController: featuredViewController)
+          } else if type == .Store {
+              self.remove(asChildViewController: featuredViewController)
+              self.add(asChildViewController: infoViewController)
+          }
       }
   ```
 
