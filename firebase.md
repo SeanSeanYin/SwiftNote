@@ -74,5 +74,21 @@
       }
   ```
 
+* #### Google SignIn的Delegate若是不在AppDelegate內的做法
+
+  * dismiss和present這兩個function要從topViewController來dismiss或present
+
+```
+    func sign(_ signIn: GIDSignIn!, dismiss viewController: UIViewController!) {
+        let topViewController = UIApplication.topViewController()
+        topViewController.dismiss(animated: true, completion: nil)
+    }
+    
+    func sign(_ signIn: GIDSignIn!, present viewController: UIViewController!) {
+        let topViewController = UIApplication.topViewController()
+        topViewController.present(viewController, animated: true, completion: nil)
+    }
+```
+
 
 
