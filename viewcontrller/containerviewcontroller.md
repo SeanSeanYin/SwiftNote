@@ -13,8 +13,8 @@
           self.add(asChildViewController: viewController)
           return viewController
       } ()
-    
-      // 此為二個ViewController
+
+      // 此為第二個ViewController
       private lazy var featuredViewController: StoreDetailFeaturedViewController = {
           let storyboard = UIStoryboard(name: "Main", bundle: .main)
           var viewController = storyboard.instantiateViewController(withIdentifier: "StoreDetailFeaturedViewController") as! StoreDetailFeaturedViewController
@@ -22,6 +22,25 @@
           self.add(asChildViewController: viewController)
           return viewController
       } ()
+  ```
+
+  * 然後寫顯示和移除ViewController的函式
+
+  ```
+      //  
+      fileprivate func add(asChildViewController viewController: UIViewController) {
+          self.addChildViewController(viewController)
+          self.containView.addSubview(viewController.view)
+          viewController.view.frame.origin = self.containView.bounds.origin
+          viewController.view.frame.size = self.containView.frame.size
+          viewController.didMove(toParentViewController: self)
+      }
+      //
+      fileprivate func remove(asChildViewController viewController: UIViewController) {
+          viewController.willMove(toParentViewController: nil)
+          viewController.view.removeFromSuperview()
+          viewController.removeFromParentViewController()
+      }
   ```
 
   * 
