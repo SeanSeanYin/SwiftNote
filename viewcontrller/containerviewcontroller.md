@@ -28,12 +28,17 @@
 
   ```
       fileprivate func add(asChildViewController viewController: UIViewController) {
+    
           // 新增viewController成原本viewcontroller的子viewcontroller
           self.addChildViewController(viewController)
+        
           // 新增viewController的view 成 原本viewcontroller的view的subview
           self.containView.addSubview(viewController.view)
-          // 設定 viewController的view的Frame跟原本viewcontroller的containView的大小一樣
+        
+          // 設定 viewController的view的座標位置跟原本viewcontroller的containView的座標位置一致
           viewController.view.frame.origin = self.containView.bounds.origin
+        
+          // 設定 viewController的view的Frame跟原本viewcontroller的containView的大小一樣
           viewController.view.frame.size = self.containView.frame.size
           viewController.didMove(toParentViewController: self)
       }
