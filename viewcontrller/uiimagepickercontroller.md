@@ -55,5 +55,14 @@
     }
     ```
 
+* 讓ImagePickerController的顏色可以變成客製化的顏色
+  * 在呼叫ImagePickerController的時候設定下面幾行
+
+  ```
+  self.imagePicker.navigationBar.isTranslucent = true
+  self.imagePicker.navigationBar.barTintColor = UIColor.navigation
+  self.imagePicker.delegate = self
+  ```
+
 
 

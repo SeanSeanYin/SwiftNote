@@ -38,5 +38,11 @@ self.navigationController?.viewControllers.removeLast
 self.navigationController?.viewControllers.remove(at: index)
 ```
 
+* 要讓Navigation Bar的顏色可以變成深色的方法
+
+```
+self.navigationController?.navigationBar.isTranslucent = false
+```
+
 
 
