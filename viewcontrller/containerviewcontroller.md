@@ -27,6 +27,7 @@
   * 然後寫顯示和移除ViewController的函式
 
   ```
+      // 顯示ViewController
       fileprivate func add(asChildViewController viewController: UIViewController) {
 
           // 新增viewController成原本viewcontroller的子viewcontroller
@@ -40,12 +41,12 @@
 
           // 設定 viewController的view的Frame跟原本viewcontroller的containView的大小一樣
           viewController.view.frame.size = self.containView.frame.size
-        
+
           // 將子viewcontroller移到父viewcontroller的位置
           viewController.didMove(toParentViewController: self)
       }
 
-      //
+      // 移除ViewController
       fileprivate func remove(asChildViewController viewController: UIViewController) {
           viewController.willMove(toParentViewController: nil)
           viewController.view.removeFromSuperview()
