@@ -9,7 +9,7 @@
             cell.backgroundColor = UIColor.clear
             cell.coverImageView.backgroundColor = UIColor.white
 
-            // 確保獲得資料，否則直接回覆一個空的Cell
+            // 確保獲得資料，否則直接返回一個空的Cell
             guard let book = (self.recommendList[collectionView.tag].books?[indexPath.item]) else {
                 return UICollectionViewCell()
             }
@@ -34,7 +34,7 @@
                                     }
                                 }
                             }
-                        } else {
+                        } else { // 下載失敗，直接給預設圖片
                             DispatchQueue.main.async {
                                 cell.coverImageView.image = UIImage(named: "default_book")
                             }
@@ -44,33 +44,10 @@
             } else {
                 cell.coverImageView.image = UIImage(named: "default_book")
             }
-
-            if (book.bookDetails.stores == nil) || (book.bookDetails.stores!.count == 0) {
-
-                DispatchQueue.main.async {
-                    cell.stockLabel.text = NSLocalizedString("SeeStaff", comment: "")
-                    cell.stockLabel.textColor = UIColor.hex("F5A623")
-                    _ = cell.coverImageView.setBorder(with: UIColor.hex("F5A623").cgColor)
-                }
-            } else {
-                cell.stockLabel.text = NSLocalizedString("SeeStaff", comment: "")
-                cell.stockLabel.textColor = UIColor.hex("F5A623")
-                _ = cell.coverImageView.setBorder(with: UIColor.hex("F5A623").cgColor)
-
-                for store in (book.bookDetails.stores)! {
-                    if store.inStock == nil { continue }
-                    if (store.id)! == self.store.id && ((store.inStock)! > 0) {
-                        cell.stockLabel.text = NSLocalizedString("InStore", comment: "")
-                        cell.stockLabel.textColor = UIColor.hex("00A0E9")
-                        _ = cell.coverImageView.setBorder(with: UIColor.hex("00A0E9").cgColor)
-                        break
-                    }
-                }
-            }
-
+            // 將Cell返回
             return cell
         }
-
+        // 返回空的Cell
         return UICollectionViewCell()
     }
 ```
