@@ -48,6 +48,8 @@
 
       // 移除ViewController
       fileprivate func remove(asChildViewController viewController: UIViewController) {
+    
+          // 在調用removeFromParentViewController要先調用willMovetoParanetViewController
           viewController.willMove(toParentViewController: nil)
           viewController.view.removeFromSuperview()
           viewController.removeFromParentViewController()
