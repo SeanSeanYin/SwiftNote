@@ -4,7 +4,7 @@
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         // 先宣告Cell
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BookCollectionCell", for: indexPath) as? BookCollectionCell {
-        
+
             // 設定cell和coverImageView的背景色
             cell.backgroundColor = UIColor.clear
             cell.coverImageView.backgroundColor = UIColor.white
@@ -17,8 +17,10 @@
             // 獲得下載圖片的url，否則直接給預設圖片
             if let imageUrl = book.bookDetails.imageUrl {
 
+                // 將下載的工作塞到global queue內，不要block到main queuq
                 DispatchQueue.global().async {
                     NetworkManager.shared.downloadImage(withImageUrl: imageUrl, completion: { [weak self] image in
+                        // 如果下載成功，塞到Main queue去更新圖片，然後重新reloadItems來畫新的Width
                         if image != nil {
                             DispatchQueue.main.async {
                                 let calWidth:CGFloat = Common.countImageWidth(img: image!, fixedHeight: 130 * (self?.getScreenScale(with: .height))!)
