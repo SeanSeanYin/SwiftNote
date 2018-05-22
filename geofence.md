@@ -35,7 +35,28 @@
 * 最後是實作delegate
 
 ```
+    // 當進入觀測點的範圍內要做的事
+    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
+        
+        if region is CLCircularRegion {
+            print("Enter region:\(region.identifier)")
+            self.notifyEnterStore(of: region)
+        }
+    }
+    
+    // 當離開觀測點的範圍時要做的事    
+    func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
 
+        if region is CLCircularRegion {
+            print("Exit region:\(region.identifier)")
+        }
+    }
+
+    // 當開始觀測點時要做的事
+    func locationManager(_ manager: CLLocationManager, didStartMonitoringFor region: CLRegion) {
+        
+        print("didStartMonitoringFor region:\(region)")
+    }
 ```
 
 
