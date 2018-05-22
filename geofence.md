@@ -37,13 +37,13 @@
 ```
     // 當進入觀測點的範圍內要做的事
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
-        
+
         if region is CLCircularRegion {
             print("Enter region:\(region.identifier)")
             self.notifyEnterStore(of: region)
         }
     }
-    
+
     // 當離開觀測點的範圍時要做的事    
     func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
 
@@ -54,10 +54,12 @@
 
     // 當開始觀測點時要做的事
     func locationManager(_ manager: CLLocationManager, didStartMonitoringFor region: CLRegion) {
-        
+
         print("didStartMonitoringFor region:\(region)")
     }
 ```
+
+* 同時最多只能存在20個觀測點，超過會有 `CoreLocation kCLErrorDomain error 5 `的錯誤訊息
 
 
 
