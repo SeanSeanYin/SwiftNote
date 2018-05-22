@@ -52,16 +52,25 @@
           // 在調用removeFromParentViewController要先調用willMovetoParanetViewController
           // 
           viewController.willMove(toParentViewController: nil)
-        
+
           // 將子viewController的view從父viewController的view移除
           viewController.view.removeFromSuperview()
-        
+
           // 正式將子viewController從父viewController移除
           viewController.removeFromParentViewController()
       }
   ```
 
-  * 
+  * 在viewDidLoad就先新增要首先顯示的ViewController
+
+  ```
+      override func viewDidLoad() {
+
+          super.viewDidLoad()        
+        
+          self.add(asChildViewController: infoViewController)
+      }
+  ```
 
 
 
