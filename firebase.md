@@ -73,7 +73,6 @@
           refreshTimer.invalidate()
       }
   ```
-
 * #### Google SignIn的Delegate若是不在AppDelegate內的做法
 
   * dismiss和present這兩個function要從topViewController來dismiss或present
@@ -83,10 +82,27 @@
         let topViewController = UIApplication.topViewController()
         topViewController.dismiss(animated: true, completion: nil)
     }
-    
+
     func sign(_ signIn: GIDSignIn!, present viewController: UIViewController!) {
         let topViewController = UIApplication.topViewController()
         topViewController.present(viewController, animated: true, completion: nil)
+    }
+    
+    extension UIApplication {
+        class func topViewController(base:UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController {
+            if let navigationVC = base as? UINavigationController {
+                return navigationVC
+            }
+            if let tabBarVC = base as? UITabBarController {
+                if let selectedVC = tabBarVC.selectedViewController {
+                    return topViewController(base:selectedVC)
+                }
+            }
+            if let presentedVC = base?.presentedViewController {
+                return topViewController(base:presentedVC)
+            }
+            return base!
+        }
     }
 ```
 
