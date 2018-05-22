@@ -47,11 +47,13 @@
                   if remainderTime > self.timeIntervalOfRefresh {
                       GIDSignIn.sharedInstance().currentUser.authentication.refreshTokens { (response, error) in
 
+                          // 確定沒有Error
                           guard error == nil else {
                               print("GIDAuthentication refreshTokens failed")
                               return
                           }
 
+                          // 更新成功
                           if let auth = response {
                               print("New accessToken expiration time:\(auth.accessTokenExpirationDate!)")
                           }
