@@ -64,7 +64,12 @@
   * 在viewDidLoad就先新增要首先顯示的ViewController
 
   ```
+      override func viewDidLoad() {
 
+          super.viewDidLoad()        
+          self.add(asChildViewController: infoViewController)
+      }
+    
   ```
 
   * 實作切換子viewcontroller的函式
