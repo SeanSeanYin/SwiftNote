@@ -35,21 +35,22 @@
               print("Netwrok is not available so failed to refresh accessToken.")
               return
           }
-        
+
           // 如果已登入，才要更新，沒登入是要更新什麼....
           if GIDSignIn.sharedInstance().hasAuthInKeychain() {
-            
+
+              // 先獲得accessToken的過期時間
               if let expirationTime = GIDSignIn.sharedInstance().currentUser.authentication.accessTokenExpirationDate {
                   let remainderTime = Date().timeIntervalSince(expirationTime)
                   print("Remainder:\(remainderTime) > timeIntervalOfRefresh:\(self.timeIntervalOfRefresh) is \((remainderTime > self.timeIntervalOfRefresh) ? true : false )")
                   if remainderTime > self.timeIntervalOfRefresh {
                       GIDSignIn.sharedInstance().currentUser.authentication.refreshTokens { (response, error) in
-                        
+
                           guard error == nil else {
                               print("GIDAuthentication refreshTokens failed")
                               return
                           }
-                        
+
                           if let auth = response {
                               print("New accessToken expiration time:\(auth.accessTokenExpirationDate!)")
                           }
