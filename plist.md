@@ -22,7 +22,20 @@
 ![](/assets/螢幕快照 2017-07-05 下午3.45.32.png)
 
 * 要讓系統方面（像是App Name或要求Location的字串）顯示做到多國語言的做法
-  * 先在整個專案建立"InfoPlist.strings"這檔案（名字一定要是InfoPlist）
+  * 先在整個專案建立"InfoPlist.strings"這字串檔（名字一定要是InfoPlist）
+  * 然後確認想要顯示多國語言的Key值
+  * ```
+    // 像是第一個是名字
+    "CFBundleDisplayName" = "BookGuru";
+    "NSCalendarsUsageDescription" = "This allows you to add Book Store Events to your default Calendar.";
+    "NSCameraUsageDescription" = "This allows you to scan Book barcodes to see their details, as well as taking your Profile picture.";
+    "NSLocationWhenInUseUsageDescription" = "Turning on Location Services will help us determine your proximity to stores.";
+    "NSLocationUsageDescription" = "Turning on Location Services will help us determine your proximity to stores.";
+    "NSLocationAlwaysAndWhenInUseUsageDescription" = "Turning on Location Services will help us determine your proximity to stores.";
+    "NSLocationAlwaysUsageDescription" = "Turning on Location Services will help us determine your proximity to stores.";
+    "NSPhotoLibraryUsageDescription" = "This allows you to access your photo library to choose a Profile Picture.";
+    "NSPhotoLibraryAddUsageDescription" = "This allows you to access your photo library to choose a Profile Picture.";
+    ```
 
 
 
