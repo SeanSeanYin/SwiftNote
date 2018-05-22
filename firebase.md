@@ -18,11 +18,19 @@
       var refreshTimer = Timer()
       let timeIntervalOfRepeats = TimeInterval(600) // 10 mintues
       let timeIntervalOfRefresh = TimeInterval(-540) // 9 minutes
-    
+
       func startRepeatlyRefreshToken(){
           if User.shared.loginType == .google {
               refreshTimer = Timer.scheduledTimer(timeInterval: self.timeIntervalOfRepeats, target: self, selector: #selector(self.refreshToken), userInfo: nil, repeats: true)
           }
+      }
+  ```
+
+  * 最後是登出時，取消Timer
+
+  ```
+      fileprivate func stopRepeatlyRefreshToken(){
+          refreshTimer.invalidate()
       }
   ```
 
