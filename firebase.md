@@ -43,6 +43,7 @@
               if let expirationTime = GIDSignIn.sharedInstance().currentUser.authentication.accessTokenExpirationDate {
                   let remainderTime = Date().timeIntervalSince(expirationTime)
                   print("Remainder:\(remainderTime) > timeIntervalOfRefresh:\(self.timeIntervalOfRefresh) is \((remainderTime > self.timeIntervalOfRefresh) ? true : false )")
+                  // 如果剩餘時間大於規定的更新時間（-540秒，也就是9分鐘）
                   if remainderTime > self.timeIntervalOfRefresh {
                       GIDSignIn.sharedInstance().currentUser.authentication.refreshTokens { (response, error) in
 
