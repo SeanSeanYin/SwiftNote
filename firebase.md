@@ -26,6 +26,42 @@
       }
   ```
 
+  * 實作refreshToken的函式
+
+  ```
+      func refreshToken(){
+          // 先確保有網路
+          guard ReachabilityManager.shared.isNetworkAvailable else {
+              print("Netwrok is not available so failed to refresh accessToken.")
+              return
+          }
+        
+          // 如果已登入，才要更新，沒登入是要更新什麼....
+          if GIDSignIn.sharedInstance().hasAuthInKeychain() {
+            
+              if let expirationTime = GIDSignIn.sharedInstance().currentUser.authentication.accessTokenExpirationDate {
+                  let remainderTime = Date().timeIntervalSince(expirationTime)
+                  print("Remainder:\(remainderTime) > timeIntervalOfRefresh:\(self.timeIntervalOfRefresh) is \((remainderTime > self.timeIntervalOfRefresh) ? true : false )")
+                  if remainderTime > self.timeIntervalOfRefresh {
+                      GIDSignIn.sharedInstance().currentUser.authentication.refreshTokens { (response, error) in
+                        
+                          guard error == nil else {
+                              print("GIDAuthentication refreshTokens failed")
+                              return
+                          }
+                        
+                          if let auth = response {
+                              print("New accessToken expiration time:\(auth.accessTokenExpirationDate!)")
+                          }
+                      }
+                  }
+              }
+          } else {
+              print("GIDSignIn.sharedInstance().hasAuthInKeychain():\(GIDSignIn.sharedInstance().hasAuthInKeychain())")
+          }
+      }
+  ```
+
   * 最後是登出時，取消Timer
 
   ```
