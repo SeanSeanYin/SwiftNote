@@ -37,6 +37,7 @@
 * [Barcode scanner](barcode-scanner.md)
 * [Network Reachability](network-reachability.md)
 * [Timer](timer.md)
+* [GeoFence](geofence.md)
 
 ## Third Party Library
 
