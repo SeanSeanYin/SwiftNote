@@ -5,7 +5,7 @@
   * `self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background.png"))`
 * #### Deinit never be called
 
-  * #### 
+  * There's strong reference
 * #### 取消鍵盤的方式
 
 ```
@@ -57,7 +57,7 @@
 
   * 在要停止的地方新增
 
-    `OperationQueue.main.addOperation {                                                                        
+    `OperationQueue.main.addOperation {                                                                          
      self.spinner.stopAnimating() }`
 * #### 出現`whose view is not in the window hierarchy!`的解法
 
