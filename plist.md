@@ -21,7 +21,7 @@
 
 ![](/assets/螢幕快照 2017-07-05 下午3.45.32.png)
 
-* #### 要讓系統方面（像是App Name或要求Location的字串）顯示做到多國語言的做法
+* #### 要讓系統方面（像是App Name或要求Location時的字串）顯示做到多國語言的做法
 
   * 先在整個專案建立"InfoPlist.strings"這字串檔（名字一定要是InfoPlist）
   * 然後確認想要顯示多國語言的Key值
