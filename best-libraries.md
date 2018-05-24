@@ -31,6 +31,12 @@
 * Twitter Image Pipeline：圖片下載和快取  
   [https://medium.mybridge.co/30-amazing-ios-swift-libraries-for-the-past-year-v-2018-7cf15027eee9](https://medium.mybridge.co/30-amazing-ios-swift-libraries-for-the-past-year-v-2018-7cf15027eee9)
 
+* MessageKit：聊天界面  
+  [https://github.com/MessageKit/MessageKit?utm\_source=mybridge&utm\_medium=blog&utm\_campaign=read\_more](https://github.com/MessageKit/MessageKit?utm_source=mybridge&utm_medium=blog&utm_campaign=read_more)
+
+* Dotzu：App除錯工具  
+  https://github.com/remirobert/Dotzu?utm\_source=mybridge&utm\_medium=blog&utm\_campaign=read\_more
+
 * 
 
 
