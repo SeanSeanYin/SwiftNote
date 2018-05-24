@@ -41,7 +41,13 @@
   [https://github.com/xmartlabs/Bender?utm\_source=mybridge&utm\_medium=blog&utm\_campaign=read\_more](https://github.com/xmartlabs/Bender?utm_source=mybridge&utm_medium=blog&utm_campaign=read_more)
 
 * HGPlaceholders：顯示預設字串跟空白狀態頁面的工具  
-  https://github.com/HamzaGhazouani/HGPlaceholders?utm\_source=mybridge&utm\_medium=blog&utm\_campaign=read\_more
+  [https://github.com/HamzaGhazouani/HGPlaceholders?utm\_source=mybridge&utm\_medium=blog&utm\_campaign=read\_more](https://github.com/HamzaGhazouani/HGPlaceholders?utm_source=mybridge&utm_medium=blog&utm_campaign=read_more)
+
+* DefaultsKit：讓UserDefault更好用的工具  
+  https://github.com/nmdias/DefaultsKit?utm\_source=mybridge&utm\_medium=blog&utm\_campaign=read\_more
+
+* Hero：過場動畫特效的工具  
+  https://github.com/lkzhao/Hero?utm\_source=mybridge&utm\_medium=blog&utm\_campaign=read\_more
 
 * 
 
