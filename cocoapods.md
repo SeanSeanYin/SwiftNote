@@ -40,5 +40,7 @@
   * `cd ~/.cocoapods/repos` 
   * `git clone --depth 1 https://github.com/CocoaPods/Specs.git master`
 
+* #### Podfile範例
+
 
 
