@@ -39,7 +39,7 @@
   * #### 執行pod setup 太久的原因：master有519MB大！直接到目錄底下從github上clone比較快
   * `cd ~/.cocoapods/repos` 
   * `git clone --depth 1 https://github.com/CocoaPods/Specs.git master`
-* #### Podfile範例 
+* #### Podfile範例
 
 ```
 // 設定source和ios的最低版
@@ -53,7 +53,7 @@ def pods
    pod 'GoogleSignIn'
 end
 
-// 
+// 用來限定Swift 版本
 post_install do |installer|
   installer.pods_project.targets.each do |target|
     target.build_configurations.each do |config|
@@ -62,7 +62,8 @@ post_install do |installer|
   end
 end
 
-target 'BookGuru' do
+// 有幾個Target需要使用上面的pod
+target 'BookMaster' do
    pods
 end
 ```
