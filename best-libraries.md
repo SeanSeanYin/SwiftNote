@@ -44,10 +44,13 @@
   [https://github.com/HamzaGhazouani/HGPlaceholders?utm\_source=mybridge&utm\_medium=blog&utm\_campaign=read\_more](https://github.com/HamzaGhazouani/HGPlaceholders?utm_source=mybridge&utm_medium=blog&utm_campaign=read_more)
 
 * DefaultsKit：讓UserDefault更好用的工具  
-  https://github.com/nmdias/DefaultsKit?utm\_source=mybridge&utm\_medium=blog&utm\_campaign=read\_more
+  [https://github.com/nmdias/DefaultsKit?utm\_source=mybridge&utm\_medium=blog&utm\_campaign=read\_more](https://github.com/nmdias/DefaultsKit?utm_source=mybridge&utm_medium=blog&utm_campaign=read_more)
 
 * Hero：過場動畫特效的工具  
-  https://github.com/lkzhao/Hero?utm\_source=mybridge&utm\_medium=blog&utm\_campaign=read\_more
+  [https://github.com/lkzhao/Hero?utm\_source=mybridge&utm\_medium=blog&utm\_campaign=read\_more](https://github.com/lkzhao/Hero?utm_source=mybridge&utm_medium=blog&utm_campaign=read_more)
+
+* SnapKit：設定AutoLayout的工具  
+  https://github.com/SnapKit/SnapKit?utm\_source=mybridge&utm\_medium=blog&utm\_campaign=read\_more
 
 * 
 
