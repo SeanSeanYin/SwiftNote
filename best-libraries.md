@@ -1,0 +1,25 @@
+* SkeletonView：用來顯示等待時的預設頁面  
+  [https://github.com/Juanpe/SkeletonView?utm\_source=mybridge&utm\_medium=blog&utm\_campaign=read\_more](https://github.com/Juanpe/SkeletonView?utm_source=mybridge&utm_medium=blog&utm_campaign=read_more)
+
+* PanelKit：產生可拖曳的Panel  
+  [https://github.com/louisdh/panelkit?utm\_source=mybridge&utm\_medium=blog&utm\_campaign=read\_more](https://github.com/louisdh/panelkit?utm_source=mybridge&utm_medium=blog&utm_campaign=read_more)
+
+* ViewAnimator：View的動畫  
+  [https://github.com/marcosgriselli/ViewAnimator?utm\_source=mybridge&utm\_medium=blog&utm\_campaign=read\_more](https://github.com/marcosgriselli/ViewAnimator?utm_source=mybridge&utm_medium=blog&utm_campaign=read_more)
+
+* SwipeCellKit：TableView的Cell的Swipe動畫  
+  [https://github.com/marcosgriselli/ViewAnimator?utm\_source=mybridge&utm\_medium=blog&utm\_campaign=read\_more](https://github.com/marcosgriselli/ViewAnimator?utm_source=mybridge&utm_medium=blog&utm_campaign=read_more)
+
+* Spruce-ios：View的動畫  
+  [https://medium.mybridge.co/30-amazing-ios-swift-libraries-for-the-past-year-v-2018-7cf15027eee9](https://medium.mybridge.co/30-amazing-ios-swift-libraries-for-the-past-year-v-2018-7cf15027eee9)
+
+* BulletinBoard：在View底部顯示Card的Alert Message  
+  [https://github.com/alexaubry/BulletinBoard?utm\_source=mybridge&utm\_medium=blog&utm\_campaign=read\_more](https://github.com/alexaubry/BulletinBoard?utm_source=mybridge&utm_medium=blog&utm_campaign=read_more)
+
+* TinyConstraints：讓AutoLayout的Constraint變得簡單設定  
+  [https://github.com/roberthein/TinyConstraints?utm\_source=mybridge&utm\_medium=blog&utm\_campaign=read\_more](https://github.com/roberthein/TinyConstraints?utm_source=mybridge&utm_medium=blog&utm_campaign=read_more)
+
+* Gemini：collectionView的翻轉動畫
+
+
+

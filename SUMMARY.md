@@ -49,6 +49,7 @@
 * [Firebase](firebase.md)
 * [Facebook](facebook.md)
 * [ObjectMapper](objectmapper.md)
+* [Best libraries](best-libraries.md)
 
 ## Tools
 
