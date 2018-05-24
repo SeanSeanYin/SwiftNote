@@ -38,10 +38,11 @@
   [https://github.com/remirobert/Dotzu?utm\_source=mybridge&utm\_medium=blog&utm\_campaign=read\_more](https://github.com/remirobert/Dotzu?utm_source=mybridge&utm_medium=blog&utm_campaign=read_more)
 
 * Bender：神經網路工具  
-  https://github.com/xmartlabs/Bender?utm\_source=mybridge&utm\_medium=blog&utm\_campaign=read\_more
+  [https://github.com/xmartlabs/Bender?utm\_source=mybridge&utm\_medium=blog&utm\_campaign=read\_more](https://github.com/xmartlabs/Bender?utm_source=mybridge&utm_medium=blog&utm_campaign=read_more)
+
+* HGPlaceholders：顯示預設字串跟空白狀態頁面的工具  
+  https://github.com/HamzaGhazouani/HGPlaceholders?utm\_source=mybridge&utm\_medium=blog&utm\_campaign=read\_more
 
 * 
-
-
 
 
