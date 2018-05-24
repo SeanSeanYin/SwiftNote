@@ -19,7 +19,18 @@
 * TinyConstraints：讓AutoLayout的Constraint變得簡單設定  
   [https://github.com/roberthein/TinyConstraints?utm\_source=mybridge&utm\_medium=blog&utm\_campaign=read\_more](https://github.com/roberthein/TinyConstraints?utm_source=mybridge&utm_medium=blog&utm_campaign=read_more)
 
-* Gemini：collectionView的翻轉動畫
+* Gemini：collectionView的翻轉動畫  
+  [https://github.com/shoheiyokoyama/Gemini?utm\_source=mybridge&utm\_medium=blog&utm\_campaign=read\_more](https://github.com/shoheiyokoyama/Gemini?utm_source=mybridge&utm_medium=blog&utm_campaign=read_more)
 
+* SpreadsheetView：做出類似excel的表格  
+  [https://github.com/kishikawakatsumi/SpreadsheetView?utm\_source=mybridge&utm\_medium=blog&utm\_campaign=read\_more](https://github.com/kishikawakatsumi/SpreadsheetView?utm_source=mybridge&utm_medium=blog&utm_campaign=read_more)
+
+* NotificationBanner：做出客製化的Notification  
+  [https://github.com/Daltron/NotificationBanner?utm\_source=mybridge&utm\_medium=blog&utm\_campaign=read\_more](https://github.com/Daltron/NotificationBanner?utm_source=mybridge&utm_medium=blog&utm_campaign=read_more)
+
+* Twitter Image Pipeline：圖片下載和快取  
+  [https://medium.mybridge.co/30-amazing-ios-swift-libraries-for-the-past-year-v-2018-7cf15027eee9](https://medium.mybridge.co/30-amazing-ios-swift-libraries-for-the-past-year-v-2018-7cf15027eee9)
+
+* 
 
 
