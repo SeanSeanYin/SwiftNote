@@ -52,5 +52,21 @@
     }
 ```
 
+* 讓Cell內的圖片依照Cell順序下載顯示的方法
+
+```
+// 先宣告一個Serial的Queue
+fileprivate let serialQueue = DispatchQueue.init(label: "queue1", qos: .userInitiated)
+
+// 然後在呼叫下載圖片的API時使用
+self.serialQueue.async {
+    // Download image...
+}
+```
+
+
+
+
+
 
 
