@@ -30,5 +30,18 @@
         }
     ```
 
+* #### 開啟自己App的設定頁面
+
+  * 不能用 `prefs:root`，因為是private api，審核會被退件
+  * 要用以下方法，會直接帶使用者到此App所有的設定的頁面
+
+  ```
+  if let url = URL(string:UIApplicationOpenSettingsURLString) {
+      if UIApplication.shared.canOpenURL(url) {
+          UIApplication.shared.open(url, options: [:], completionHandler: nil)
+      }
+  }
+  ```
+
 
 
