@@ -108,7 +108,8 @@
 
 * #### Google login出現空白頁面的問題
 
-  * 原因是，
+  * 原因是，在  `sign(_ signIn: GIDSignIn!, present viewController: UIViewController!)` 
+  * 
 
 
 
