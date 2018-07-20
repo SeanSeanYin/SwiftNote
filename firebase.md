@@ -87,7 +87,7 @@
         let topViewController = UIApplication.topViewController()
         topViewController.present(viewController, animated: true, completion: nil)
     }
-    
+
     extension UIApplication {
         class func topViewController(base:UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController {
             if let navigationVC = base as? UINavigationController {
@@ -105,6 +105,10 @@
         }
     }
 ```
+
+* #### Google login出現空白頁面的問題
+
+  * 原因是，
 
 
 
