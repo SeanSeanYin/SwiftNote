@@ -11,8 +11,24 @@
 * #### 透過Firebase利用FB登入，[參考這篇](http://appcoda.com.tw/firebase-facebook-login/)
 * #### Google Login 時，畫面空白的原因和解法
 
-  * 原因：因為我把Google SignIn放在獨立的.swift內，所以在 `sign(_ signIn:GIDSignIn!, present viewController: UIViewController!)`  這個delegate的function內，我的Top ViewController不是當下的
+  * 原因：因為我把Google SignIn放在獨立的.swift內，所以在 `sign(_ signIn:GIDSignIn!, present viewController: UIViewController!)`  這個delegate的function內，我的 top ViewController不是當下的真正的top viewController，而是NavigationController，因此在呼叫出Google Login的SFSafariViewController時，會產生 `whose view is not in the window hierarchy` 的錯誤，進而造成畫面空白。
+  * 解法，使用下面這個function來獲取 top ViewController，來確保可以獲得top viewController而不是NavigationController
 
+  ```
+      class func getTopViewController () -> UIViewController? {
+        
+          if var topController = UIApplication.shared.keyWindow?.rootViewController {
+            
+              while let presentedViewController = topController.presentedViewController {
+                  topController = presentedViewController
+              }
+            
+              return topController
+          }
+        
+          return nil
+      }
+  ```
 * #### Google SingIn的refresh token方式
 
   * 因為每次User開啟App一定都會先去Google拿一次accessToken，不管是GIDSignIn\(\).sharedInstance\(\).hasAuthInKeychain\(\)的情況下用signInSilently\(\)，或是直接使用sign\(\)做登入，一定會呼叫delegate內的sign\(\)這個function，。
