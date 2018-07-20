@@ -10,6 +10,8 @@
   * 解法： 在`FBSDKLoginManager().logIn()`之前，先登出`FBSDKLoginManager().logOut()`
 * #### 透過Firebase利用FB登入，[參考這篇](http://appcoda.com.tw/firebase-facebook-login/)
 * #### Google Login 時，畫面空白的原因和解法
+
+  * 
 * #### Google SingIn的refresh token方式
 
   * 因為每次User開啟App一定都會先去Google拿一次accessToken，不管是GIDSignIn\(\).sharedInstance\(\).hasAuthInKeychain\(\)的情況下用signInSilently\(\)，或是直接使用sign\(\)做登入，一定會呼叫delegate內的sign\(\)這個function，。
