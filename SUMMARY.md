@@ -4,6 +4,7 @@
 
 * [Observable](rxswift/observable.md)
 * Subject
+* [RxTest](rxswift/rxtest.md)
 
 ## Foundation
 
