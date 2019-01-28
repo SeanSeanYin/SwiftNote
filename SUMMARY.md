@@ -3,7 +3,7 @@
 ## RxSwift
 
 * [Observable](rxswift/observable.md)
-* Subject
+* [Subject](rxswift/subject.md)
 * [RxTest](rxswift/rxtest.md)
 
 ## Foundation
